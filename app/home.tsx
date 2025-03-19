@@ -12,6 +12,17 @@ interface HomeProps {
 }
 
 export default function HomeSection({ profile }: HomeProps) {
+  // Fungsi untuk scroll ke section tanpa mengubah URL
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault(); // Mencegah perilaku default anchor link
+    
+    const section = document.getElementById(sectionId);
+    if (section) {
+      // Scroll ke section dengan animasi smooth
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section id="beranda" className="pt-24 md:pt-32 pb-16 md:pb-20 px-4 md:px-8 min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-indigo-50 to-white">
       <div className="container mx-auto max-w-6xl">
@@ -31,13 +42,21 @@ export default function HomeSection({ profile }: HomeProps) {
               {profile.bio}
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
-              <a href="#portofolio" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2 md:py-3 px-6 md:px-8 rounded-full transition-all font-medium shadow-lg hover:shadow-blue-500/30 text-sm md:text-base">
+              <a 
+                href="#portofolio" 
+                onClick={(e) => scrollToSection(e, 'portofolio')}
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2 md:py-3 px-6 md:px-8 rounded-full transition-all font-medium shadow-lg hover:shadow-blue-500/30 text-sm md:text-base"
+              >
                 Lihat Karya
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </a>
-              <a href="#kontak" className="inline-flex items-center gap-2 bg-transparent border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 py-2 md:py-3 px-6 md:px-8 rounded-full transition-all font-medium text-sm md:text-base">
+              <a 
+                href="#kontak" 
+                onClick={(e) => scrollToSection(e, 'kontak')}
+                className="inline-flex items-center gap-2 bg-transparent border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 py-2 md:py-3 px-6 md:px-8 rounded-full transition-all font-medium text-sm md:text-base"
+              >
                 Hubungi Saya
               </a>
             </div>

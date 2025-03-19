@@ -9,6 +9,16 @@ interface AboutSectionProps {
 }
 
 export default function AboutSection({ profile, experience, education }: AboutSectionProps) {
+  // Fungsi untuk menangani download CV
+  const handleDownloadCV = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Jika CV belum tersedia, cegah default action dan tampilkan pesan
+    if (!process.env.NEXT_PUBLIC_CV_URL) {
+      e.preventDefault();
+      alert('CV akan segera tersedia!');
+    }
+    // Jika CV tersedia, biarkan default action (download) berjalan
+  };
+
   return (
     <section id="tentang" className="py-24 px-8 bg-gradient-to-br from-blue-50 to-white">
       <div className="container mx-auto max-w-6xl">
@@ -93,12 +103,19 @@ export default function AboutSection({ profile, experience, education }: AboutSe
               </div>
             </div>
             
-            <a href="#kontak" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full transition-all font-medium shadow-lg hover:shadow-blue-500/30">
-              Download CV
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a 
+                href={process.env.NEXT_PUBLIC_CV_URL || '#'} 
+                onClick={handleDownloadCV}
+                download="/CV_Alfreinsco.pdf"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full transition-all font-medium shadow-lg hover:shadow-blue-500/30 hover:scale-105"
+              >
+                Download CV
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         
