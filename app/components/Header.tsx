@@ -9,121 +9,124 @@ interface HeaderProps {
 }
 
 export default function Header({ isScrolled, activeSection }: HeaderProps) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navItems = ['beranda', 'tentang', 'layanan', 'portofolio', 'kontak'];
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Tutup menu saat scroll
   useEffect(() => {
-    // Menutup menu mobile saat header di-scroll
-    if (isScrolled && isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
     }
-  }, [isScrolled, isMobileMenuOpen]);
-
-  // Menutup menu mobile ketika pengguna mengklik link
+  }, [isScrolled]);
+  
+  // Tutup menu saat klik link
   const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
+    setIsMenuOpen(false);
   };
-
+  
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'py-3 bg-white/90 backdrop-blur-md shadow-md' 
-        : 'py-5 bg-transparent'
-    }`}>
-      <div className="container mx-auto max-w-6xl px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link 
-            href="/" 
-            className="text-2xl font-bold relative"
-          >
-            <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              Alfreinsco
-            </span>
-            <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full"></span>
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'py-3 bg-white shadow-md' : 'py-5 bg-transparent'}`}>
+      <div className="container mx-auto max-w-6xl px-4 md:px-8">
+        <div className="flex justify-between items-center">
+          <Link href="/" className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">
+            Alfreinsco
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => {
-              const isActive = activeSection === item;
-              return (
-                <a 
-                  key={item}
-                  href={`#${item}`}
-                  className={`capitalize font-medium transition-all relative 
-                    ${isActive 
-                      ? 'text-blue-500 after:w-full' 
-                      : isScrolled 
-                        ? 'text-gray-700 hover:text-blue-500 after:w-0 hover:after:w-full' 
-                        : 'text-gray-800 hover:text-blue-500 after:w-0 hover:after:w-full'
-                    }
-                    after:absolute after:h-0.5 after:bg-blue-400 after:left-0 after:-bottom-1 after:transition-all`}
-                >
-                  {item}
-                </a>
-              );
-            })}
-            
+          <nav className="hidden md:flex items-center space-x-10">
+            <Link 
+              href="#beranda" 
+              className={`relative font-medium text-base transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-blue-600 after:transition-all hover:scale-105 ${activeSection === 'beranda' ? 'text-blue-600 after:w-full' : 'text-gray-700 hover:text-blue-600 after:w-0 hover:after:w-full'}`}
+            >
+              Beranda
+            </Link>
+            <Link 
+              href="#tentang" 
+              className={`relative font-medium text-base transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-blue-600 after:transition-all hover:scale-105 ${activeSection === 'tentang' ? 'text-blue-600 after:w-full' : 'text-gray-700 hover:text-blue-600 after:w-0 hover:after:w-full'}`}
+            >
+              Tentang
+            </Link>
+            <Link 
+              href="#layanan" 
+              className={`relative font-medium text-base transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-blue-600 after:transition-all hover:scale-105 ${activeSection === 'layanan' ? 'text-blue-600 after:w-full' : 'text-gray-700 hover:text-blue-600 after:w-0 hover:after:w-full'}`}
+            >
+              Layanan
+            </Link>
+            <Link 
+              href="#portofolio" 
+              className={`relative font-medium text-base transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-blue-600 after:transition-all hover:scale-105 ${activeSection === 'portofolio' ? 'text-blue-600 after:w-full' : 'text-gray-700 hover:text-blue-600 after:w-0 hover:after:w-full'}`}
+            >
+              Portofolio
+            </Link>
+            <Link 
+              href="#kontak" 
+              className={`relative font-medium text-base transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-blue-600 after:transition-all hover:scale-105 ${activeSection === 'kontak' ? 'text-blue-600 after:w-full' : 'text-gray-700 hover:text-blue-600 after:w-0 hover:after:w-full'}`}
+            >
+              Kontak
+            </Link>
             <a 
               href="#kontak" 
-              className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-2 px-6 rounded-full transition-all hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 font-medium"
+              onClick={handleLinkClick}
+              className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-2.5 px-6 rounded-full text-base transition-all hover:shadow-lg hover:scale-105 font-medium"
             >
               Hubungi Saya
             </a>
           </nav>
           
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden flex flex-col gap-1.5 p-2 text-gray-800"
-            aria-label="Toggle menu"
+            className="md:hidden text-gray-700 focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className={`block w-6 h-0.5 transition-all duration-300 ${
-              isMobileMenuOpen 
-                ? 'rotate-45 translate-y-2 bg-blue-400' 
-                : 'bg-gray-800'
-            }`}></span>
-            <span className={`block w-6 h-0.5 transition-all duration-300 ${
-              isMobileMenuOpen 
-                ? 'opacity-0' 
-                : 'bg-gray-800'
-            }`}></span>
-            <span className={`block w-6 h-0.5 transition-all duration-300 ${
-              isMobileMenuOpen 
-                ? '-rotate-45 -translate-y-2 bg-blue-400' 
-                : 'bg-gray-800'
-            }`}></span>
+            {isMenuOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
-      </div>
-      
-      {/* Mobile menu */}
-      <div className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ${
-        isMobileMenuOpen 
-          ? 'max-h-96 border-b border-gray-200' 
-          : 'max-h-0 overflow-hidden'
-      }`}>
-        <div className="container mx-auto max-w-6xl px-8 py-4">
-          <div className="flex flex-col gap-4">
-            {navItems.map((item) => {
-              const isActive = activeSection === item;
-              return (
-                <a 
-                  key={item}
-                  href={`#${item}`}
-                  onClick={handleLinkClick}
-                  className={`capitalize font-medium transition-all border-b border-gray-100 pb-2 
-                    ${isActive 
-                      ? 'text-blue-500' 
-                      : 'text-gray-700 hover:text-blue-500'
-                    }`}
-                >
-                  {item}
-                </a>
-              );
-            })}
-            
+        
+        {/* Mobile Navigation */}
+        <div className={`md:hidden fixed inset-0 bg-white z-40 pt-20 px-6 transition-all duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div className="flex flex-col space-y-6">
+            <Link 
+              href="#beranda" 
+              onClick={handleLinkClick}
+              className={`text-lg font-medium ${activeSection === 'beranda' ? 'text-blue-600' : 'text-gray-700'}`}
+            >
+              Beranda
+            </Link>
+            <Link 
+              href="#tentang" 
+              onClick={handleLinkClick}
+              className={`text-lg font-medium ${activeSection === 'tentang' ? 'text-blue-600' : 'text-gray-700'}`}
+            >
+              Tentang
+            </Link>
+            <Link 
+              href="#layanan" 
+              onClick={handleLinkClick}
+              className={`text-lg font-medium ${activeSection === 'layanan' ? 'text-blue-600' : 'text-gray-700'}`}
+            >
+              Layanan
+            </Link>
+            <Link 
+              href="#portofolio" 
+              onClick={handleLinkClick}
+              className={`text-lg font-medium ${activeSection === 'portofolio' ? 'text-blue-600' : 'text-gray-700'}`}
+            >
+              Portofolio
+            </Link>
+            <Link 
+              href="#kontak" 
+              onClick={handleLinkClick}
+              className={`text-lg font-medium ${activeSection === 'kontak' ? 'text-blue-600' : 'text-gray-700'}`}
+            >
+              Kontak
+            </Link>
             <a 
               href="#kontak" 
               onClick={handleLinkClick}

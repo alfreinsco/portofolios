@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 
-export default function AboutSection() {
+interface AboutSectionProps {
+  profile: any;
+  experience: any[];
+  education: any[];
+}
+
+export default function AboutSection({ profile, experience, education }: AboutSectionProps) {
   return (
     <section id="tentang" className="py-24 px-8 bg-gradient-to-br from-blue-50 to-white">
       <div className="container mx-auto max-w-6xl">

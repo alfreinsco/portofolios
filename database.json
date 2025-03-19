@@ -1,0 +1,237 @@
+{
+  "profile": {
+    "name": "Alfreinsco",
+    "title": "Full Stack Developer",
+    "location": "Jakarta, Indonesia",
+    "phone": "+62 813 1881 2027",
+    "email": "alfreinsco@gmail.com",
+    "bio": "Membangun aplikasi web, mobile dan desktop yang menarik dengan fokus pada pengalaman pengguna yang luar biasa dan performa tinggi. Menjadikan ide Anda menjadi kenyataan.",
+    "avatar": "/img/marthin1.jpg",
+    "available": true,
+    "socialMedia": {
+      "linkedin": "https://linkedin.com/in/alfreinsco",
+      "github": "https://github.com/alfreinsco",
+      "twitter": "https://twitter.com/alfreinsco",
+      "instagram": "https://instagram.com/salakory14"
+    }
+  },
+  "skills": {
+    "programming": [
+      { "name": "JavaScript", "level": 95 },
+      { "name": "TypeScript", "level": 90 },
+      { "name": "React.js", "level": 92 },
+      { "name": "Next.js", "level": 88 },
+      { "name": "Node.js", "level": 85 },
+      { "name": "Express.js", "level": 80 },
+      { "name": "HTML/CSS", "level": 95 },
+      { "name": "TailwindCSS", "level": 90 },
+      { "name": "PHP", "level": 75 },
+      { "name": "Laravel", "level": 70 }
+    ],
+    "design": [
+      { "name": "UI/UX Design", "level": 85 },
+      { "name": "Figma", "level": 90 },
+      { "name": "Adobe XD", "level": 80 },
+      { "name": "Photoshop", "level": 75 },
+      { "name": "Illustrator", "level": 70 }
+    ],
+    "other": [
+      { "name": "Git & GitHub", "level": 85 },
+      { "name": "REST API", "level": 90 },
+      { "name": "Database Design", "level": 80 },
+      { "name": "MongoDB", "level": 85 },
+      { "name": "MySQL/PostgreSQL", "level": 85 },
+      { "name": "Docker", "level": 75 },
+      { "name": "AWS/Netlify/Vercel", "level": 80 }
+    ]
+  },
+  "experience": [
+    {
+      "position": "Senior Full Stack Developer",
+      "company": "Tech Solutions Indonesia",
+      "location": "Jakarta",
+      "period": "2020 - Sekarang",
+      "description": "Mengembangkan dan memelihara aplikasi web skala besar menggunakan React, Node.js, dan AWS. Memimpin tim pengembangan dengan 5 anggota."
+    },
+    {
+      "position": "UI/UX Designer & Frontend Developer",
+      "company": "Creative Digital Agency",
+      "location": "Jakarta",
+      "period": "2018 - 2020",
+      "description": "Merancang antarmuka pengguna dan mengimplementasikan desain ke dalam kode frontend menggunakan React.js dan TailwindCSS."
+    },
+    {
+      "position": "Web Developer",
+      "company": "Startup Hub Indonesia",
+      "location": "Jakarta",
+      "period": "2016 - 2018",
+      "description": "Mengembangkan website dan aplikasi web untuk berbagai startup menggunakan PHP, Laravel dan JavaScript."
+    }
+  ],
+  "education": [
+    {
+      "degree": "S1 Teknik Informatika",
+      "institution": "Universitas Indonesia",
+      "location": "Depok",
+      "period": "2012 - 2016",
+      "description": "Fokus pada pengembangan web dan desain aplikasi. Lulus dengan predikat cum laude."
+    },
+    {
+      "degree": "Bootcamp Full Stack Web Development",
+      "institution": "Dicoding Academy",
+      "location": "Online",
+      "period": "2017",
+      "description": "Program intensif pengembangan web full stack dengan fokus pada MERN stack."
+    }
+  ],
+  "services": [
+    {
+      "title": "Web Development",
+      "icon": "code",
+      "description": "Pembuatan website responsive, aplikasi web modern, dan sistem manajemen konten dengan performa tinggi."
+    },
+    {
+      "title": "Mobile App Development",
+      "icon": "mobile",
+      "description": "Pengembangan aplikasi mobile untuk iOS dan Android menggunakan React Native dan Flutter."
+    },
+    {
+      "title": "UI/UX Design",
+      "icon": "design",
+      "description": "Desain antarmuka pengguna yang menarik, intuitif dan memberikan pengalaman terbaik bagi pengguna."
+    },
+    {
+      "title": "Konsultasi Teknologi",
+      "icon": "consultation",
+      "description": "Konsultasi pemilihan teknologi, arsitektur aplikasi, dan strategi pengembangan untuk bisnis Anda."
+    },
+    {
+      "title": "Backend Development",
+      "icon": "server",
+      "description": "Pengembangan backend yang aman, skalabel, dan berperforma tinggi dengan REST API dan database."
+    },
+    {
+      "title": "Maintenance & Support",
+      "icon": "support",
+      "description": "Layanan pemeliharaan dan dukungan teknis untuk aplikasi web dan mobile yang telah berjalan."
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "Aplikasi E-commerce",
+      "desc": "Platform belanja online lengkap dengan pembayaran digital dan admin dashboard",
+      "category": "web",
+      "techs": ["React", "Node.js", "MongoDB"],
+      "image": "/img/empty-300x240.jpg",
+      "features": [
+        "Sistem keranjang belanja yang responsif",
+        "Integrasi dengan berbagai metode pembayaran",
+        "Dashboard admin untuk manajemen produk",
+        "Sistem pencarian dan filter produk yang canggih"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Aplikasi Mobile Banking",
+      "desc": "Aplikasi perbankan modern dengan fitur transfer, pembayaran, dan investasi",
+      "category": "app",
+      "techs": ["Flutter", "Firebase", "REST API"],
+      "image": "/img/empty-300x240.jpg",
+      "features": [
+        "Autentikasi biometrik untuk keamanan tinggi",
+        "Transfer dana instan antar bank",
+        "Pembayaran tagihan dan e-wallet",
+        "Fitur investasi dan manajemen keuangan"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Dashboard Analytics",
+      "desc": "Dashboard interaktif untuk visualisasi data perusahaan",
+      "category": "web",
+      "techs": ["Vue.js", "D3.js", "Tailwind"],
+      "image": "/img/empty-300x240.jpg",
+      "features": [
+        "Visualisasi data real-time dengan grafik interaktif",
+        "Laporan kustom yang dapat diunduh",
+        "Integrasi dengan berbagai sumber data",
+        "Tampilan responsif untuk semua perangkat"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Logo & Branding Perusahaan",
+      "desc": "Desain identitas visual untuk startup teknologi",
+      "category": "design",
+      "techs": ["Figma", "Illustrator", "Photoshop"],
+      "image": "/img/empty-300x240.jpg",
+      "features": [
+        "Logo yang unik dan mudah dikenali",
+        "Panduan brand lengkap dengan color palette",
+        "Desain stationery dan marketing materials",
+        "Aset visual untuk media sosial"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Aplikasi Manajemen Proyek",
+      "desc": "Sistem manajemen proyek dengan fitur kanban dan timeline",
+      "category": "web",
+      "techs": ["Next.js", "GraphQL", "PostgreSQL"],
+      "image": "/img/empty-300x240.jpg",
+      "features": [
+        "Board kanban untuk manajemen tugas",
+        "Timeline proyek dengan diagram Gantt",
+        "Kolaborasi tim dengan komentar real-time",
+        "Pelaporan kemajuan proyek otomatis"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "UI/UX Website Pendidikan",
+      "desc": "Desain antarmuka untuk platform pembelajaran online",
+      "category": "design",
+      "techs": ["Figma", "Prototyping", "UX Research"],
+      "image": "/img/empty-300x240.jpg",
+      "features": [
+        "Desain yang berfokus pada pengalaman belajar",
+        "Antarmuka yang intuitif dan mudah dinavigasi",
+        "Komponen UI yang konsisten dan dapat digunakan kembali",
+        "Prototype interaktif untuk testing pengguna"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Budi Santoso",
+      "position": "CEO, TechStart Indonesia",
+      "company": "TechStart Indonesia",
+      "avatar": "/testimonial1.jpg",
+      "text": "Alfreinsco memberikan solusi teknologi yang tepat untuk startup kami. Kerjanya sangat profesional dan hasilnya melampaui ekspektasi kami."
+    },
+    {
+      "id": 2,
+      "name": "Sarah Wijaya",
+      "position": "Marketing Director",
+      "company": "Digital Agency",
+      "avatar": "/testimonial2.jpg",
+      "text": "Website yang dibuat sangat responsif dan cepat. Proses kerjasamanya juga sangat menyenangkan dengan komunikasi yang baik."
+    },
+    {
+      "id": 3,
+      "name": "Hendro Wibowo",
+      "position": "Founder",
+      "company": "EdTech Platform",
+      "avatar": "/testimonial3.jpg",
+      "text": "Aplikasi mobile yang dibuat sangat intuitif dan mudah digunakan. Pengguna kami sangat puas dengan pengalaman menggunakan aplikasinya."
+    }
+  ],
+  "stats": {
+    "projectsCompleted": 75,
+    "happyClients": 40,
+    "yearsExperience": 6,
+    "awardsWon": 12
+  }
+} 

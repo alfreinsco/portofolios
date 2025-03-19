@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import HomeSection from "./home";
@@ -12,6 +11,7 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import { getData } from "./utils/data";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +23,9 @@ export default function Home() {
     portfolio: false,
     testimonials: false
   });
+  
+  // Ambil data dari database.json
+  const data = getData();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,49 +80,39 @@ export default function Home() {
     );
   };
 
-  // Data portofolio
-  const portfolioItems = [
-    {id: 1, title: "Aplikasi E-commerce", desc: "Platform belanja online lengkap dengan pembayaran digital dan admin dashboard", category: "web", techs: ["React", "Node.js", "MongoDB"], image: "/project1-placeholder.jpg"},
-    {id: 2, title: "Aplikasi Mobile Banking", desc: "Aplikasi perbankan modern dengan fitur transfer, pembayaran, dan investasi", category: "app", techs: ["Flutter", "Firebase", "REST API"], image: "/project2-placeholder.jpg"},
-    {id: 3, title: "Dashboard Analytics", desc: "Dashboard interaktif untuk visualisasi data perusahaan", category: "web", techs: ["Vue.js", "D3.js", "Tailwind"], image: "/project3-placeholder.jpg"},
-    {id: 4, title: "Logo & Branding Perusahaan", desc: "Desain identitas visual untuk startup teknologi", category: "design", techs: ["Figma", "Illustrator", "Photoshop"], image: "/project4-placeholder.jpg"},
-    {id: 5, title: "Aplikasi Manajemen Proyek", desc: "Sistem manajemen proyek dengan fitur kanban dan timeline", category: "web", techs: ["Next.js", "GraphQL", "PostgreSQL"], image: "/project5-placeholder.jpg"},
-    {id: 6, title: "UI/UX Website Pendidikan", desc: "Desain antarmuka untuk platform pembelajaran online", category: "design", techs: ["Figma", "Prototyping", "UX Research"], image: "/project6-placeholder.jpg"}
-  ];
-
   return (
     <div className="font-sans">
       {/* Header Component - Sekarang dengan activeSection */}
       <Header isScrolled={isScrolled} activeSection={activeSection} />
 
       {/* Hero Section Component */}
-      <HomeSection />
+      <HomeSection profile={data.profile} />
 
       {/* Stats Section Component */}
-      <StatsSection isVisible={isVisible.stats} />
+      <StatsSection isVisible={isVisible.stats} stats={data.stats} />
 
       {/* About Section Component */}
-      <AboutSection />
+      <AboutSection profile={data.profile} experience={data.experience} education={data.education} />
 
       {/* Services Section Component */}
-      <ServicesSection isVisible={isVisible.services} />
+      <ServicesSection isVisible={isVisible.services} services={data.services} />
 
       {/* Portfolio Section Component */}
       <PortfolioSection 
         isVisible={isVisible.portfolio} 
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
-        portfolioItems={portfolioItems}
+        portfolioItems={data.portfolio}
       />
 
       {/* Testimonials Section Component */}
       {/* <TestimonialsSection isVisible={isVisible.testimonials} /> */}
 
       {/* Contact Section Component */}
-      <ContactSection />
+      <ContactSection profile={data.profile} />
 
       {/* Footer Component */}
-      <Footer />
+      <Footer profile={data.profile} />
 
       {/* Scroll to Top Button Component */}
       <ScrollToTopButton isScrolled={isScrolled} />

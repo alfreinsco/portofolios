@@ -1,6 +1,10 @@
 "use client"
 
-export default function Footer() {
+interface FooterProps {
+  profile: any;
+}
+
+export default function Footer({ profile }: FooterProps) {
   return (
     <footer className="py-12 px-8 bg-gray-900 text-white">
       <div className="container mx-auto max-w-6xl">
