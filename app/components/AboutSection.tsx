@@ -125,6 +125,24 @@ export default function AboutSection({ profile, experience, education }: AboutSe
             <div>
               <div className="flex justify-between mb-1">
                 <span className="font-medium text-gray-700">Frontend Development</span>
+                <span className="text-blue-600">100%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div className="bg-blue-600 h-2 rounded-full" style={{width: "100%"}}></div>
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-between mb-1">
+                <span className="font-medium text-gray-700">Backend Development</span>
+                <span className="text-blue-600">100%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div className="bg-blue-600 h-2 rounded-full" style={{width: "100%"}}></div>
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-between mb-1">
+                <span className="font-medium text-gray-700">UI/UX Design</span>
                 <span className="text-blue-600">95%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
@@ -133,29 +151,11 @@ export default function AboutSection({ profile, experience, education }: AboutSe
             </div>
             <div>
               <div className="flex justify-between mb-1">
-                <span className="font-medium text-gray-700">Backend Development</span>
+                <span className="font-medium text-gray-700">Mobile Development</span>
                 <span className="text-blue-600">90%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div className="bg-blue-600 h-2 rounded-full" style={{width: "90%"}}></div>
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium text-gray-700">UI/UX Design</span>
-                <span className="text-blue-600">85%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{width: "85%"}}></div>
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium text-gray-700">Mobile Development</span>
-                <span className="text-blue-600">80%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{width: "80%"}}></div>
               </div>
             </div>
           </div>
