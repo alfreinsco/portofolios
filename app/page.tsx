@@ -102,7 +102,7 @@ export default function Home() {
         isVisible={isVisible.portfolio} 
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
-        portfolioItems={data.portfolio}
+        portfolioItems={data.portfolio.map(item => ({ ...item, link: '' }))}
       />
 
       {/* Testimonials Section Component */}

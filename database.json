@@ -119,17 +119,131 @@
   "portfolio": [
     {
       "id": 1,
-      "title": "Aplikasi Pendaftaran Mahasiswa Baru Universitas Pattimura",
+      "title": "Aplikasi Pendaftaran Mahasiswa Baru Universitas Pattimura Jalur Mandiri",
       "desc": "Sistem pendaftaran mahasiswa baru yang memudahkan proses pendaftaran dan pengelolaan data mahasiswa.",
       "category": "web",
       "techs": ["React", "Node.js", "MongoDB", "Laravel"],
       "image": "/img/project/pmb.png",
+      "link": "https://pmb.unpatti.ac.id",
       "features": [
         "Form pendaftaran yang mudah diisi",
         "Verifikasi data secara otomatis",
         "Dashboard untuk pengelolaan data mahasiswa",
         "Notifikasi melalui email untuk status pendaftaran",
         "Pembayaran online dengan metode virtual account"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Sistem Pemilihan Majelis Jemaat GPM Wayame",
+      "desc": "Sistem yang memiliki 4 sub-sistem yaitu sidata untuk pendataan jemaat, siverval untuk verifikasi dan validasi jemaat pemilihan, sipungut untuk sistem pemungutan suara, dan situng untuk sistem perhitungan suara.",
+      "category": "web",
+      "techs": ["PHP", "Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "image": "/img/project/sipdp.png",
+      "link": "https://sipdp.elabs.id",
+      "features": [
+        "Sistem pendataan jemaat yang efisien",
+        "Verifikasi dan validasi data pemilih secara otomatis",
+        "Sistem pemungutan suara yang aman dan transparan",
+        "Sistem perhitungan suara yang akurat dan cepat",
+        "Dashboard untuk pengelolaan data pemilih dan hasil pemungutan suara",
+        "Notifikasi melalui email untuk status pemilihan"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Perpustakaan Digital SMA Kristen YPKPM Ambon - Solusi Cerdas untuk Akses Buku Modern",
+      "desc": "Sistem perpustakaan digital yang memudahkan akses dan pengelolaan koleksi buku secara online.",
+      "category": "web",
+      "techs": ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      "image": "/img/project/smakrismart.png",
+      "link": "https://github.com/alfreinsco/smakrismart",
+      "features": [
+        "Pencarian buku yang cepat dan mudah",
+        "Pengelolaan koleksi buku secara efisien",
+        "Fitur peminjaman dan pengembalian buku secara online",
+        "Notifikasi untuk pengingat peminjaman",
+        "Dashboard untuk statistik peminjaman dan koleksi"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Pendaftaran KKN Kebangsaan 2024 - Program Kuliah Kerja Nyata untuk Masyarakat",
+      "desc": "Sistem pendaftaran KKN yang memudahkan mahasiswa untuk mendaftar dan mengelola data kegiatan KKN.",
+      "category": "web",
+      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "image": "/img/project/kkn-kebangsaan2024.png",
+      "link": "https://kkn2024.unpatti.ac.id",
+      "features": [
+        "Form pendaftaran yang user-friendly",
+        "Verifikasi data secara otomatis",
+        "Dashboard untuk pengelolaan data peserta KKN",
+        "Notifikasi melalui email untuk status pendaftaran",
+        "Integrasi dengan sistem pembayaran online"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Sistem Yudisium - Solusi untuk Proses Yudisium Mahasiswa",
+      "desc": "Sistem yudisium yang memudahkan mahasiswa untuk mengelola dan memantau proses yudisium mereka.",
+      "category": "web",
+      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "image": "/img/project/sisyu.png",
+      "link": "https://yudisium.unpatti.ac.id",
+      "features": [
+        "Form pendaftaran yudisium yang mudah digunakan",
+        "Verifikasi data mahasiswa secara otomatis",
+        "Dashboard untuk pengelolaan data yudisium",
+        "Notifikasi melalui email untuk status yudisium",
+        "Integrasi dengan sistem akademik universitas"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sistem Penyuratan - Solusi untuk Proses Penyuratan",
+      "desc": "Sistem penyuratan yang memudahkan pengguna untuk mengelola dan memantau proses penyuratan mereka.",
+      "category": "web",
+      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "image": "/img/project/sispen.png",
+      "link": "https://wa.me/6281318812027",
+      "features": [
+        "Form pendaftaran penyuratan yang mudah digunakan",
+        "Verifikasi data penyuratan secara otomatis",
+        "Dashboard untuk pengelolaan data penyuratan",
+        "Notifikasi melalui email untuk status penyuratan",
+        "Integrasi dengan sistem administrasi universitas"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Sistem CDC Teknik Mesin - Solusi untuk Proses CDC",
+      "desc": "Sistem CDC yang memudahkan pengguna untuk mengelola dan memantau proses teknik mesin mereka.",
+      "category": "web",
+      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "image": "/img/project/cdc-mesin.png",
+      "link": "https://wa.me/6281318812027",
+      "features": [
+        "Form pendaftaran CDC yang mudah digunakan",
+        "Verifikasi data CDC secara otomatis",
+        "Dashboard untuk pengelolaan data CDC",
+        "Notifikasi melalui email untuk status CDC",
+        "Integrasi dengan sistem administrasi teknik mesin"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Sistem Permintaan Ambulance - Solusi untuk Permintaan Ambulance",
+      "desc": "Aplikasi mobile yang memudahkan pengguna untuk mengajukan permintaan ambulance dengan cepat dan efisien.",
+      "category": "app",
+      "techs": ["Flutter", "Firebase", "Dart"],
+      "image": "/img/project/ambulance.png",
+      "link": "https://wa.me/6281318812027",
+      "features": [
+        "Form permintaan ambulance yang mudah digunakan",
+        "Pelacakan lokasi ambulance secara real-time",
+        "Notifikasi status permintaan melalui aplikasi",
+        "Integrasi dengan sistem kesehatan lokal",
+        "Dukungan 24/7 untuk pengguna"
       ]
     }
   ],

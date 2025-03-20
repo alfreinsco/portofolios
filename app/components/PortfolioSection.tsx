@@ -10,6 +10,7 @@ interface PortfolioItem {
   category: string;
   techs: string[];
   image: string;
+  link: string;
   features: string[];
 }
 
@@ -204,7 +205,7 @@ export default function PortfolioSection({
                   Tutup
                 </button>
                 <a 
-                  href="#" 
+                  href={selectedProject.link} 
                   className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
