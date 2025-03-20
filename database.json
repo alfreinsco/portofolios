@@ -119,86 +119,17 @@
   "portfolio": [
     {
       "id": 1,
-      "title": "Aplikasi E-commerce",
-      "desc": "Platform belanja online lengkap dengan pembayaran digital dan admin dashboard",
+      "title": "Aplikasi Pendaftaran Mahasiswa Baru Universitas Pattimura",
+      "desc": "Sistem pendaftaran mahasiswa baru yang memudahkan proses pendaftaran dan pengelolaan data mahasiswa.",
       "category": "web",
-      "techs": ["React", "Node.js", "MongoDB"],
-      "image": "/img/empty-300x240.jpg",
+      "techs": ["React", "Node.js", "MongoDB", "Laravel"],
+      "image": "/img/project/pmb.png",
       "features": [
-        "Sistem keranjang belanja yang responsif",
-        "Integrasi dengan berbagai metode pembayaran",
-        "Dashboard admin untuk manajemen produk",
-        "Sistem pencarian dan filter produk yang canggih"
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Aplikasi Mobile Banking",
-      "desc": "Aplikasi perbankan modern dengan fitur transfer, pembayaran, dan investasi",
-      "category": "app",
-      "techs": ["Flutter", "Firebase", "REST API"],
-      "image": "/img/empty-300x240.jpg",
-      "features": [
-        "Autentikasi biometrik untuk keamanan tinggi",
-        "Transfer dana instan antar bank",
-        "Pembayaran tagihan dan e-wallet",
-        "Fitur investasi dan manajemen keuangan"
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Dashboard Analytics",
-      "desc": "Dashboard interaktif untuk visualisasi data perusahaan",
-      "category": "web",
-      "techs": ["Vue.js", "D3.js", "Tailwind"],
-      "image": "/img/empty-300x240.jpg",
-      "features": [
-        "Visualisasi data real-time dengan grafik interaktif",
-        "Laporan kustom yang dapat diunduh",
-        "Integrasi dengan berbagai sumber data",
-        "Tampilan responsif untuk semua perangkat"
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Logo & Branding Perusahaan",
-      "desc": "Desain identitas visual untuk startup teknologi",
-      "category": "design",
-      "techs": ["Figma", "Illustrator", "Photoshop"],
-      "image": "/img/empty-300x240.jpg",
-      "features": [
-        "Logo yang unik dan mudah dikenali",
-        "Panduan brand lengkap dengan color palette",
-        "Desain stationery dan marketing materials",
-        "Aset visual untuk media sosial"
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Aplikasi Manajemen Proyek",
-      "desc": "Sistem manajemen proyek dengan fitur kanban dan timeline",
-      "category": "web",
-      "techs": ["Next.js", "GraphQL", "PostgreSQL"],
-      "image": "/img/empty-300x240.jpg",
-      "features": [
-        "Board kanban untuk manajemen tugas",
-        "Timeline proyek dengan diagram Gantt",
-        "Kolaborasi tim dengan komentar real-time",
-        "Pelaporan kemajuan proyek otomatis"
-      ]
-    },
-    {
-      "id": 6,
-      "title": "UI/UX Website Pendidikan",
-      "desc": "Desain antarmuka untuk platform pembelajaran online",
-      "category": "design",
-      "techs": ["Figma", "Prototyping", "UX Research"],
-      "image": "/img/empty-300x240.jpg",
-      "features": [
-        "Desain yang berfokus pada pengalaman belajar",
-        "Antarmuka yang intuitif dan mudah dinavigasi",
-        "Komponen UI yang konsisten dan dapat digunakan kembali",
-        "Prototype interaktif untuk testing pengguna"
+        "Form pendaftaran yang mudah diisi",
+        "Verifikasi data secara otomatis",
+        "Dashboard untuk pengelolaan data mahasiswa",
+        "Notifikasi melalui email untuk status pendaftaran",
+        "Pembayaran online dengan metode virtual account"
       ]
     }
   ],

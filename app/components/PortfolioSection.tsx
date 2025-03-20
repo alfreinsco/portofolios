@@ -104,7 +104,7 @@ export default function PortfolioSection({
                   <p className="text-blue-100 text-sm md:text-base text-center mb-3 md:mb-4">{item.desc}</p>
                   <div className="flex flex-wrap gap-1.5 md:gap-2 justify-center">
                     {item.techs.map((tech, idx) => (
-                      <span key={idx} className="text-xs bg-white bg-opacity-20 text-white px-2 md:px-3 py-0.5 md:py-1 rounded-full">{tech}</span>
+                      <span key={idx} className="text-xs bg-white bg-opacity-20 text-gray-700 px-2 md:px-3 py-0.5 md:py-1 rounded-full">{tech}</span>
                     ))}
                   </div>
                 </div>
