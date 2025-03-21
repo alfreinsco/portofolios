@@ -1,31 +1,27 @@
-import { Database } from 'sqlite3';
-import { open } from 'sqlite';
-import { mkdir } from 'fs/promises';
-import path from 'path';
+import { kv } from '@vercel/kv';
 
-const dbPath = path.join(process.cwd(), '.vercel/output/static');
-
-// Pastikan direktori ada
-try {
-  await mkdir(dbPath, { recursive: true });
-} catch (error) {
-  console.log('Directory exists or cannot be created');
+interface Visitor {
+  id: string;
+  timestamp: string;
+  [key: string]: any;
 }
 
-const db = await open({
-  filename: path.join(dbPath, 'visitors.db'),
-  driver: Database
-});
+class LocalStorage {
+  private visitors: Visitor[] = [];
 
-// Buat tabel jika belum ada
-await db.exec(`
-  CREATE TABLE IF NOT EXISTS visitors (
-    id TEXT PRIMARY KEY,
-    ip TEXT,
-    browser TEXT,
-    os TEXT,
-    timestamp TEXT
-  )
-`);
+  async lpush(key: string, value: string): Promise<number> {
+    const visitor = JSON.parse(value);
+    this.visitors.unshift(visitor);
+    return this.visitors.length;
+  }
 
-export default db;
+  async lrange(key: string, start: number, end: number): Promise<string[]> {
+    return this.visitors.map(v => JSON.stringify(v));
+  }
+}
+
+// Cek apakah Vercel KV tersedia
+const isKVAvailable = process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN;
+
+// Gunakan Vercel KV atau fallback ke penyimpanan lokal
+export const db = isKVAvailable ? kv : new LocalStorage();
