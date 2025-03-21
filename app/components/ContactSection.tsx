@@ -9,8 +9,25 @@ interface ContactSectionProps {
 export default function ContactSection({ profile }: ContactSectionProps) {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Di sini implementasi logika pengiriman form bisa ditambahkan
-    alert('Pesan Anda telah terkirim. Terima kasih!');
+    
+    // Ambil nilai dari form
+    const form = e.target as HTMLFormElement;
+    const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+    const subject = (form.elements.namedItem('subject') as HTMLInputElement).value;
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+
+    // Format pesan untuk WhatsApp
+    const whatsappMessage = `*Pesan dari Website*\n\nNama: ${name}\nEmail: ${email}\nSubjek: ${subject}\n\nPesan:\n${message}`;
+    
+    // Encode pesan untuk URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Buka WhatsApp dengan pesan yang sudah disiapkan
+    window.open(`https://wa.me/6281318812027?text=${encodedMessage}`, '_blank');
+    
+    // Reset form
+    form.reset();
   };
 
   return (
@@ -93,6 +110,11 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
               </a>
+              <a href={profile.socialMedia.whatsapp} target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.627 0-12 5.373-12 12 0 2.21.577 4.27 1.58 6.06l-1.58 4.94c-.1.3.1.6.4.6.1 0 .2 0 .3-.1l4.94-1.58c1.79 1.003 3.85 1.58 6.06 1.58 6.627 0 12-5.373 12-12S18.627 0 12 0zm6.5 17.5l-1.5 1.5c-.2.2-.5.2-.7 0l-1.5-1.5c-.2-.2-.2-.5 0-.7l1.5-1.5c.2-.2.5-.2.7 0l1.5 1.5c.2.2.2.5 0 .7zm-3-3l-1.5 1.5c-.2.2-.5.2-.7 0l-1.5-1.5c-.2-.2-.2-.5 0-.7l1.5-1.5c.2-.2.5-.2.7 0l1.5 1.5c.2.2.2.5 0 .7zm-3-3l-1.5 1.5c-.2.2-.5.2-.7 0l-1.5-1.5c-.2-.2-.2-.5 0-.7l1.5-1.5c.2-.2.5-.2.7 0l1.5 1.5c.2.2.2.5 0 .7z"/>
+                </svg>
+              </a>
             </div>
           </div>
           
@@ -106,7 +128,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <input 
                     type="text" 
                     id="name" 
-                    className="w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base" 
+                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base" 
                     placeholder="Nama Anda"
                     required
                   />
@@ -116,7 +138,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <input 
                     type="email" 
                     id="email" 
-                    className="w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base" 
+                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base" 
                     placeholder="email@contoh.com"
                     required
                   />
@@ -128,7 +150,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 <input 
                   type="text" 
                   id="subject" 
-                  className="w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base" 
+                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base" 
                   placeholder="Subjek pesan"
                   required
                 />
@@ -139,7 +161,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 <textarea 
                   id="message" 
                   rows={4} 
-                  className="w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base" 
+                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base" 
                   placeholder="Tulis pesan Anda di sini..."
                   required
                 ></textarea>
@@ -147,9 +169,12 @@ export default function ContactSection({ profile }: ContactSectionProps) {
               
               <button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-2.5 md:py-3 px-6 rounded-lg hover:shadow-lg transition-all font-medium text-sm md:text-base"
+                className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-2.5 md:py-3 px-6 rounded-lg hover:shadow-lg transition-all font-medium text-sm md:text-base flex items-center justify-center gap-2"
               >
-                Kirim Pesan
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/>
+                </svg>
+                Kirim Pesan via WhatsApp
               </button>
             </form>
           </div>
