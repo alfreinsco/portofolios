@@ -1,40 +1,61 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-
-const VISITORS_FILE = path.join(process.cwd(), 'pengunjung.json');
+import { kv } from '@vercel/kv';
 
 export async function GET() {
   try {
-    const data = await fs.readFile(VISITORS_FILE, 'utf-8');
-    return NextResponse.json(JSON.parse(data));
+    const visitors = await kv.lrange('visitors', 0, -1);
+    if (!Array.isArray(visitors)) {
+      return NextResponse.json([]);
+    }
+    const parsedVisitors = visitors.map(visitor => {
+      try {
+        return JSON.parse(visitor);
+      } catch {
+        return null;
+      }
+    }).filter(Boolean);
+    return NextResponse.json(parsedVisitors);
   } catch (error) {
+    console.error('KV Error:', error);
     return NextResponse.json([]);
   }
 }
 
 export async function POST(request: Request) {
-  const visitorData = await request.json();
-  const visitors = await getVisitors();
-  
-  const newVisitor = {
-    id: uuidv4(),
-    ...visitorData,
-    timestamp: new Date().toISOString()
-  };
-  
-  visitors.push(newVisitor);
-  await fs.writeFile(VISITORS_FILE, JSON.stringify(visitors, null, 2));
-  
-  return NextResponse.json(newVisitor);
-}
-
-async function getVisitors() {
   try {
-    const data = await fs.readFile(VISITORS_FILE, 'utf-8');
-    return JSON.parse(data);
+    // Validasi input
+    const visitorData = await request.json();
+    if (!visitorData) {
+      return NextResponse.json(
+        { error: 'Invalid visitor data' }, 
+        { status: 400 }
+      );
+    }
+
+    const newVisitor = {
+      id: uuidv4(),
+      ...visitorData,
+      timestamp: new Date().toISOString()
+    };
+    
+    // Coba simpan ke KV dengan penanganan error yang lebih spesifik
+    try {
+      await kv.lpush('visitors', JSON.stringify(newVisitor));
+    } catch (kvError) {
+      console.error('KV Storage Error:', kvError);
+      return NextResponse.json(
+        { error: 'Database connection failed' },
+        { status: 503 }
+      );
+    }
+
+    return NextResponse.json(newVisitor);
   } catch (error) {
-    return [];
+    console.error('Request Processing Error:', error);
+    return NextResponse.json(
+      { error: 'Invalid request format' },
+      { status: 400 }
+    );
   }
-} 
+}

@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/kv": "^3.0.0",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
