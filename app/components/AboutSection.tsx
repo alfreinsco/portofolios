@@ -127,7 +127,7 @@ export default function AboutSection({
                 </svg>
                 <span className="text-gray-700">
                   Email:{" "}
-                  <span className="font-medium">alfreinsco@email.com</span>
+                  <span className="font-medium">alfreinsco@gmail.com</span>
                 </span>
               </div>
               <div className="flex items-center gap-2">
