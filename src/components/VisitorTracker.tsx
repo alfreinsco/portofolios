@@ -1,37 +1,23 @@
-"use client"
-
 import { useEffect } from 'react';
-import { addVisitor } from './utils/visitors';
+import { addVisitor } from '../utils/visitors';
 
-export default function ClientLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function VisitorTracker() {
   useEffect(() => {
     const trackVisitor = async () => {
       try {
-        // Cek apakah sudah tracking di sesi ini
         const hasTracked = localStorage.getItem('visitorTracked');
         const lastTracked = localStorage.getItem('lastTrackedTime');
         const now = new Date().getTime();
-        
-        // Jika belum tracking atau sudah lebih dari 24 jam
-        if (!hasTracked || !lastTracked || (now - parseInt(lastTracked)) > 24 * 60 * 60 * 1000) {
+
+        if (!hasTracked || !lastTracked || now - parseInt(lastTracked) > 24 * 60 * 60 * 1000) {
           const userAgent = window.navigator.userAgent;
           const browser = detectBrowser(userAgent);
           const os = detectOS(userAgent);
-          
           const response = await fetch('https://api.ipify.org?format=json');
           const data = await response.json();
-          
-          await addVisitor({
-            ip: data.ip,
-            browser,
-            os
-          });
 
-          // Simpan status tracking
+          await addVisitor({ ip: data.ip, browser, os });
+
           localStorage.setItem('visitorTracked', 'true');
           localStorage.setItem('lastTrackedTime', now.toString());
         }
@@ -43,7 +29,7 @@ export default function ClientLayout({
     trackVisitor();
   }, []);
 
-  return <>{children}</>;
+  return null;
 }
 
 function detectBrowser(userAgent: string): string {
@@ -62,4 +48,4 @@ function detectOS(userAgent: string): string {
   if (userAgent.includes('Android')) return 'Android';
   if (userAgent.includes('iPhone') || userAgent.includes('iPad')) return 'iOS';
   return 'Unknown';
-} 
+}

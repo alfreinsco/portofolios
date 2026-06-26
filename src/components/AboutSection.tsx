@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 interface AboutSectionProps {
   profile: any;
@@ -16,7 +15,7 @@ export default function AboutSection({
   // Fungsi untuk menangani download CV
   const handleDownloadCV = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // Jika CV belum tersedia, cegah default action dan tampilkan pesan
-    if (!process.env.NEXT_PUBLIC_CV_URL) {
+    if (!import.meta.env.VITE_CV_URL) {
       e.preventDefault();
       alert("CV akan segera tersedia!");
     }
@@ -41,7 +40,7 @@ export default function AboutSection({
           <div className="md:w-2/5">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden flex-shrink-0 border-8 border-white shadow-2xl z-10 relative">
-                <Image
+                <img
                   src="/img/marthin1.jpeg"
                   alt="Foto Profil"
                   width={320}
@@ -204,7 +203,7 @@ export default function AboutSection({
 
             <div className="flex flex-wrap gap-4">
               <a
-                href={process.env.NEXT_PUBLIC_CV_URL || "#"}
+                href={import.meta.env.VITE_CV_URL || "#"}
                 onClick={handleDownloadCV}
                 download="/CV_Alfreinsco.pdf"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full transition-all font-medium shadow-lg hover:shadow-blue-500/30 hover:scale-105"

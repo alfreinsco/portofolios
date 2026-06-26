@@ -1,4 +1,4 @@
-import databaseJson from '@/database.json';
+import databaseJson from '../../database.json';
 
 export interface DatabaseType {
   profile: {

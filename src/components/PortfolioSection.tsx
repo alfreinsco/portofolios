@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react";
-import Image from "next/image";
 
 interface PortfolioItem {
   id: number;
@@ -94,11 +93,10 @@ export default function PortfolioSection({
           {filteredProjects.map((item) => (
             <div key={item.id} className="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
-                <Image 
+                <img 
                   src={item.image} 
                   alt={item.title} 
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-600 to-indigo-600 bg-opacity-90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-95 transition-all duration-300 p-4 md:p-6">
                   <h3 className="text-white text-lg md:text-xl font-bold mb-2 md:mb-3">{item.title}</h3>
@@ -156,11 +154,10 @@ export default function PortfolioSection({
             
             <div className="overflow-y-auto flex-grow p-4 md:p-6">
               <div className="relative h-64 md:h-80 mb-6">
-                <Image 
+                <img 
                   src={selectedProject.image} 
                   alt={selectedProject.title} 
-                  fill
-                  className="object-cover rounded-lg"
+                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
                 />
               </div>
               

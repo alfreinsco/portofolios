@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 
 interface TestimonialsSectionProps {
   isVisible: boolean;
@@ -27,7 +26,7 @@ export default function TestimonialsSection({ isVisible }: TestimonialsSectionPr
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full overflow-hidden">
-                <Image 
+                <img 
                   src="/img/testimonial1.jpg" 
                   alt="Sarah Johnson" 
                   width={48} 
@@ -49,7 +48,7 @@ export default function TestimonialsSection({ isVisible }: TestimonialsSectionPr
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full overflow-hidden">
-                <Image 
+                <img 
                   src="/img/testimonial2.jpg" 
                   alt="Michael Chen" 
                   width={48} 
@@ -71,7 +70,7 @@ export default function TestimonialsSection({ isVisible }: TestimonialsSectionPr
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full overflow-hidden">
-                <Image 
+                <img 
                   src="/img/testimonial3.jpg" 
                   alt="Amanda Torres" 
                   width={48} 

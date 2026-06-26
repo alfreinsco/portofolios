@@ -1,17 +1,17 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import Header from "./components/Header";
-import HomeSection from "./home";
-import StatsSection from "./components/StatsSection";
-import AboutSection from "./components/AboutSection";
-import ServicesSection from "./components/ServicesSection";
-import PortfolioSection from "./components/PortfolioSection";
-import TestimonialsSection from "./components/TestimonialsSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
-import ScrollToTopButton from "./components/ScrollToTopButton";
-import { getData } from "./utils/data";
+import Header from "../components/Header";
+import HomeSection from "../home";
+import StatsSection from "../components/StatsSection";
+import AboutSection from "../components/AboutSection";
+import ServicesSection from "../components/ServicesSection";
+import PortfolioSection from "../components/PortfolioSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
+import ScrollToTopButton from "../components/ScrollToTopButton";
+import { getData } from "../utils/data";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);

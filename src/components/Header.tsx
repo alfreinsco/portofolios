@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -17,11 +16,6 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
       setIsMenuOpen(false);
     }
   }, [isScrolled]);
-  
-  // Tutup menu saat klik link
-  const handleLinkClick = () => {
-    setIsMenuOpen(false);
-  };
   
   // Fungsi untuk scroll ke section tanpa mengubah URL
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {

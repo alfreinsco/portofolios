@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 interface HomeProps {
   profile: {
@@ -113,14 +112,13 @@ export default function HomeSection({ profile }: HomeProps) {
           </div>
           <div className="w-full md:w-1/2 relative mt-8 md:mt-0">
             <div className="relative z-10 animate-float max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-              <Image
+              <img
                 src="/img/marthin.jpeg"
                 alt="Developer Hero"
                 width={600}
                 height={600}
                 className="rounded-2xl object-cover shadow-2xl"
-                priority
-              />
+                              />
             </div>
             <div className="absolute top-0 right-0 -z-10 w-48 h-48 md:w-72 md:h-72 bg-blue-200 rounded-full filter blur-3xl opacity-50 animate-blob"></div>
             <div className="absolute bottom-0 left-0 -z-10 w-48 h-48 md:w-72 md:h-72 bg-indigo-200 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
