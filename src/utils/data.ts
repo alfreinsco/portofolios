@@ -69,9 +69,13 @@ export type DatabaseType = {
   developerActivity: {
     githubUsername: string;
     githubContributionsUrl: string;
+    githubStatsUrl: string;
+    githubStreakUrl: string;
+    githubTopLanguagesUrl: string;
     githubProfileUrl: string;
     wakatimeUsername: string;
     wakatimeActivityUrl: string;
+    wakatimeLanguagesUrl: string;
     wakatimeProfileUrl: string;
   };
 };
