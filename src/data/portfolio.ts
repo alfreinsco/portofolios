@@ -2,10 +2,10 @@ export const portfolio = [
   {
     title: "SIGAP UNPATTI - Sistem Informasi Kepegawaian",
     desc: "Sistem informasi kepegawaian Universitas Pattimura yang dirancang untuk memonitoring kehadiran, aktivitas, dan data master pegawai secara terintegrasi.",
-    category: "web",
+    category: "app",
     techs: ["React", "PHP", "Laravel", "MySQL"], // Sesuaikan dengan tech stack asli yang Anda gunakan
-    image: "/img/project/sigap.png",
-    link: "https://sigap.unpatti.ac.id",
+    image: "/img/project/sigap.jpeg",
+    link: "https://play.google.com/store/apps/details?id=com.unpatti.sigap",
     features: [
       "Dashboard monitoring kehadiran pegawai (WFO/WFH/WFA) secara real-time",
       "Sistem absensi online terintegrasi dengan rekapitulasi bulanan",
