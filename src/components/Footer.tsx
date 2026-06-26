@@ -5,6 +5,20 @@ interface FooterProps {
 }
 
 export default function Footer({ profile }: FooterProps) {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
+    e.preventDefault(); // Mencegah perilaku default anchor link
+
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+
+    const section = document.getElementById(sectionId);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <footer className="py-12 px-8 bg-gray-900 text-white">
       <div className="container mx-auto max-w-6xl">
@@ -114,6 +128,12 @@ export default function Footer({ profile }: FooterProps) {
               <li>
                 <a
                   href="#beranda"
+                  onClick={(e) =>
+                    scrollToSection(
+                      e as React.MouseEvent<HTMLAnchorElement>,
+                      "beranda",
+                    )
+                  }
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Beranda
@@ -122,6 +142,12 @@ export default function Footer({ profile }: FooterProps) {
               <li>
                 <a
                   href="#tentang"
+                  onClick={(e) =>
+                    scrollToSection(
+                      e as React.MouseEvent<HTMLAnchorElement>,
+                      "tentang",
+                    )
+                  }
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Tentang
@@ -130,6 +156,12 @@ export default function Footer({ profile }: FooterProps) {
               <li>
                 <a
                   href="#layanan"
+                  onClick={(e) =>
+                    scrollToSection(
+                      e as React.MouseEvent<HTMLAnchorElement>,
+                      "layanan",
+                    )
+                  }
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Layanan
@@ -138,6 +170,12 @@ export default function Footer({ profile }: FooterProps) {
               <li>
                 <a
                   href="#portofolio"
+                  onClick={(e) =>
+                    scrollToSection(
+                      e as React.MouseEvent<HTMLAnchorElement>,
+                      "portofolio",
+                    )
+                  }
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Portofolio
@@ -145,18 +183,16 @@ export default function Footer({ profile }: FooterProps) {
               </li>
               <li>
                 <a
-                  href="#testimonial"
+                  href="#aktivitas"
+                  onClick={(e) =>
+                    scrollToSection(
+                      e as React.MouseEvent<HTMLAnchorElement>,
+                      "aktivitas",
+                    )
+                  }
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Testimonial
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#kontak"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Kontak
+                  Aktivitas
                 </a>
               </li>
             </ul>
@@ -165,46 +201,24 @@ export default function Footer({ profile }: FooterProps) {
           <div>
             <h3 className="text-lg font-bold mb-4">Layanan</h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Web Development
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Mobile App Development
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  UI/UX Design
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  E-commerce Solutions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Konsultasi Digital
-                </a>
-              </li>
+              {[
+                "Web Development",
+                "Mobile App Development",
+                "UI/UX Design",
+                "Konsultasi Teknologi",
+                "Backend Development",
+                "Maintenance & Support",
+              ].map((service) => (
+                <li key={service}>
+                  <a
+                    href="#layanan"
+                    onClick={(e) => scrollToSection(e, "layanan")}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {service}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -272,7 +286,7 @@ export default function Footer({ profile }: FooterProps) {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
+        {/* <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
               &copy; {new Date().getFullYear()} Alfreinsco. Hak Cipta
@@ -299,7 +313,7 @@ export default function Footer({ profile }: FooterProps) {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

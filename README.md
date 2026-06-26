@@ -23,7 +23,7 @@ Konten website dikelola dari folder `src/data` agar mudah diedit dan tetap cocok
 - `src/data/portfolio.ts` untuk daftar proyek.
 - `src/data/services.ts` untuk layanan.
 - `src/data/developerActivity.ts` untuk WakaTime dan GitHub contributions.
-- `src/data/skills.ts`, `experience.ts`, `education.ts`, `testimonials.ts`, dan `stats.ts` untuk section lainnya.
+- `src/data/skills.ts`, `experience.ts`, `education.ts`, dan `stats.ts` untuk section lainnya.
 
 Setelah mengubah file data, jalankan `npm run build`, lalu deploy ulang.
 

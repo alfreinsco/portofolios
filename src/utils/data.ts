@@ -42,14 +42,6 @@ export type DatabaseType = {
     icon: string;
     description: string;
   }>;
-  testimonials: Array<{
-    id: number;
-    name: string;
-    position: string;
-    company: string;
-    avatar: string;
-    text: string;
-  }>;
   stats: {
     projectsCompleted: number;
     happyClients: number;
@@ -101,10 +93,6 @@ export function getEducation() {
 
 export function getServices() {
   return getData().services;
-}
-
-export function getTestimonials() {
-  return getData().testimonials;
 }
 
 export function getStats() {

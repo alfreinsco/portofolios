@@ -10,7 +10,6 @@ Edit file sesuai kebutuhan:
 - `education.ts` — riwayat pendidikan
 - `services.ts` — layanan yang ditawarkan
 - `portfolio.ts` — daftar proyek portfolio
-- `testimonials.ts` — testimonial
 - `stats.ts` — angka statistik di website
 - `developerActivity.ts` — link WakaTime dan GitHub contributions
 
