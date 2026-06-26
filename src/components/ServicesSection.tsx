@@ -61,12 +61,12 @@ export default function ServicesSection({ isVisible, services }: ServicesSection
   };
 
   return (
-    <section id="layanan" className="py-16 md:py-24 px-4 md:px-8 bg-white">
+    <section id="layanan" className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-white to-blue-50/60">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center mb-10 md:mb-16">
-          <span className="text-blue-600 font-medium mb-2">Layanan</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800">Apa yang Saya Tawarkan</h2>
-          <div className="w-16 md:w-20 h-1 bg-blue-600 mt-3 md:mt-4 rounded-full"></div>
+          <span className="section-eyebrow mb-3">Layanan</span>
+          <h2 className="section-title text-2xl sm:text-3xl md:text-4xl font-black text-center">Apa yang Saya Tawarkan</h2>
+          <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mt-3 md:mt-4 rounded-full"></div>
           <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 text-center max-w-3xl px-2">
             Saya menawarkan berbagai layanan pengembangan web dan mobile dengan fokus pada kualitas, performa, dan pengalaman pengguna.
           </p>
@@ -74,8 +74,8 @@ export default function ServicesSection({ isVisible, services }: ServicesSection
         
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-5 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group hover:-translate-y-2 border border-gray-100">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-blue-50 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-blue-600 transition-all">
+            <div key={index} className="glass-card p-5 md:p-8 rounded-3xl transition-all group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/15">
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center mb-4 md:mb-6 shadow-lg shadow-blue-900/10 group-hover:scale-110 transition-all">
                 <div className="group-hover:text-white transition-all">
                   {getIconComponent(service.icon)}
                 </div>

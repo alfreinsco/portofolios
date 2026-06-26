@@ -34,19 +34,19 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
   };
   
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'py-3 bg-white shadow-md' : 'py-5 bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'py-3 bg-white/85 shadow-lg shadow-blue-900/5 backdrop-blur-xl border-b border-white/70' : 'py-5 bg-transparent'}`}>
       <div className="container mx-auto max-w-6xl px-4 md:px-8">
         <div className="flex justify-between items-center">
           <a 
             href="/" 
             onClick={(e) => scrollToSection(e, 'beranda')}
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform"
+            className="text-xl md:text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform"
           >
             Alfreinsco
           </a>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center gap-8 rounded-full bg-white/50 px-4 py-2 shadow-sm shadow-blue-900/5 backdrop-blur">
             <a 
               href="#beranda" 
               onClick={(e) => scrollToSection(e, 'beranda')}
@@ -85,7 +85,7 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
             <a 
               href="#kontak" 
               onClick={(e) => scrollToSection(e, 'kontak')}
-              className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-2.5 px-6 rounded-full text-base transition-all hover:shadow-lg hover:scale-105 font-medium"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2.5 px-6 rounded-full text-base transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/35 hover:scale-105 font-semibold"
             >
               Hubungi Saya
             </a>
@@ -93,7 +93,7 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-700 focus:outline-none"
+            className="md:hidden text-gray-700 focus:outline-none rounded-2xl bg-white/70 p-2 shadow-lg shadow-blue-900/10 backdrop-blur"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -109,7 +109,7 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
         </div>
         
         {/* Mobile Navigation */}
-        <div className={`md:hidden fixed inset-0 bg-white z-40 pt-20 px-6 transition-all duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={`md:hidden fixed inset-0 bg-white/95 z-40 pt-24 px-6 transition-all duration-300 ease-in-out transform backdrop-blur-xl ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex flex-col space-y-6">
             <a 
               href="#beranda" 

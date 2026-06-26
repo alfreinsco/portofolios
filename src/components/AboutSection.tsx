@@ -25,21 +25,21 @@ export default function AboutSection({
   return (
     <section
       id="tentang"
-      className="py-24 px-8 bg-gradient-to-br from-blue-50 to-white"
+      className="py-20 md:py-24 px-4 md:px-8 bg-gradient-to-br from-white to-blue-50/70"
     >
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center mb-16">
-          <span className="text-blue-600 font-medium mb-2">Tentang</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">
+          <span className="section-eyebrow mb-3">Tentang</span>
+          <h2 className="section-title text-3xl md:text-4xl font-black text-center">
             Mengenal Saya Lebih Dekat
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mt-4 rounded-full"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mt-4 rounded-full"></div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-2/5">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden flex-shrink-0 border-8 border-white shadow-2xl z-10 relative">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden flex-shrink-0 border-8 border-white shadow-2xl shadow-blue-900/20 z-10 relative">
                 <img
                   src="/img/marthin1.jpeg"
                   alt="Foto Profil"
@@ -50,7 +50,7 @@ export default function AboutSection({
               </div>
               <div className="absolute w-full h-full top-5 left-5 border-8 border-blue-600 rounded-2xl -z-10"></div>
 
-              <div className="absolute -bottom-6 -right-6 bg-white shadow-lg rounded-xl p-4 flex items-center gap-3">
+              <div className="absolute -bottom-6 -right-6 glass-card rounded-2xl p-4 flex items-center gap-3">
                 <div className="bg-blue-100 rounded-full p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

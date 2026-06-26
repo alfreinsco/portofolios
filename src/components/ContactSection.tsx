@@ -35,15 +35,15 @@ export default function ContactSection({ profile }: ContactSectionProps) {
   return (
     <section
       id="kontak"
-      className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-br from-blue-50 to-white"
+      className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-br from-white via-blue-50 to-indigo-50"
     >
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center mb-10 md:mb-16">
-          <span className="text-blue-600 font-medium mb-2">Kontak</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800">
+          <span className="section-eyebrow mb-3">Kontak</span>
+          <h2 className="section-title text-2xl sm:text-3xl md:text-4xl font-black text-center">
             Hubungi Saya
           </h2>
-          <div className="w-16 md:w-20 h-1 bg-blue-600 mt-3 md:mt-4 rounded-full"></div>
+          <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mt-3 md:mt-4 rounded-full"></div>
           <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 text-center max-w-3xl px-2">
             Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya dan
             diskusikan ide proyek Anda.
@@ -51,7 +51,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-stretch">
-          <div className="md:w-1/2 bg-white rounded-xl shadow-lg p-6 md:p-8">
+          <div className="md:w-1/2 glass-card rounded-3xl p-6 md:p-8">
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-gray-800">
               Informasi Kontak
             </h3>
@@ -236,7 +236,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
             </div>
           </div>
 
-          <div className="md:w-1/2 bg-white rounded-xl shadow-lg p-6 md:p-8">
+          <div className="md:w-1/2 glass-card rounded-3xl p-6 md:p-8">
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-gray-800">
               Kirim Pesan
             </h3>
@@ -253,7 +253,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <input
                     type="text"
                     id="name"
-                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
+                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-blue-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
                     placeholder="Nama Anda"
                     required
                   />
@@ -268,7 +268,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <input
                     type="email"
                     id="email"
-                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
+                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-blue-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
                     placeholder="email@gmail.com"
                     required
                   />
@@ -285,7 +285,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 <input
                   type="text"
                   id="subject"
-                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
+                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-blue-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
                   placeholder="Subjek pesan"
                   required
                 />
@@ -301,7 +301,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 <textarea
                   id="message"
                   rows={4}
-                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
+                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-blue-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
                   placeholder="Tulis pesan Anda di sini..."
                   required
                 ></textarea>
