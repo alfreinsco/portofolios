@@ -7,6 +7,7 @@ import StatsSection from "../components/StatsSection";
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
 import PortfolioSection from "../components/PortfolioSection";
+import DeveloperActivitySection from "../components/DeveloperActivitySection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
     stats: false,
     services: false,
     portfolio: false,
+    activity: false,
     testimonials: false
   });
   const data = getData();
@@ -33,11 +35,13 @@ export default function Home() {
       const stats = document.getElementById('stats');
       const services = document.getElementById('layanan');
       const portfolio = document.getElementById('portofolio');
+      const activity = document.getElementById('aktivitas');
       const testimonials = document.getElementById('testimonial');
       
       if (stats && isElementInViewport(stats)) setIsVisible(prev => ({...prev, stats: true}));
       if (services && isElementInViewport(services)) setIsVisible(prev => ({...prev, services: true}));
       if (portfolio && isElementInViewport(portfolio)) setIsVisible(prev => ({...prev, portfolio: true}));
+      if (activity && isElementInViewport(activity)) setIsVisible(prev => ({...prev, activity: true}));
       if (testimonials && isElementInViewport(testimonials)) setIsVisible(prev => ({...prev, testimonials: true}));
 
       // Deteksi section yang aktif
@@ -46,6 +50,7 @@ export default function Home() {
         { id: 'tentang', element: document.getElementById('tentang') },
         { id: 'layanan', element: document.getElementById('layanan') }, 
         { id: 'portofolio', element: document.getElementById('portofolio') },
+        { id: 'aktivitas', element: document.getElementById('aktivitas') },
         { id: 'testimonial', element: document.getElementById('testimonial') },
         { id: 'kontak', element: document.getElementById('kontak') }
       ];
@@ -102,6 +107,8 @@ export default function Home() {
         setActiveCategory={setActiveCategory}
         portfolioItems={data.portfolio.map(item => ({ ...item, link: '' }))}
       />
+
+      <DeveloperActivitySection activity={data.developerActivity} />
 
       {/* Testimonials Section Component */}
       {/* <TestimonialsSection isVisible={isVisible.testimonials} /> */}

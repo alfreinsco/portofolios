@@ -66,6 +66,14 @@ export type DatabaseType = {
     link: string;
     features: string[];
   }>;
+  developerActivity: {
+    githubUsername: string;
+    githubContributionsUrl: string;
+    githubProfileUrl: string;
+    wakatimeUsername: string;
+    wakatimeActivityUrl: string;
+    wakatimeProfileUrl: string;
+  };
 };
 
 export function getData(): DatabaseType {
@@ -102,4 +110,8 @@ export function getStats() {
 
 export function getPortfolio() {
   return getData().portfolio;
+}
+
+export function getDeveloperActivity() {
+  return getData().developerActivity;
 }

@@ -12,6 +12,7 @@ Edit file sesuai kebutuhan:
 - `portfolio.ts` — daftar proyek portfolio
 - `testimonials.ts` — testimonial
 - `stats.ts` — angka statistik di website
+- `developerActivity.ts` — link WakaTime dan GitHub contributions
 
 Catatan:
 

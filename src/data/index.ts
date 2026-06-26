@@ -6,6 +6,7 @@ import { services } from './services';
 import { portfolio } from './portfolio';
 import { testimonials } from './testimonials';
 import { stats } from './stats';
+import { developerActivity } from './developerActivity';
 
 export const siteData = {
   profile,
@@ -16,4 +17,5 @@ export const siteData = {
   portfolio,
   testimonials,
   stats,
+  developerActivity,
 } as const;
