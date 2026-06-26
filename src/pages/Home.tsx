@@ -11,7 +11,8 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import { getData } from "../utils/data";
+import { DatabaseType, getData } from "../utils/data";
+import { loadSiteData } from "../utils/siteData";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,9 +24,11 @@ export default function Home() {
     portfolio: false,
     testimonials: false
   });
-  
-  // Ambil data dari database.json
-  const data = getData();
+  const [data, setData] = useState<DatabaseType>(() => getData());
+
+  useEffect(() => {
+    loadSiteData().then(setData).catch(() => setData(getData()));
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

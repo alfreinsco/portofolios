@@ -15,6 +15,7 @@ export interface DatabaseType {
       github: string;
       twitter: string;
       instagram: string;
+      whatsapp: string;
     };
   };
   skills: {

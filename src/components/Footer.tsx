@@ -10,9 +10,11 @@ export default function Footer({ profile }: FooterProps) {
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-4">
-              Alfreinsco
-            </div>
+            <img
+              src="/img/logo-alfreinsco-bawah.png"
+              alt="Alfreinsco"
+              className="mb-4 h-20 w-auto rounded-2xl bg-white/95 p-2 object-contain"
+            />
             <p className="text-gray-400 mb-6">
               Menyediakan layanan pengembangan web dan mobile berkualitas tinggi
               untuk membantu bisnis Anda tumbuh di era digital.
