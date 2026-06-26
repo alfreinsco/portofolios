@@ -116,21 +116,21 @@
     {
       "position": "Senior Full Stack Developer",
       "company": "Tech Solutions Indonesia",
-      "location": "Jakarta",
+      "location": "Ambon",
       "period": "2020 - Sekarang",
       "description": "Mengembangkan dan memelihara aplikasi web skala besar menggunakan React, Node.js, dan AWS. Memimpin tim pengembangan dengan 5 anggota."
     },
     {
       "position": "UI/UX Designer & Frontend Developer",
       "company": "Creative Digital Agency",
-      "location": "Jakarta",
+      "location": "Ambon",
       "period": "2018 - 2020",
       "description": "Merancang antarmuka pengguna dan mengimplementasikan desain ke dalam kode frontend menggunakan React.js dan TailwindCSS."
     },
     {
       "position": "Web Developer",
       "company": "Startup Hub Indonesia",
-      "location": "Jakarta",
+      "location": "Ambon",
       "period": "2016 - 2018",
       "description": "Mengembangkan website dan aplikasi web untuk berbagai startup menggunakan PHP, Laravel dan JavaScript."
     }
@@ -189,12 +189,7 @@
       "title": "Aplikasi Pendaftaran Mahasiswa Baru Universitas Pattimura Jalur Mandiri",
       "desc": "Sistem pendaftaran mahasiswa baru yang memudahkan proses pendaftaran dan pengelolaan data mahasiswa.",
       "category": "web",
-      "techs": [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Laravel"
-      ],
+      "techs": ["React", "Node.js", "MongoDB", "Laravel"],
       "image": "/img/project/pmb.png",
       "link": "https://pmb.unpatti.ac.id",
       "features": [
@@ -210,13 +205,7 @@
       "title": "Sistem Pemilihan Majelis Jemaat GPM Wayame",
       "desc": "Sistem yang memiliki 4 sub-sistem yaitu sidata untuk pendataan jemaat, siverval untuk verifikasi dan validasi jemaat pemilihan, sipungut untuk sistem pemungutan suara, dan situng untuk sistem perhitungan suara.",
       "category": "web",
-      "techs": [
-        "PHP",
-        "Laravel",
-        "MySQL",
-        "TailwindCSS",
-        "DaisyUI"
-      ],
+      "techs": ["PHP", "Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
       "image": "/img/project/sipdp.png",
       "link": "https://sipdp.elabs.id",
       "features": [
@@ -233,12 +222,7 @@
       "title": "Perpustakaan Digital SMA Kristen YPKPM Ambon - Solusi Cerdas untuk Akses Buku Modern",
       "desc": "Sistem perpustakaan digital yang memudahkan akses dan pengelolaan koleksi buku secara online.",
       "category": "web",
-      "techs": [
-        "PHP",
-        "Laravel",
-        "MySQL",
-        "Bootstrap"
-      ],
+      "techs": ["PHP", "Laravel", "MySQL", "Bootstrap"],
       "image": "/img/project/smakrismart.png",
       "link": "https://github.com/alfreinsco/smakrismart",
       "features": [
@@ -254,12 +238,7 @@
       "title": "Pendaftaran KKN Kebangsaan 2024 - Program Kuliah Kerja Nyata untuk Masyarakat",
       "desc": "Sistem pendaftaran KKN yang memudahkan mahasiswa untuk mendaftar dan mengelola data kegiatan KKN.",
       "category": "web",
-      "techs": [
-        "Laravel",
-        "MySQL",
-        "TailwindCSS",
-        "DaisyUI"
-      ],
+      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
       "image": "/img/project/kkn-kebangsaan2024.png",
       "link": "https://kkn2024.unpatti.ac.id",
       "features": [
@@ -275,12 +254,7 @@
       "title": "Sistem Yudisium - Solusi untuk Proses Yudisium Mahasiswa",
       "desc": "Sistem yudisium yang memudahkan mahasiswa untuk mengelola dan memantau proses yudisium mereka.",
       "category": "web",
-      "techs": [
-        "Laravel",
-        "MySQL",
-        "TailwindCSS",
-        "DaisyUI"
-      ],
+      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
       "image": "/img/project/sisyu.png",
       "link": "https://yudisium.unpatti.ac.id",
       "features": [
@@ -296,12 +270,7 @@
       "title": "Sistem Penyuratan - Solusi untuk Proses Penyuratan",
       "desc": "Sistem penyuratan yang memudahkan pengguna untuk mengelola dan memantau proses penyuratan mereka.",
       "category": "web",
-      "techs": [
-        "Laravel",
-        "MySQL",
-        "TailwindCSS",
-        "DaisyUI"
-      ],
+      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
       "image": "/img/project/sispen.png",
       "link": "https://wa.me/6281318812027",
       "features": [
@@ -317,12 +286,7 @@
       "title": "Sistem CDC Teknik Mesin - Solusi untuk Proses CDC",
       "desc": "Sistem CDC yang memudahkan pengguna untuk mengelola dan memantau proses teknik mesin mereka.",
       "category": "web",
-      "techs": [
-        "Laravel",
-        "MySQL",
-        "TailwindCSS",
-        "DaisyUI"
-      ],
+      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
       "image": "/img/project/cdc-mesin.png",
       "link": "https://wa.me/6281318812027",
       "features": [
@@ -338,11 +302,7 @@
       "title": "Sistem Permintaan Ambulance - Solusi untuk Permintaan Ambulance",
       "desc": "Aplikasi mobile yang memudahkan pengguna untuk mengajukan permintaan ambulance dengan cepat dan efisien.",
       "category": "app",
-      "techs": [
-        "Flutter",
-        "Firebase",
-        "Dart"
-      ],
+      "techs": ["Flutter", "Firebase", "Dart"],
       "image": "/img/project/ambulance.png",
       "link": "https://wa.me/6281318812027",
       "features": [
