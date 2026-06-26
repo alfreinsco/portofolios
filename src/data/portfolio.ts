@@ -1,9 +1,24 @@
 export const portfolio = [
   {
+    title: "Kairatu Beach - Paket Liburan Keluarga",
+    desc: "Destinasi pantai eksklusif dan privat di Seram Bagian Barat yang dirancang khusus untuk momen hangat berkumpul bersama keluarga tercinta.",
+    category: "web",
+    techs: ["Next.js", "Tailwind CSS", "TypeScript"],
+    image: "/img/project/kairatubeach.png",
+    link: "https://kairatubeach.codedaritimur.com/",
+    features: [
+      "Akses penuh ke area pantai privat yang aman dan ramah keluarga",
+      "Fasilitas Gazebo Premium untuk bersantai menikmati panorama laut lepas",
+      "Spot foto instagramable di setiap sudut pantai",
+      "Area parkir yang luas dan aman untuk kendaraan keluarga",
+      "Pendampingan langsung oleh koordinator lokal selama kunjungan",
+    ],
+  },
+  {
     title: "SIGAP UNPATTI - Sistem Informasi Kepegawaian",
     desc: "Sistem informasi kepegawaian Universitas Pattimura yang dirancang untuk memonitoring kehadiran, aktivitas, dan data master pegawai secara terintegrasi.",
     category: "app",
-    techs: ["React", "PHP", "Laravel", "MySQL"], // Sesuaikan dengan tech stack asli yang Anda gunakan
+    techs: ["flutter", "React", "PHP", "Laravel", "MySQL"], // Sesuaikan dengan tech stack asli yang Anda gunakan
     image: "/img/project/sigap.jpeg",
     link: "https://play.google.com/store/apps/details?id=com.unpatti.sigap",
     features: [
