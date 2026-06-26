@@ -24,6 +24,7 @@ export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('semua');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProject, setSelectedProject] = useState<PortfolioProject | null>(null);
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied'>('idle');
   const [isScrolled] = useState(true);
 
   const openProjectDetail = (project: PortfolioProject) => {
@@ -34,6 +35,14 @@ export default function Portfolio() {
   const closeProjectDetail = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'auto';
+  };
+
+  const copyPortfolioPrompt = async () => {
+    const prompt = `Buatkan saya portofolio profesional untuk kebutuhan melamar kerja berdasarkan data berikut. Fokuskan pada nilai bisnis, impact, tech stack, tanggung jawab, dan hasil yang relevan untuk recruiter. Tulis dalam bahasa Indonesia yang profesional dan ringkas. Susun menjadi: ringkasan profil, highlight skill, daftar proyek unggulan, deskripsi tiap proyek dengan problem-solution-impact, dan versi singkat untuk CV/LinkedIn.\n\nData proyek:\n${JSON.stringify(data.portfolio, null, 2)}`;
+
+    await navigator.clipboard.writeText(prompt);
+    setCopyStatus('copied');
+    window.setTimeout(() => setCopyStatus('idle'), 1800);
   };
 
   const stats = useMemo(() => {
@@ -75,6 +84,13 @@ export default function Portfolio() {
                 <h1 className="section-title text-3xl font-black md:text-4xl">Daftar Proyek</h1>
               </div>
               <p className="text-sm font-semibold text-gray-500">Cari dan filter proyek sesuai kebutuhan.</p>
+              <button
+                type="button"
+                onClick={copyPortfolioPrompt}
+                className="w-fit rounded-full border border-slate-200 bg-white/70 px-3 py-1.5 text-xs font-semibold text-slate-500 shadow-sm transition hover:border-cyan-100 hover:text-[#0575f5]"
+              >
+                {copyStatus === 'copied' ? 'Prompt disalin' : 'Copy prompt portfolio'}
+              </button>
             </div>
           </div>
         </section>

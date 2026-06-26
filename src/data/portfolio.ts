@@ -1,5 +1,35 @@
 export const portfolio = [
   {
+    title: "MIKASTOR POS",
+    desc: "Sistem Informasi Point of Sales (POS) dan Manajemen Inventori retail minyak kayu putih yang dirancang untuk mengoptimalkan alur kerja kasir serta memberikan laporan performa bisnis yang akurat bagi pemilik toko.",
+    category: "web",
+    techs: ["PHP Native", "Tailwind CSS"],
+    image: "/img/project/mikastor.png",
+    link: "https://github.com/alfreinsco/mikastor",
+    features: [
+      "Dashboard bisnis real-time untuk memantau akumulasi total pendapatan, omset harian, dan jumlah varian aktif.",
+      "Sistem manajemen inventori cerdas dengan indikator peringatan otomatis untuk stok produk yang mulai menipis.",
+      "Modul kasir (Point of Sales) yang cepat dan responsif untuk efisiensi pemrosesan transaksi pelanggan.",
+      "Pelacakan riwayat transaksi dan nota penjualan terperinci guna transparansi laporan keuangan.",
+      "Manajemen operasional toko yang terintegrasi, mencakup pencatatan pengeluaran dan pemrosesan pesanan online.",
+    ],
+  },
+  {
+    title: "SIKERMA UNPATTI",
+    desc: "Sistem Informasi Manajemen Kerjasama Universitas Pattimura untuk melacak, mengelola, dan mengoptimalkan dokumen kerja sama antarinstansi secara transparan dan real-time.",
+    category: "web",
+    techs: ["Laravel", "Tailwind CSS", "Livewire"], // Sesuaikan kembali dengan tech stack asli yang Anda gunakan
+    image: "/img/project/sikerma.png",
+    link: "https://sikerma.unpatti.ac.id/",
+    features: [
+      "Dashboard interaktif pelacakan statistik total kerja sama, mitra aktif, dan persentase tingkat keberhasilan",
+      "Sistem manajemen dan filter dokumen kerja sama berdasarkan jenis (MoU, MoA, IA), status, dan masa berlaku",
+      "Pencarian cepat dokumen berdasarkan nomor, judul, instansi mitra, atau status verifikasi",
+      "Manajemen statistik jumlah kerja sama yang terbagi berdasarkan klaster sub-kelompok kerja dan unit terkait",
+      "Sistem verifikasi dokumen terintegrasi untuk menjamin validitas berkas kerja sama yang sedang berjalan",
+    ],
+  },
+  {
     title: "SMART PKK MALUKU",
     desc: "Aplikasi dan ruang belajar sederhana untuk keluarga serta kader PKK Maluku guna membaca materi, mengikuti kursus, menonton video, dan mengikuti webinar secara mandiri.",
     category: "web",
