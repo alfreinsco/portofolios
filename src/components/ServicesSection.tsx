@@ -102,7 +102,7 @@ export default function ServicesSection({ isVisible, services }: ServicesSection
               key={index}
               type="button"
               onClick={() => setSelectedService(service)}
-              className="glass-card p-5 md:p-8 rounded-3xl text-left transition-all group hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/15 focus:outline-none focus:ring-4 focus:ring-cyan-100"
+              className="glass-card cursor-pointer p-5 md:p-8 rounded-3xl text-left transition-all group hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/15 focus:outline-none focus:ring-4 focus:ring-cyan-100"
             >
               <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center mb-4 md:mb-6 shadow-lg shadow-[#142331]/10 group-hover:scale-110 transition-all">
                 <div className="group-hover:text-white transition-all">

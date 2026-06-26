@@ -49,6 +49,11 @@ export default function PortfolioSection({
   const filteredProjects = activeCategory === "semua" 
     ? portfolioItems 
     : portfolioItems.filter(item => item.category === activeCategory);
+  const displayedProjects = filteredProjects.slice(0, 6);
+
+  const openAllProjectsPage = () => {
+    window.location.href = "/portofolio";
+  };
   
   return (
     <section id="portofolio" className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-cyan-50/70 to-white">
@@ -90,34 +95,39 @@ export default function PortfolioSection({
         </div>
         
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {filteredProjects.map((item) => (
-            <div key={item.id} className="glass-card rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/15 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+          {displayedProjects.map((item) => (
+            <div key={item.id} className="glass-card rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/15 transition-all duration-300 transform hover:-translate-y-2 border border-white/80">
+              <div className="relative h-48 sm:h-56 md:h-60 overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.title} 
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#10c7ee] to-[#0575f5] bg-opacity-90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-95 transition-all duration-300 p-4 md:p-6">
-                  <h3 className="text-white text-lg md:text-xl font-bold mb-2 md:mb-3">{item.title}</h3>
-                  <p className="text-cyan-100 text-sm md:text-base text-center mb-3 md:mb-4">{item.desc}</p>
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#142331]/80 to-transparent"></div>
+                <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold capitalize text-[#0575f5] shadow-lg backdrop-blur">
+                  {item.category === 'web' ? 'Website' : item.category === 'app' ? 'Aplikasi' : 'Desain'}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#142331]/95 via-[#0575f5]/90 to-[#10c7ee]/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 p-4 md:p-6">
+                  <h3 className="text-white text-lg md:text-xl font-black mb-2 md:mb-3 text-center line-clamp-2">{item.title}</h3>
+                  <p className="text-cyan-50 text-sm md:text-base text-center mb-3 md:mb-4 line-clamp-3">{item.desc}</p>
                   <div className="flex flex-wrap gap-1.5 md:gap-2 justify-center">
-                    {item.techs.map((tech, idx) => (
-                      <span key={idx} className="text-xs bg-white bg-opacity-20 text-gray-700 px-2 md:px-3 py-0.5 md:py-1 rounded-full">{tech}</span>
+                    {item.techs.slice(0, 4).map((tech, idx) => (
+                      <span key={idx} className="text-xs bg-white/20 text-white px-2 md:px-3 py-0.5 md:py-1 rounded-full backdrop-blur">{tech}</span>
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="p-4 md:p-6">
-                <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2 text-gray-800">{item.title}</h3>
+              <div className="p-5 md:p-6 flex min-h-[250px] flex-col">
+                <h3 className="text-base md:text-lg font-black mb-2 text-[#142331] line-clamp-2">{item.title}</h3>
+                <p className="mb-4 text-sm text-gray-600 line-clamp-3">{item.desc}</p>
                 <div className="flex flex-wrap gap-1.5 md:gap-2 mb-3 md:mb-4">
-                  {item.techs.map((tech, idx) => (
+                  {item.techs.slice(0, 4).map((tech, idx) => (
                     <span key={idx} className="text-xs bg-cyan-100 text-[#0575f5] px-2 md:px-3 py-0.5 md:py-1 rounded-full">{tech}</span>
                   ))}
                 </div>
                 <button 
                   onClick={() => openProjectDetail(item)}
-                  className="text-[#0575f5] text-sm md:text-base font-medium hover:text-[#045fd0] transition-colors flex items-center gap-1"
+                  className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#10c7ee] to-[#0575f5] px-4 py-2 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:shadow-cyan-500/35"
                 >
                   Lihat Detail
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -128,6 +138,21 @@ export default function PortfolioSection({
             </div>
           ))}
         </div>
+
+        {filteredProjects.length > 6 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={openAllProjectsPage}
+              className="inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/85 px-6 py-3 font-bold text-[#0575f5] shadow-xl shadow-[#142331]/5 backdrop-blur transition hover:-translate-y-1 hover:border-cyan-200 hover:shadow-cyan-500/20"
+            >
+              Lihat proyek lainnya
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4a1 1 0 110 2H6v10h8v-4a1 1 0 112 0v4a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm9-1a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 11-2 0V5.414l-5.293 5.293a1 1 0 01-1.414-1.414L14.586 4H13a1 1 0 01-1-1z" clipRule="evenodd" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
       
       {/* Modal Detail Proyek dengan Background Semi-Transparan */}

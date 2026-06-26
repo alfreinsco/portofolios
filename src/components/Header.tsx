@@ -24,6 +24,11 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
   ) => {
     e.preventDefault(); // Mencegah perilaku default anchor link
 
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+
     const section = document.getElementById(sectionId);
     if (section) {
       // Scroll ke section dengan animasi smooth

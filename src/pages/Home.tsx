@@ -28,6 +28,11 @@ export default function Home() {
   const data = getData();
 
   useEffect(() => {
+    if (window.location.hash) {
+      const section = document.getElementById(window.location.hash.replace('#', ''));
+      section?.scrollIntoView({ behavior: 'smooth' });
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
@@ -105,7 +110,7 @@ export default function Home() {
         isVisible={isVisible.portfolio} 
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
-        portfolioItems={data.portfolio.map(item => ({ ...item, link: '' }))}
+        portfolioItems={data.portfolio}
       />
 
       <DeveloperActivitySection activity={data.developerActivity} />
