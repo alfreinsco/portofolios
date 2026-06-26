@@ -1,5 +1,35 @@
 export const portfolio = [
   {
+    title: "SMART PKK MALUKU",
+    desc: "Aplikasi dan ruang belajar sederhana untuk keluarga serta kader PKK Maluku guna membaca materi, mengikuti kursus, menonton video, dan mengikuti webinar secara mandiri.",
+    category: "web",
+    techs: ["Next.js", "Tailwind CSS", "TypeScript"], // Sesuaikan dengan teknologi asli yang Anda gunakan
+    image: "/img/project/smartpkkmaluku.png",
+    link: "https://smart.pkkmaluku.com/",
+    features: [
+      "Sistem pembelajaran mandiri (E-Learning) interaktif langkah demi langkah untuk kader dan keluarga",
+      "Manajemen kursus dan materi bacaan praktis seputar kesehatan, organisasi, dan keterampilan rumah tangga",
+      "Integrasi jadwal dan pelaksanaan pertemuan online atau webinar komunitas",
+      "Pusat media edukasi berupa konten video dan podcast yang informatif serta inspiratif",
+      "Antarmuka ramah pengguna dengan tombol navigasi besar yang mudah diakses oleh segala usia",
+    ],
+  },
+  {
+    title: "TP PKK Provinsi Maluku",
+    desc: "Portal resmi Tim Penggerak PKK Provinsi Maluku untuk pemberdayaan keluarga, peningkatan kualitas hidup, dan penguatan ketahanan ekonomi menuju Maluku sejahtera.",
+    category: "web",
+    techs: ["Next.js", "Tailwind CSS", "TypeScript"],
+    image: "/img/project/pkkmaluku.png",
+    link: "https://pkkmaluku.com/",
+    features: [
+      "Sistem pemetaan interaktif sebaran kader dan kelompok Dasawisma di 11 kabupaten/kota",
+      "Manajemen data terintegrasi untuk empat Kelompok Kerja (Pokja I - IV)",
+      "Portal publikasi berita, kegiatan terkini, dan dokumentasi program kerja",
+      "Akses cepat ke regulasi, surat keputusan (SK), dan unduhan dokumen resmi",
+      "Desain responsif yang ramah pengguna dengan performa tinggi menggunakan teknologi modern",
+    ],
+  },
+  {
     title: "Kairatu Beach - Paket Liburan Keluarga",
     desc: "Destinasi pantai eksklusif dan privat di Seram Bagian Barat yang dirancang khusus untuk momen hangat berkumpul bersama keluarga tercinta.",
     category: "web",
