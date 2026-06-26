@@ -1,5 +1,20 @@
 export const portfolio = [
   {
+    title: "Repository UNPATTI",
+    desc: "Platform digital perpustakaan Universitas Pattimura untuk mengakses ribuan e-resources akademik seperti jurnal, skripsi, tesis, dan penelitian terkini secara mudah dan instan.",
+    category: "web",
+    techs: ["PHP", "Bootstrap", "MySQL"], // Contoh tech stack umum repository kampus, silakan sesuaikan jika tahu detailnya
+    image: "/img/project/repository-unpatti.png",
+    link: "https://repository.unpatti.ac.id/",
+    features: [
+      "Pencarian canggih dengan fitur filter berdasarkan penulis, tahun publikasi, topik, dan jenis dokumen akademik.",
+      "Akses instan untuk membaca, mengunduh (download), dan menandai (bookmark) publikasi favorit kapan saja.",
+      "Koleksi e-resources lengkap yang mencakup jurnal internasional, skripsi mahasiswa, tesis, dan penelitian eksklusif.",
+      "Manajemen konten tugas akhir terintegrasi dengan sistem persetujuan publikasi sebelum ditampilkan secara aktif.",
+      "Navigasi katalog digital yang intuitif dilengkapi dengan informasi kontak dan panduan penggunaan bagi sivitas akademika.",
+    ],
+  },
+  {
     title: "MIKASTOR POS",
     desc: "Sistem Informasi Point of Sales (POS) dan Manajemen Inventori retail minyak kayu putih yang dirancang untuk mengoptimalkan alur kerja kasir serta memberikan laporan performa bisnis yang akurat bagi pemilik toko.",
     category: "web",
