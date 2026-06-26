@@ -155,85 +155,110 @@ export default function PortfolioSection({
         )}
       </div>
       
-      {/* Modal Detail Proyek dengan Background Semi-Transparan */}
+      {/* Modal Detail Proyek */}
       {isModalOpen && selectedProject && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/50 transition-all duration-300"
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#142331]/75 backdrop-blur-md transition-all duration-300"
           onClick={closeProjectDetail}
         >
-          <div 
-            className="bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl"
-            onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup saat klik di dalam modal
+          <div
+            className="relative flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-[#142331]/40"
+            onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-4 md:p-6 flex justify-between items-center border-b">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800">{selectedProject.title}</h3>
-              <button 
-                onClick={closeProjectDetail}
-                className="text-gray-500 hover:text-gray-700 focus:outline-none transition-colors"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            
-            <div className="overflow-y-auto flex-grow p-4 md:p-6">
-              <div className="relative h-64 md:h-80 mb-6">
-                <img 
-                  src={selectedProject.image} 
-                  alt={selectedProject.title} 
-                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
+            <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#10c7ee]/25 blur-3xl"></div>
+            <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#0575f5]/20 blur-3xl"></div>
+
+            <div className="relative grid min-h-[260px] overflow-hidden lg:grid-cols-[1.1fr_0.9fr]">
+              <div className="relative h-72 lg:h-auto">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#142331]/80 via-[#142331]/10 to-transparent"></div>
+                <span className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-black text-[#0575f5] shadow-lg backdrop-blur capitalize">
+                  {selectedProject.category === 'web' ? 'Website' : selectedProject.category === 'app' ? 'Aplikasi' : 'Desain'}
+                </span>
               </div>
-              
-              <div className="mb-6">
-                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-800">Deskripsi Proyek</h4>
-                <p className="text-gray-600">{selectedProject.desc}</p>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-800">Teknologi</h4>
-                <div className="flex flex-wrap gap-2">
-                  {selectedProject.techs.map((tech, idx) => (
-                    <span key={idx} className="bg-cyan-100 text-[#0575f5] px-3 py-1 rounded-full">{tech}</span>
+
+              <div className="relative flex flex-col justify-center bg-gradient-to-br from-[#142331] via-[#16344a] to-[#0575f5] p-6 text-white md:p-8">
+                <button
+                  onClick={closeProjectDetail}
+                  className="absolute right-5 top-5 rounded-full bg-white/10 p-2 text-white/80 shadow-lg backdrop-blur transition hover:bg-white hover:text-[#142331]"
+                  aria-label="Tutup modal"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-cyan-200">Project Detail</p>
+                <h3 className="pr-10 text-2xl font-black leading-tight md:text-3xl">{selectedProject.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-cyan-50/90 md:text-base">{selectedProject.desc}</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {selectedProject.techs.slice(0, 5).map((tech, idx) => (
+                    <span key={idx} className="rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white backdrop-blur">
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>
-              
-              <div className="mb-6">
-                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-800">Kategori</h4>
-                <span className="bg-cyan-100 text-[#0575f5] px-3 py-1 rounded-full capitalize">
-                  {selectedProject.category === 'web' ? 'Website' : 
-                   selectedProject.category === 'app' ? 'Aplikasi' : 'Desain'}
-                </span>
-              </div>
-              
-              <div>
-                <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-800">Fitur Utama</h4>
-                <ul className="list-disc pl-5 text-gray-600 space-y-1">
-                  {selectedProject.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
+            </div>
+
+            <div className="relative flex-grow overflow-y-auto p-5 md:p-8">
+              <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+                <div className="space-y-4">
+                  <div className="rounded-3xl border border-cyan-100 bg-cyan-50/60 p-5">
+                    <h4 className="text-sm font-black uppercase tracking-wide text-[#0575f5]">Teknologi</h4>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {selectedProject.techs.map((tech, idx) => (
+                        <span key={idx} className="rounded-full bg-white px-3 py-1 text-sm font-bold text-[#0575f5] shadow-sm">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-3xl border border-slate-100 bg-white p-5 shadow-lg shadow-[#142331]/5">
+                    <h4 className="text-sm font-black uppercase tracking-wide text-[#142331]">Kategori</h4>
+                    <p className="mt-3 text-lg font-black capitalize text-[#0575f5]">
+                      {selectedProject.category === 'web' ? 'Website' : selectedProject.category === 'app' ? 'Aplikasi' : 'Desain'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rounded-3xl border border-slate-100 bg-white p-5 shadow-lg shadow-[#142331]/5 md:p-6">
+                  <h4 className="text-lg font-black text-[#142331]">Fitur Utama</h4>
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {selectedProject.features.map((feature, idx) => (
+                      <div key={idx} className="flex gap-3 rounded-2xl bg-slate-50 p-3 text-sm leading-6 text-gray-600">
+                        <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#10c7ee]"></span>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="p-4 md:p-6 border-t bg-gray-50">
-              <div className="flex justify-end gap-3">
-                <button 
+
+            <div className="relative border-t border-cyan-100 bg-white/90 p-4 backdrop-blur md:p-6">
+              <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+                <button
                   onClick={closeProjectDetail}
-                  className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+                  className="rounded-full border border-slate-200 bg-white px-5 py-2.5 font-bold text-slate-700 transition hover:bg-slate-50"
                 >
                   Tutup
                 </button>
-                <a 
-                  href={selectedProject.link} 
-                  className="px-4 py-2 bg-[#0575f5] text-white rounded-lg hover:bg-[#045fd0] transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Kunjungi Proyek
-                </a>
+                {selectedProject.link && (
+                  <a
+                    href={selectedProject.link}
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#10c7ee] to-[#0575f5] px-5 py-2.5 font-bold text-white shadow-lg shadow-cyan-500/25 transition hover:-translate-y-0.5 hover:shadow-cyan-500/40"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Kunjungi Proyek
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4a1 1 0 110 2H6v10h8v-4a1 1 0 112 0v4a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm9-1a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 11-2 0V5.414l-5.293 5.293a1 1 0 01-1.414-1.414L14.586 4H13a1 1 0 01-1-1z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                )}
               </div>
             </div>
           </div>

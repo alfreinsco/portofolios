@@ -23,7 +23,7 @@ export const portfolio = [
     category: "web",
     techs: ["PHP", "Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
     image: "/img/project/sipdp.png",
-    link: "https://sipdp.elabs.id",
+    link: null,
     features: [
       "Sistem pendataan jemaat yang efisien",
       "Verifikasi dan validasi data pemilih secara otomatis",
@@ -58,7 +58,7 @@ export const portfolio = [
     category: "web",
     techs: ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
     image: "/img/project/kkn-kebangsaan2024.png",
-    link: "https://kkn2024.unpatti.ac.id",
+    link: null,
     features: [
       "Form pendaftaran yang user-friendly",
       "Verifikasi data secara otomatis",
@@ -74,7 +74,7 @@ export const portfolio = [
     category: "web",
     techs: ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
     image: "/img/project/sisyu.png",
-    link: "https://yudisium.unpatti.ac.id",
+    link: null,
     features: [
       "Form pendaftaran yudisium yang mudah digunakan",
       "Verifikasi data mahasiswa secara otomatis",
@@ -90,7 +90,7 @@ export const portfolio = [
     category: "web",
     techs: ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
     image: "/img/project/sispen.png",
-    link: "https://wa.me/6281318812027",
+    link: null,
     features: [
       "Form pendaftaran penyuratan yang mudah digunakan",
       "Verifikasi data penyuratan secara otomatis",
@@ -106,7 +106,7 @@ export const portfolio = [
     category: "web",
     techs: ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
     image: "/img/project/cdc-mesin.png",
-    link: "https://wa.me/6281318812027",
+    link: null,
     features: [
       "Form pendaftaran CDC yang mudah digunakan",
       "Verifikasi data CDC secara otomatis",
@@ -122,7 +122,7 @@ export const portfolio = [
     category: "app",
     techs: ["Flutter", "Firebase", "Dart"],
     image: "/img/project/ambulance.png",
-    link: "https://wa.me/6281318812027",
+    link: null,
     features: [
       "Form permintaan ambulance yang mudah digunakan",
       "Pelacakan lokasi ambulance secara real-time",
