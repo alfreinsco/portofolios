@@ -1,5 +1,7 @@
 "use client"
 
+import { FormEvent, useState } from "react";
+
 interface Service {
   title: string;
   icon: string;
@@ -12,6 +14,28 @@ interface ServicesSectionProps {
 }
 
 export default function ServicesSection({ isVisible, services }: ServicesSectionProps) {
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+  const closeModal = () => setSelectedService(null);
+
+  const handleServiceSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!selectedService) return;
+
+    const form = event.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    const whatsappMessage = `*Permintaan Layanan dari Website*\n\nLayanan: ${selectedService.title}\nNama: ${name}\nEmail: ${email}\n\nPesan:\n${message}\n\nCatatan layanan:\n${selectedService.description}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    window.open(`https://wa.me/6281318812027?text=${encodedMessage}`, "_blank");
+    form.reset();
+    closeModal();
+  };
+
   // Fungsi untuk mendapatkan icon berdasarkan nama icon
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
@@ -74,7 +98,12 @@ export default function ServicesSection({ isVisible, services }: ServicesSection
         
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {services.map((service, index) => (
-            <div key={index} className="glass-card p-5 md:p-8 rounded-3xl transition-all group hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/15">
+            <button
+              key={index}
+              type="button"
+              onClick={() => setSelectedService(service)}
+              className="glass-card p-5 md:p-8 rounded-3xl text-left transition-all group hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/15 focus:outline-none focus:ring-4 focus:ring-cyan-100"
+            >
               <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center mb-4 md:mb-6 shadow-lg shadow-[#142331]/10 group-hover:scale-110 transition-all">
                 <div className="group-hover:text-white transition-all">
                   {getIconComponent(service.icon)}
@@ -82,10 +111,70 @@ export default function ServicesSection({ isVisible, services }: ServicesSection
               </div>
               <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-gray-800">{service.title}</h3>
               <p className="text-sm md:text-base text-gray-600">{service.description}</p>
-            </div>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#0575f5]">
+                Konsultasikan layanan
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </span>
+            </button>
           ))}
         </div>
       </div>
+
+      {selectedService && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#142331]/70 px-4 py-6 backdrop-blur-sm" onClick={closeModal}>
+          <div className="relative w-full max-w-2xl overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-[#142331]/30" onClick={(event) => event.stopPropagation()}>
+            <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#10c7ee]/25 blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-[#0575f5]/20 blur-3xl"></div>
+
+            <div className="relative border-b border-cyan-100 bg-gradient-to-br from-cyan-50 to-white p-6 md:p-8">
+              <button
+                type="button"
+                onClick={closeModal}
+                className="absolute right-5 top-5 rounded-full bg-white/80 p-2 text-gray-500 shadow-lg transition hover:text-[#142331]"
+                aria-label="Tutup modal"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <span className="section-eyebrow mb-4">Konsultasi Layanan</span>
+              <h3 className="pr-10 text-2xl font-black text-[#142331] md:text-3xl">{selectedService.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-gray-600 md:text-base">{selectedService.description}</p>
+            </div>
+
+            <form onSubmit={handleServiceSubmit} className="relative space-y-5 p-6 md:p-8">
+              <div className="grid gap-5 sm:grid-cols-2">
+                <label className="block">
+                  <span className="mb-2 block text-sm font-bold text-gray-700">Nama</span>
+                  <input name="name" type="text" required placeholder="Nama lengkap" className="w-full rounded-2xl border border-cyan-100 bg-white px-4 py-3 text-gray-800 outline-none transition focus:border-[#10c7ee] focus:ring-4 focus:ring-cyan-100" />
+                </label>
+                <label className="block">
+                  <span className="mb-2 block text-sm font-bold text-gray-700">Email</span>
+                  <input name="email" type="email" required placeholder="email@domain.com" className="w-full rounded-2xl border border-cyan-100 bg-white px-4 py-3 text-gray-800 outline-none transition focus:border-[#10c7ee] focus:ring-4 focus:ring-cyan-100" />
+                </label>
+              </div>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-gray-700">Pesan</span>
+                <textarea name="message" required rows={5} placeholder={`Halo, saya tertarik dengan layanan ${selectedService.title}. Saya ingin konsultasi tentang...`} className="w-full rounded-2xl border border-cyan-100 bg-white px-4 py-3 text-gray-800 outline-none transition focus:border-[#10c7ee] focus:ring-4 focus:ring-cyan-100" />
+              </label>
+
+              <div className="rounded-2xl bg-cyan-50 p-4 text-sm text-gray-600">
+                Pesan WhatsApp akan otomatis menyertakan layanan <span className="font-bold text-[#0575f5]">{selectedService.title}</span>, nama, email, dan pesan Anda.
+              </div>
+
+              <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#10c7ee] to-[#0575f5] px-6 py-3.5 font-bold text-white shadow-xl shadow-cyan-500/25 transition hover:-translate-y-0.5 hover:shadow-cyan-500/40">
+                Kirim ke WhatsApp
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </section>
   );
-} 
+}

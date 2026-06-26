@@ -94,13 +94,6 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
             <a
               href="#kontak"
               onClick={(e) => scrollToSection(e, "kontak")}
-              className={`relative font-medium text-base transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-[#0575f5] after:transition-all hover:scale-105 ${activeSection === "kontak" ? "text-[#0575f5] after:w-full" : "text-gray-700 hover:text-[#0575f5] after:w-0 hover:after:w-full"}`}
-            >
-              Kontak
-            </a>
-            <a
-              href="#kontak"
-              onClick={(e) => scrollToSection(e, "kontak")}
               className="bg-gradient-to-r from-[#10c7ee] to-[#0575f5] text-white py-2.5 px-6 rounded-full text-base transition-all shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/35 hover:scale-105 font-semibold"
             >
               Hubungi Saya
@@ -185,13 +178,6 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
               className={`text-lg font-medium ${activeSection === "aktivitas" ? "text-[#0575f5]" : "text-gray-700"}`}
             >
               Aktivitas
-            </a>
-            <a
-              href="#kontak"
-              onClick={(e) => scrollToSection(e, "kontak")}
-              className={`text-lg font-medium ${activeSection === "kontak" ? "text-[#0575f5]" : "text-gray-700"}`}
-            >
-              Kontak
             </a>
             <a
               href="#kontak"
