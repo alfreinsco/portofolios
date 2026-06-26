@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 interface PortfolioItem {
-  id: number;
   title: string;
   desc: string;
   category: string;
@@ -49,7 +48,7 @@ export default function PortfolioSection({
   const filteredProjects = activeCategory === "semua" 
     ? portfolioItems 
     : portfolioItems.filter(item => item.category === activeCategory);
-  const displayedProjects = filteredProjects.slice(0, 6);
+  const displayedProjects = filteredProjects.slice(0, 3);
 
   const openAllProjectsPage = () => {
     window.location.href = "/portofolio";
@@ -94,52 +93,63 @@ export default function PortfolioSection({
           </button>
         </div>
         
-        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {displayedProjects.map((item) => (
-            <div key={item.id} className="glass-card rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/15 transition-all duration-300 transform hover:-translate-y-2 border border-white/80">
-              <div className="relative h-48 sm:h-56 md:h-60 overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
+        <div className={`space-y-5 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {displayedProjects.map((item, index) => (
+            <article key={item.title} className="group grid overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-xl shadow-[#142331]/5 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/15 lg:grid-cols-[300px_1fr]">
+              <div className="relative min-h-56 overflow-hidden lg:min-h-full">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#142331]/80 to-transparent"></div>
-                <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold capitalize text-[#0575f5] shadow-lg backdrop-blur">
-                  {item.category === 'web' ? 'Website' : item.category === 'app' ? 'Aplikasi' : 'Desain'}
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-[#142331]/95 via-[#0575f5]/90 to-[#10c7ee]/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 p-4 md:p-6">
-                  <h3 className="text-white text-lg md:text-xl font-black mb-2 md:mb-3 text-center line-clamp-2">{item.title}</h3>
-                  <p className="text-cyan-50 text-sm md:text-base text-center mb-3 md:mb-4 line-clamp-3">{item.desc}</p>
-                  <div className="flex flex-wrap gap-1.5 md:gap-2 justify-center">
-                    {item.techs.slice(0, 4).map((tech, idx) => (
-                      <span key={idx} className="text-xs bg-white/20 text-white px-2 md:px-3 py-0.5 md:py-1 rounded-full backdrop-blur">{tech}</span>
-                    ))}
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#142331]/75 via-transparent to-transparent"></div>
+                <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-black text-[#0575f5] shadow-lg backdrop-blur">
+                  #{String(index + 1).padStart(2, '0')}
+                </span>
               </div>
-              <div className="p-5 md:p-6 flex min-h-[250px] flex-col">
-                <h3 className="text-base md:text-lg font-black mb-2 text-[#142331] line-clamp-2">{item.title}</h3>
-                <p className="mb-4 text-sm text-gray-600 line-clamp-3">{item.desc}</p>
-                <div className="flex flex-wrap gap-1.5 md:gap-2 mb-3 md:mb-4">
-                  {item.techs.slice(0, 4).map((tech, idx) => (
-                    <span key={idx} className="text-xs bg-cyan-100 text-[#0575f5] px-2 md:px-3 py-0.5 md:py-1 rounded-full">{tech}</span>
+
+              <div className="flex min-h-[280px] flex-col p-5 md:p-7">
+                <div className="mb-4 flex flex-wrap items-center gap-2">
+                  <span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-black text-[#0575f5]">
+                    {item.category === 'web' ? 'Website' : item.category === 'app' ? 'Aplikasi' : 'Desain'}
+                  </span>
+                  {item.techs.slice(0, 5).map((tech) => (
+                    <span key={tech} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">
+                      {tech}
+                    </span>
                   ))}
                 </div>
-                <button 
-                  onClick={() => openProjectDetail(item)}
-                  className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#10c7ee] to-[#0575f5] px-4 py-2 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:shadow-cyan-500/35"
-                >
-                  Lihat Detail
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
+
+                <h3 className="text-xl font-black leading-snug text-[#142331] md:text-2xl">{item.title}</h3>
+                <p className="mt-3 max-w-3xl text-sm leading-6 text-gray-600 md:text-base line-clamp-3">{item.desc}</p>
+
+                <div className="mt-5 grid gap-2 sm:grid-cols-2">
+                  {item.features.slice(0, 4).map((feature) => (
+                    <div key={feature} className="flex gap-2 rounded-2xl bg-cyan-50/70 p-3 text-sm text-gray-600">
+                      <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#10c7ee]"></span>
+                      <span className="line-clamp-2">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-auto pt-6">
+                  <button
+                    type="button"
+                    onClick={() => openProjectDetail(item)}
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#10c7ee] to-[#0575f5] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/25 transition hover:-translate-y-0.5 hover:shadow-cyan-500/40"
+                  >
+                    Lihat Detail
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        {filteredProjects.length > 6 && (
+        {filteredProjects.length > 3 && (
           <div className="mt-10 flex justify-center">
             <button
               type="button"

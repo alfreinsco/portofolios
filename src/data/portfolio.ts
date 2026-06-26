@@ -1,6 +1,5 @@
 export const portfolio = [
   {
-    id: 1,
     title:
       "Aplikasi Pendaftaran Mahasiswa Baru Universitas Pattimura Jalur Mandiri",
     desc: "Sistem pendaftaran mahasiswa baru yang memudahkan proses pendaftaran dan pengelolaan data mahasiswa.",
@@ -17,7 +16,6 @@ export const portfolio = [
     ],
   },
   {
-    id: 2,
     title: "Sistem Pemilihan Majelis Jemaat GPM Wayame",
     desc: "Sistem yang memiliki 4 sub-sistem yaitu sidata untuk pendataan jemaat, siverval untuk verifikasi dan validasi jemaat pemilihan, sipungut untuk sistem pemungutan suara, dan situng untuk sistem perhitungan suara.",
     category: "web",
@@ -34,7 +32,6 @@ export const portfolio = [
     ],
   },
   {
-    id: 3,
     title:
       "Perpustakaan Digital SMA Kristen YPKPM Ambon - Solusi Cerdas untuk Akses Buku Modern",
     desc: "Sistem perpustakaan digital yang memudahkan akses dan pengelolaan koleksi buku secara online.",
@@ -51,7 +48,6 @@ export const portfolio = [
     ],
   },
   {
-    id: 4,
     title:
       "Pendaftaran KKN Kebangsaan 2024 - Program Kuliah Kerja Nyata untuk Masyarakat",
     desc: "Sistem pendaftaran KKN yang memudahkan mahasiswa untuk mendaftar dan mengelola data kegiatan KKN.",
@@ -68,7 +64,6 @@ export const portfolio = [
     ],
   },
   {
-    id: 5,
     title: "Sistem Yudisium - Solusi untuk Proses Yudisium Mahasiswa",
     desc: "Sistem yudisium yang memudahkan mahasiswa untuk mengelola dan memantau proses yudisium mereka.",
     category: "web",
@@ -84,7 +79,6 @@ export const portfolio = [
     ],
   },
   {
-    id: 6,
     title: "Sistem Penyuratan - Solusi untuk Proses Penyuratan",
     desc: "Sistem penyuratan yang memudahkan pengguna untuk mengelola dan memantau proses penyuratan mereka.",
     category: "web",
@@ -100,7 +94,6 @@ export const portfolio = [
     ],
   },
   {
-    id: 7,
     title: "Sistem CDC Teknik Mesin - Solusi untuk Proses CDC",
     desc: "Sistem CDC yang memudahkan pengguna untuk mengelola dan memantau proses teknik mesin mereka.",
     category: "web",
@@ -116,7 +109,6 @@ export const portfolio = [
     ],
   },
   {
-    id: 8,
     title: "Sistem Permintaan Ambulance - Solusi untuk Permintaan Ambulance",
     desc: "Aplikasi mobile yang memudahkan pengguna untuk mengajukan permintaan ambulance dengan cepat dan efisien.",
     category: "app",

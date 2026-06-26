@@ -57,7 +57,6 @@ export type DatabaseType = {
     awardsWon: number;
   };
   portfolio: Array<{
-    id: number;
     title: string;
     desc: string;
     category: string;
