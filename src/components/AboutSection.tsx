@@ -25,7 +25,7 @@ export default function AboutSection({
   return (
     <section
       id="tentang"
-      className="py-20 md:py-24 px-4 md:px-8 bg-gradient-to-br from-white to-blue-50/70"
+      className="py-20 md:py-24 px-4 md:px-8 bg-gradient-to-br from-white to-cyan-50/70"
     >
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center mb-16">
@@ -33,13 +33,13 @@ export default function AboutSection({
           <h2 className="section-title text-3xl md:text-4xl font-black text-center">
             Mengenal Saya Lebih Dekat
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mt-4 rounded-full"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#10c7ee] to-[#0575f5] mt-4 rounded-full"></div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-2/5">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden flex-shrink-0 border-8 border-white shadow-2xl shadow-blue-900/20 z-10 relative">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden flex-shrink-0 border-8 border-white shadow-2xl shadow-[#142331]/20 z-10 relative">
                 <img
                   src="/img/marthin1.jpeg"
                   alt="Foto Profil"
@@ -48,13 +48,13 @@ export default function AboutSection({
                   className="object-cover -translate-y-40"
                 />
               </div>
-              <div className="absolute w-full h-full top-5 left-5 border-8 border-blue-600 rounded-2xl -z-10"></div>
+              <div className="absolute w-full h-full top-5 left-5 border-8 border-[#0575f5] rounded-2xl -z-10"></div>
 
               <div className="absolute -bottom-6 -right-6 glass-card rounded-2xl p-4 flex items-center gap-3">
-                <div className="bg-blue-100 rounded-full p-2">
+                <div className="bg-cyan-100 rounded-full p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-blue-600"
+                    className="h-6 w-6 text-[#0575f5]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -97,7 +97,7 @@ export default function AboutSection({
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-blue-600"
+                  className="h-5 w-5 text-[#0575f5]"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -114,7 +114,7 @@ export default function AboutSection({
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-blue-600"
+                  className="h-5 w-5 text-[#0575f5]"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -132,7 +132,7 @@ export default function AboutSection({
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-blue-600"
+                  className="h-5 w-5 text-[#0575f5]"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -150,7 +150,7 @@ export default function AboutSection({
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-blue-600"
+                  className="h-5 w-5 text-[#0575f5]"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -167,7 +167,7 @@ export default function AboutSection({
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-blue-600"
+                  className="h-5 w-5 text-[#0575f5]"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -184,7 +184,7 @@ export default function AboutSection({
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-blue-600"
+                  className="h-5 w-5 text-[#0575f5]"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -206,7 +206,7 @@ export default function AboutSection({
                 href={import.meta.env.VITE_CV_URL || "#"}
                 onClick={handleDownloadCV}
                 download="/CV_Alfreinsco.pdf"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full transition-all font-medium shadow-lg hover:shadow-blue-500/30 hover:scale-105"
+                className="inline-flex items-center gap-2 bg-[#0575f5] hover:bg-[#045fd0] text-white py-3 px-8 rounded-full transition-all font-medium shadow-lg hover:shadow-cyan-500/30 hover:scale-105"
               >
                 Download CV
                 <svg
@@ -236,11 +236,11 @@ export default function AboutSection({
                 <span className="font-medium text-gray-700">
                   Frontend Development
                 </span>
-                <span className="text-blue-600">100%</span>
+                <span className="text-[#0575f5]">100%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-blue-600 h-2 rounded-full"
+                  className="bg-[#0575f5] h-2 rounded-full"
                   style={{ width: "100%" }}
                 ></div>
               </div>
@@ -250,11 +250,11 @@ export default function AboutSection({
                 <span className="font-medium text-gray-700">
                   Backend Development
                 </span>
-                <span className="text-blue-600">100%</span>
+                <span className="text-[#0575f5]">100%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-blue-600 h-2 rounded-full"
+                  className="bg-[#0575f5] h-2 rounded-full"
                   style={{ width: "100%" }}
                 ></div>
               </div>
@@ -262,11 +262,11 @@ export default function AboutSection({
             <div>
               <div className="flex justify-between mb-1">
                 <span className="font-medium text-gray-700">UI/UX Design</span>
-                <span className="text-blue-600">95%</span>
+                <span className="text-[#0575f5]">95%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-blue-600 h-2 rounded-full"
+                  className="bg-[#0575f5] h-2 rounded-full"
                   style={{ width: "95%" }}
                 ></div>
               </div>
@@ -276,11 +276,11 @@ export default function AboutSection({
                 <span className="font-medium text-gray-700">
                   Mobile Development
                 </span>
-                <span className="text-blue-600">90%</span>
+                <span className="text-[#0575f5]">90%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-blue-600 h-2 rounded-full"
+                  className="bg-[#0575f5] h-2 rounded-full"
                   style={{ width: "90%" }}
                 ></div>
               </div>

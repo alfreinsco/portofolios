@@ -30,26 +30,26 @@ export default function HomeSection({ profile }: HomeProps) {
       id="beranda"
       className="relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-20 px-4 md:px-8 min-h-screen flex items-center soft-grid"
     >
-      <div className="absolute left-1/2 top-20 h-72 w-72 -translate-x-1/2 rounded-full bg-blue-300/20 blur-3xl"></div>
-      <div className="absolute -right-24 top-32 h-80 w-80 rounded-full bg-indigo-300/25 blur-3xl animate-blob"></div>
+      <div className="absolute left-1/2 top-20 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-300/20 blur-3xl"></div>
+      <div className="absolute -right-24 top-32 h-80 w-80 rounded-full bg-blue-300/25 blur-3xl animate-blob"></div>
       <div className="container mx-auto max-w-6xl">
         <div className="relative flex flex-col md:flex-row gap-10 md:gap-12 items-center">
           <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-6">
             {profile.available && (
-              <div className="glass-card text-blue-700 rounded-full px-4 py-2 inline-flex w-fit items-center gap-2 text-sm font-semibold shadow-blue-200/50">
+              <div className="glass-card text-[#045fd0] rounded-full px-4 py-2 inline-flex w-fit items-center gap-2 text-sm font-semibold shadow-cyan-200/50">
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_0_6px_rgba(52,211,153,0.16)]"></span>
                 ✨ Tersedia untuk proyek baru
               </div>
             )}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tight mb-2 text-gray-900">
               Saya{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#10c7ee] to-[#0575f5] bg-clip-text text-transparent">
                 {profile.name}
               </span>
               ,
               <br />
               <span className="relative">
-                <span className="inline-block animate-typing overflow-hidden whitespace-nowrap border-r-4 border-blue-600 pr-1">
+                <span className="inline-block animate-typing overflow-hidden whitespace-nowrap border-r-4 border-[#0575f5] pr-1">
                   {profile.title}
                 </span>
               </span>
@@ -61,7 +61,7 @@ export default function HomeSection({ profile }: HomeProps) {
               <a
                 href="#portofolio"
                 onClick={(e) => scrollToSection(e, "portofolio")}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2.5 md:py-3.5 px-6 md:px-8 rounded-full transition-all font-semibold shadow-xl shadow-blue-500/25 hover:-translate-y-1 hover:shadow-blue-500/40 text-sm md:text-base"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-[#10c7ee] to-[#0575f5] text-white py-2.5 md:py-3.5 px-6 md:px-8 rounded-full transition-all font-semibold shadow-xl shadow-cyan-500/25 hover:-translate-y-1 hover:shadow-cyan-500/40 text-sm md:text-base"
               >
                 Lihat Karya
                 <svg
@@ -80,7 +80,7 @@ export default function HomeSection({ profile }: HomeProps) {
               <a
                 href="#kontak"
                 onClick={(e) => scrollToSection(e, "kontak")}
-                className="inline-flex items-center gap-2 bg-white/70 border border-white text-gray-700 hover:border-blue-200 hover:text-blue-700 py-2.5 md:py-3.5 px-6 md:px-8 rounded-full transition-all font-semibold text-sm md:text-base shadow-lg shadow-blue-900/5 backdrop-blur hover:-translate-y-1"
+                className="inline-flex items-center gap-2 bg-white/70 border border-white text-gray-700 hover:border-cyan-200 hover:text-[#045fd0] py-2.5 md:py-3.5 px-6 md:px-8 rounded-full transition-all font-semibold text-sm md:text-base shadow-lg shadow-[#142331]/5 backdrop-blur hover:-translate-y-1"
               >
                 Hubungi Saya
               </a>
@@ -93,28 +93,28 @@ export default function HomeSection({ profile }: HomeProps) {
                 <img
                   src="/img/icons/react.svg"
                   alt="React"
-                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-blue-900/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
+                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
                 />
                 <img
                   src="/img/icons/nextjs.svg"
                   alt="Next.js"
-                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-blue-900/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
+                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
                 />
                 <img
                   src="/img/icons/node.svg"
                   alt="Node.js"
-                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-blue-900/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
+                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
                 />
                 <img
                   src="/img/icons/typescript.svg"
                   alt="TypeScript"
-                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-blue-900/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
+                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
                 />
               </div>
             </div>
           </div>
           <div className="w-full md:w-1/2 relative mt-8 md:mt-0">
-            <div className="relative z-10 animate-float max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-[2rem] bg-white/50 p-3 shadow-2xl shadow-blue-900/20 backdrop-blur">
+            <div className="relative z-10 animate-float max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-[2rem] bg-white/50 p-3 shadow-2xl shadow-[#142331]/20 backdrop-blur">
               <img
                 src="/img/marthin.jpeg"
                 alt="Developer Hero"
@@ -123,8 +123,8 @@ export default function HomeSection({ profile }: HomeProps) {
                 className="rounded-[1.5rem] object-cover shadow-2xl"
                               />
             </div>
-            <div className="absolute -top-6 right-6 -z-10 w-48 h-48 md:w-72 md:h-72 bg-blue-300 rounded-full filter blur-3xl opacity-50 animate-blob"></div>
-            <div className="absolute bottom-0 left-0 -z-10 w-48 h-48 md:w-72 md:h-72 bg-indigo-300 rounded-full filter blur-3xl opacity-50 animate-blob"></div>
+            <div className="absolute -top-6 right-6 -z-10 w-48 h-48 md:w-72 md:h-72 bg-cyan-300 rounded-full filter blur-3xl opacity-50 animate-blob"></div>
+            <div className="absolute bottom-0 left-0 -z-10 w-48 h-48 md:w-72 md:h-72 bg-blue-300 rounded-full filter blur-3xl opacity-50 animate-blob"></div>
           </div>
         </div>
       </div>

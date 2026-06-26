@@ -1,6 +1,6 @@
-import databaseJson from '../../database.json';
+import { siteData } from '../data';
 
-export interface DatabaseType {
+export type DatabaseType = {
   profile: {
     name: string;
     title: string;
@@ -63,51 +63,43 @@ export interface DatabaseType {
     category: string;
     techs: string[];
     image: string;
+    link: string;
     features: string[];
   }>;
-}
+};
 
-// Fungsi untuk mendapatkan semua data
 export function getData(): DatabaseType {
-  return databaseJson as DatabaseType;
+  return siteData as unknown as DatabaseType;
 }
 
-// Fungsi untuk mendapatkan data profil
 export function getProfile() {
   return getData().profile;
 }
 
-// Fungsi untuk mendapatkan data skills
 export function getSkills() {
   return getData().skills;
 }
 
-// Fungsi untuk mendapatkan data experience
 export function getExperience() {
   return getData().experience;
 }
 
-// Fungsi untuk mendapatkan data education
 export function getEducation() {
   return getData().education;
 }
 
-// Fungsi untuk mendapatkan data services
 export function getServices() {
   return getData().services;
 }
 
-// Fungsi untuk mendapatkan data testimonials
 export function getTestimonials() {
   return getData().testimonials;
 }
 
-// Fungsi untuk mendapatkan data stats
 export function getStats() {
   return getData().stats;
 }
 
-// Tambahkan fungsi ini
 export function getPortfolio() {
   return getData().portfolio;
-} 
+}

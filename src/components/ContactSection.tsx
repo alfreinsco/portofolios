@@ -35,7 +35,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
   return (
     <section
       id="kontak"
-      className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-br from-white via-blue-50 to-indigo-50"
+      className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-br from-white via-cyan-50 to-blue-50"
     >
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center mb-10 md:mb-16">
@@ -43,7 +43,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
           <h2 className="section-title text-2xl sm:text-3xl md:text-4xl font-black text-center">
             Hubungi Saya
           </h2>
-          <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mt-3 md:mt-4 rounded-full"></div>
+          <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-[#10c7ee] to-[#0575f5] mt-3 md:mt-4 rounded-full"></div>
           <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 text-center max-w-3xl px-2">
             Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya dan
             diskusikan ide proyek Anda.
@@ -58,7 +58,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
 
             <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
               <div className="flex items-start gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mt-1">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] mt-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 md:h-6 md:w-6"
@@ -88,7 +88,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
               </div>
 
               <div className="flex items-start gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mt-1">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] mt-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 md:h-6 md:w-6"
@@ -118,7 +118,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
               </div>
 
               <div className="flex items-start gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mt-1">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] mt-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 md:h-6 md:w-6"
@@ -162,7 +162,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 href={profile.socialMedia.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 href={profile.socialMedia.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +192,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 href={profile.socialMedia.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -207,7 +207,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 href={profile.socialMedia.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -222,7 +222,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 href={profile.socialMedia.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +253,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <input
                     type="text"
                     id="name"
-                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-blue-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
+                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-cyan-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-[#10c7ee] focus:border-[#10c7ee] transition-all text-sm md:text-base"
                     placeholder="Nama Anda"
                     required
                   />
@@ -268,7 +268,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <input
                     type="email"
                     id="email"
-                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-blue-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
+                    className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-cyan-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-[#10c7ee] focus:border-[#10c7ee] transition-all text-sm md:text-base"
                     placeholder="email@gmail.com"
                     required
                   />
@@ -285,7 +285,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 <input
                   type="text"
                   id="subject"
-                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-blue-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
+                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-cyan-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-[#10c7ee] focus:border-[#10c7ee] transition-all text-sm md:text-base"
                   placeholder="Subjek pesan"
                   required
                 />
@@ -301,7 +301,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 <textarea
                   id="message"
                   rows={4}
-                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-blue-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm md:text-base"
+                  className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-cyan-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-[#10c7ee] focus:border-[#10c7ee] transition-all text-sm md:text-base"
                   placeholder="Tulis pesan Anda di sini..."
                   required
                 ></textarea>
@@ -309,7 +309,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-2.5 md:py-3 px-6 rounded-lg hover:shadow-lg transition-all font-medium text-sm md:text-base flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-[#10c7ee] to-[#0575f5] text-white py-2.5 md:py-3 px-6 rounded-lg hover:shadow-lg transition-all font-medium text-sm md:text-base flex items-center justify-center gap-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

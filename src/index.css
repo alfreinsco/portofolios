@@ -10,6 +10,9 @@
 :root {
   --background: #f8fbff;
   --foreground: #111827;
+  --brand-cyan: #10c7ee;
+  --brand-blue: #0575f5;
+  --brand-navy: #142331;
 }
 
 @theme inline {
@@ -40,14 +43,14 @@ body::before {
   pointer-events: none;
   z-index: -1;
   background:
-    radial-gradient(circle at 15% 10%, rgba(59, 130, 246, 0.16), transparent 28rem),
-    radial-gradient(circle at 85% 5%, rgba(99, 102, 241, 0.14), transparent 24rem),
+    radial-gradient(circle at 15% 10%, rgba(16, 199, 238, 0.16), transparent 28rem),
+    radial-gradient(circle at 85% 5%, rgba(5, 117, 245, 0.14), transparent 24rem),
     linear-gradient(180deg, #f8fbff 0%, #ffffff 42%, #f5f7ff 100%);
 }
 
 ::selection {
-  background: rgba(37, 99, 235, 0.18);
-  color: #1d4ed8;
+  background: rgba(16, 199, 238, 0.2);
+  color: var(--brand-blue);
 }
 
 @keyframes typing {
@@ -57,7 +60,7 @@ body::before {
 
 @keyframes blink {
   from, to { border-color: transparent }
-  50% { border-color: #2563eb; }
+  50% { border-color: var(--brand-blue); }
 }
 
 @keyframes float {
@@ -95,7 +98,7 @@ body::before {
 .glass-card {
   background: rgba(255, 255, 255, 0.76);
   border: 1px solid rgba(255, 255, 255, 0.72);
-  box-shadow: 0 24px 80px rgba(30, 64, 175, 0.12);
+  box-shadow: 0 24px 80px rgba(5, 117, 245, 0.12);
   backdrop-filter: blur(18px);
 }
 
@@ -104,15 +107,15 @@ body::before {
   align-items: center;
   gap: 0.5rem;
   border-radius: 9999px;
-  background: rgba(37, 99, 235, 0.1);
-  color: #2563eb;
+  background: rgba(16, 199, 238, 0.12);
+  color: var(--brand-blue);
   padding: 0.4rem 0.9rem;
   font-size: 0.875rem;
   font-weight: 700;
 }
 
 .section-title {
-  background: linear-gradient(90deg, #111827, #1d4ed8, #4f46e5);
+  background: linear-gradient(90deg, var(--brand-navy), var(--brand-blue), var(--brand-cyan));
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -122,8 +125,8 @@ body::before {
 
 .soft-grid {
   background-image:
-    linear-gradient(rgba(37, 99, 235, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(5, 117, 245, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 117, 245, 0.06) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 

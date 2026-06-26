@@ -15,6 +15,17 @@ Untuk menjalankan aplikasi sekaligus JSON Server pengunjung:
 npm run start
 ```
 
+## Data Static
+
+Konten website dikelola dari folder `src/data` agar mudah diedit dan tetap cocok untuk deploy static seperti Vercel.
+
+- `src/data/profile.ts` untuk profil, kontak, dan sosial media.
+- `src/data/portfolio.ts` untuk daftar proyek.
+- `src/data/services.ts` untuk layanan.
+- `src/data/skills.ts`, `experience.ts`, `education.ts`, `testimonials.ts`, dan `stats.ts` untuk section lainnya.
+
+Setelah mengubah file data, jalankan `npm run build`, lalu deploy ulang.
+
 ## API Pengunjung
 
 Next.js API route sebelumnya telah diganti menjadi client-side API call. Secara default aplikasi memakai JSON Server di:

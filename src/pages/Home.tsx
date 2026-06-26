@@ -11,8 +11,7 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import { DatabaseType, getData } from "../utils/data";
-import { loadSiteData } from "../utils/siteData";
+import { getData } from "../utils/data";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,11 +23,7 @@ export default function Home() {
     portfolio: false,
     testimonials: false
   });
-  const [data, setData] = useState<DatabaseType>(() => getData());
-
-  useEffect(() => {
-    loadSiteData().then(setData).catch(() => setData(getData()));
-  }, []);
+  const data = getData();
 
   useEffect(() => {
     const handleScroll = () => {

@@ -10,9 +10,9 @@ export default function TestimonialsSection({ isVisible }: TestimonialsSectionPr
     <section id="testimonial" className="py-24 px-8 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center mb-16">
-          <span className="text-blue-600 font-medium mb-2">Testimonial</span>
+          <span className="text-[#0575f5] font-medium mb-2">Testimonial</span>
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">Apa Kata Klien</h2>
-          <div className="w-20 h-1 bg-blue-600 mt-4 rounded-full"></div>
+          <div className="w-20 h-1 bg-[#0575f5] mt-4 rounded-full"></div>
           <p className="mt-6 text-gray-600 text-center max-w-3xl">
             Berikut beberapa ulasan dari klien yang telah bekerja sama dengan saya dalam berbagai proyek.
           </p>
@@ -20,7 +20,7 @@ export default function TestimonialsSection({ isVisible }: TestimonialsSectionPr
         
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all relative">
-            <div className="absolute -top-5 right-8 text-6xl text-blue-200">"</div>
+            <div className="absolute -top-5 right-8 text-6xl text-cyan-200">"</div>
             <p className="text-gray-600 mb-6 relative z-10">
               Alfreinsco membantu kami membangun website e-commerce dengan tampilan yang modern dan fungsionalitas yang lengkap. Hasilnya melebihi ekspektasi kami, dan penjualan kami meningkat signifikan!
             </p>
@@ -42,7 +42,7 @@ export default function TestimonialsSection({ isVisible }: TestimonialsSectionPr
           </div>
           
           <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all relative">
-            <div className="absolute -top-5 right-8 text-6xl text-blue-200">"</div>
+            <div className="absolute -top-5 right-8 text-6xl text-cyan-200">"</div>
             <p className="text-gray-600 mb-6 relative z-10">
               Kami sangat terkesan dengan desain UI/UX yang dibuat Alfreinsco untuk aplikasi mobile kami. Pengguna kami memberikan feedback positif tentang kemudahan penggunaan dan tampilan yang menarik.
             </p>
@@ -64,7 +64,7 @@ export default function TestimonialsSection({ isVisible }: TestimonialsSectionPr
           </div>
           
           <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all relative">
-            <div className="absolute -top-5 right-8 text-6xl text-blue-200">"</div>
+            <div className="absolute -top-5 right-8 text-6xl text-cyan-200">"</div>
             <p className="text-gray-600 mb-6 relative z-10">
               Alfreinsco adalah partner yang tepat dalam pengembangan website kami. Responsif, komunikatif, dan selalu memberikan solusi kreatif untuk setiap tantangan yang kami hadapi.
             </p>

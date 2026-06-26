@@ -51,12 +51,12 @@ export default function PortfolioSection({
     : portfolioItems.filter(item => item.category === activeCategory);
   
   return (
-    <section id="portofolio" className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-blue-50/60 to-white">
+    <section id="portofolio" className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-cyan-50/70 to-white">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center mb-10 md:mb-16">
           <span className="section-eyebrow mb-3">Portofolio</span>
           <h2 className="section-title text-2xl sm:text-3xl md:text-4xl font-black text-center">Proyek Terbaru</h2>
-          <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mt-3 md:mt-4 rounded-full"></div>
+          <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-[#10c7ee] to-[#0575f5] mt-3 md:mt-4 rounded-full"></div>
           <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 text-center max-w-3xl px-2">
             Berikut adalah beberapa proyek terbaru yang telah saya kerjakan bersama klien dan tim.
           </p>
@@ -65,25 +65,25 @@ export default function PortfolioSection({
         <div className="flex justify-center flex-wrap gap-2 md:gap-4 mb-8 md:mb-12 px-2">
           <button 
             onClick={() => setActiveCategory("semua")} 
-            className={`px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all ${activeCategory === "semua" ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-blue-500/25' : 'text-gray-700 bg-white/80 hover:bg-blue-100 backdrop-blur'}`}
+            className={`px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all ${activeCategory === "semua" ? 'bg-gradient-to-r from-[#10c7ee] to-[#0575f5] text-white shadow-cyan-500/25' : 'text-gray-700 bg-white/80 hover:bg-cyan-100 backdrop-blur'}`}
           >
             Semua
           </button>
           <button 
             onClick={() => setActiveCategory("web")} 
-            className={`px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all ${activeCategory === "web" ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-blue-500/25' : 'text-gray-700 bg-white/80 hover:bg-blue-100 backdrop-blur'}`}
+            className={`px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all ${activeCategory === "web" ? 'bg-gradient-to-r from-[#10c7ee] to-[#0575f5] text-white shadow-cyan-500/25' : 'text-gray-700 bg-white/80 hover:bg-cyan-100 backdrop-blur'}`}
           >
             Website
           </button>
           <button 
             onClick={() => setActiveCategory("app")} 
-            className={`px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all ${activeCategory === "app" ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-blue-500/25' : 'text-gray-700 bg-white/80 hover:bg-blue-100 backdrop-blur'}`}
+            className={`px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all ${activeCategory === "app" ? 'bg-gradient-to-r from-[#10c7ee] to-[#0575f5] text-white shadow-cyan-500/25' : 'text-gray-700 bg-white/80 hover:bg-cyan-100 backdrop-blur'}`}
           >
             Aplikasi
           </button>
           <button 
             onClick={() => setActiveCategory("design")} 
-            className={`px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all ${activeCategory === "design" ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-blue-500/25' : 'text-gray-700 bg-white/80 hover:bg-blue-100 backdrop-blur'}`}
+            className={`px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all ${activeCategory === "design" ? 'bg-gradient-to-r from-[#10c7ee] to-[#0575f5] text-white shadow-cyan-500/25' : 'text-gray-700 bg-white/80 hover:bg-cyan-100 backdrop-blur'}`}
           >
             Desain
           </button>
@@ -91,16 +91,16 @@ export default function PortfolioSection({
         
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {filteredProjects.map((item) => (
-            <div key={item.id} className="glass-card rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-blue-500/15 transition-all duration-300 transform hover:-translate-y-2">
+            <div key={item.id} className="glass-card rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-cyan-500/15 transition-all duration-300 transform hover:-translate-y-2">
               <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.title} 
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-600 to-indigo-600 bg-opacity-90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-95 transition-all duration-300 p-4 md:p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#10c7ee] to-[#0575f5] bg-opacity-90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-95 transition-all duration-300 p-4 md:p-6">
                   <h3 className="text-white text-lg md:text-xl font-bold mb-2 md:mb-3">{item.title}</h3>
-                  <p className="text-blue-100 text-sm md:text-base text-center mb-3 md:mb-4">{item.desc}</p>
+                  <p className="text-cyan-100 text-sm md:text-base text-center mb-3 md:mb-4">{item.desc}</p>
                   <div className="flex flex-wrap gap-1.5 md:gap-2 justify-center">
                     {item.techs.map((tech, idx) => (
                       <span key={idx} className="text-xs bg-white bg-opacity-20 text-gray-700 px-2 md:px-3 py-0.5 md:py-1 rounded-full">{tech}</span>
@@ -112,12 +112,12 @@ export default function PortfolioSection({
                 <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2 text-gray-800">{item.title}</h3>
                 <div className="flex flex-wrap gap-1.5 md:gap-2 mb-3 md:mb-4">
                   {item.techs.map((tech, idx) => (
-                    <span key={idx} className="text-xs bg-blue-100 text-blue-600 px-2 md:px-3 py-0.5 md:py-1 rounded-full">{tech}</span>
+                    <span key={idx} className="text-xs bg-cyan-100 text-[#0575f5] px-2 md:px-3 py-0.5 md:py-1 rounded-full">{tech}</span>
                   ))}
                 </div>
                 <button 
                   onClick={() => openProjectDetail(item)}
-                  className="text-blue-600 text-sm md:text-base font-medium hover:text-blue-700 transition-colors flex items-center gap-1"
+                  className="text-[#0575f5] text-sm md:text-base font-medium hover:text-[#045fd0] transition-colors flex items-center gap-1"
                 >
                   Lihat Detail
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -170,14 +170,14 @@ export default function PortfolioSection({
                 <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-800">Teknologi</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.techs.map((tech, idx) => (
-                    <span key={idx} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">{tech}</span>
+                    <span key={idx} className="bg-cyan-100 text-[#0575f5] px-3 py-1 rounded-full">{tech}</span>
                   ))}
                 </div>
               </div>
               
               <div className="mb-6">
                 <h4 className="text-lg md:text-xl font-semibold mb-2 text-gray-800">Kategori</h4>
-                <span className="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full capitalize">
+                <span className="bg-cyan-100 text-[#0575f5] px-3 py-1 rounded-full capitalize">
                   {selectedProject.category === 'web' ? 'Website' : 
                    selectedProject.category === 'app' ? 'Aplikasi' : 'Desain'}
                 </span>
@@ -203,7 +203,7 @@ export default function PortfolioSection({
                 </button>
                 <a 
                   href={selectedProject.link} 
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className="px-4 py-2 bg-[#0575f5] text-white rounded-lg hover:bg-[#045fd0] transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

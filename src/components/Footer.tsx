@@ -24,7 +24,7 @@ export default function Footer({ profile }: FooterProps) {
                 href="https://linkedin.com/in/alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center text-gray-300 hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ export default function Footer({ profile }: FooterProps) {
                 href="https://github.com/alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center text-gray-300 hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export default function Footer({ profile }: FooterProps) {
                 href="https://twitter.com/alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center text-gray-300 hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ export default function Footer({ profile }: FooterProps) {
                 href="https://instagram.com/alfreinsco_"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center text-gray-300 hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ export default function Footer({ profile }: FooterProps) {
                 href="https://wa.me/6281318812027"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center text-gray-300 hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

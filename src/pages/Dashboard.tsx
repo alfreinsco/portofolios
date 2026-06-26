@@ -33,9 +33,9 @@ export default function DashboardPage() {
         <div className="bg-white rounded-lg shadow p-6 mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Statistik</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <p className="text-sm text-blue-600 mb-1">Total Pengunjung</p>
-              <p className="text-2xl font-bold text-blue-800">{totalVisitors}</p>
+            <div className="bg-cyan-50 p-4 rounded-lg">
+              <p className="text-sm text-[#0575f5] mb-1">Total Pengunjung</p>
+              <p className="text-2xl font-bold text-[#142331]">{totalVisitors}</p>
             </div>
             <div className="bg-green-50 p-4 rounded-lg">
               <p className="text-sm text-green-600 mb-1">Hari Ini</p>
