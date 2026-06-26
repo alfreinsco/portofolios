@@ -54,6 +54,7 @@ export type DatabaseType = {
     category: string;
     techs: string[];
     image: string;
+    images?: string[];
     link: string;
     features: string[];
   }>;

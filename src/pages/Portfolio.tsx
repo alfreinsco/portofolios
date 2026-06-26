@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';
@@ -18,6 +18,83 @@ const getCategoryLabel = (category: string) => {
   if (category === 'app') return 'Aplikasi';
   return 'Desain';
 };
+
+const getProjectImages = (project: PortfolioProject) => {
+  const images = project.images?.length ? project.images : [project.image];
+  return images.filter(Boolean);
+};
+
+function ProjectImageSlider({ project, index }: { project: PortfolioProject; index: number }) {
+  const images = getProjectImages(project);
+
+  return (
+    <div className="relative min-h-64 overflow-hidden lg:min-h-full">
+      {images.length > 1 ? (
+        <div className="flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth">
+          {images.map((image, imageIndex) => (
+            <img
+              key={image}
+              src={image}
+              alt={`${project.title} ${imageIndex + 1}`}
+              className="h-full min-w-full snap-center object-cover transition duration-700 group-hover:scale-105"
+            />
+          ))}
+        </div>
+      ) : (
+        <img src={images[0]} alt={project.title} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+      )}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#142331]/70 via-transparent to-transparent"></div>
+      <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-black text-[#0575f5] shadow-lg backdrop-blur">
+        #{String(index + 1).padStart(2, '0')}
+      </span>
+      {images.length > 1 && (
+        <span className="absolute bottom-4 right-4 rounded-full bg-[#142331]/80 px-3 py-1 text-xs font-bold text-white backdrop-blur">
+          Geser • {images.length} gambar
+        </span>
+      )}
+    </div>
+  );
+}
+
+function ModalImageGallery({ images, title }: { images: string[]; title: string }) {
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  const scrollToImage = (index: number) => {
+    const gallery = galleryRef.current;
+    if (!gallery) return;
+    gallery.scrollTo({ left: gallery.clientWidth * index, behavior: 'smooth' });
+  };
+
+  const scrollGallery = (direction: 'prev' | 'next') => {
+    const gallery = galleryRef.current;
+    if (!gallery) return;
+    gallery.scrollBy({ left: direction === 'next' ? gallery.clientWidth : -gallery.clientWidth, behavior: 'smooth' });
+  };
+
+  return (
+    <div className="relative border-b border-cyan-100 bg-white">
+      <div ref={galleryRef} className="flex h-[320px] snap-x snap-mandatory overflow-x-auto scroll-smooth md:h-[460px]">
+        {images.map((image, index) => (
+          <img key={image} src={image} alt={`${title} ${index + 1}`} className="h-full min-w-full snap-center bg-slate-950 object-contain" />
+        ))}
+      </div>
+
+      {images.length > 1 && (
+        <>
+          <button type="button" onClick={() => scrollGallery('prev')} className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-[#142331] shadow-xl backdrop-blur transition hover:bg-white" aria-label="Gambar sebelumnya">‹</button>
+          <button type="button" onClick={() => scrollGallery('next')} className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-[#142331] shadow-xl backdrop-blur transition hover:bg-white" aria-label="Gambar berikutnya">›</button>
+          <div className="absolute bottom-4 left-1/2 flex max-w-[90%] -translate-x-1/2 gap-2 overflow-x-auto rounded-2xl bg-[#142331]/75 p-2 backdrop-blur">
+            {images.map((image, index) => (
+              <button key={image} type="button" onClick={() => scrollToImage(index)} className="h-14 w-20 flex-shrink-0 overflow-hidden rounded-xl border border-white/20 transition hover:border-cyan-300">
+                <img src={image} alt={`${title} thumbnail ${index + 1}`} className="h-full w-full object-cover" />
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
 
 export default function Portfolio() {
   const data = getData();
@@ -151,13 +228,7 @@ export default function Portfolio() {
               <div className="space-y-5">
                 {projects.map((project, index) => (
                   <article key={project.title} className="group grid overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-xl shadow-[#142331]/5 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/15 lg:grid-cols-[320px_1fr]">
-                    <div className="relative min-h-64 overflow-hidden lg:min-h-full">
-                      <img src={project.image} alt={project.title} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#142331]/70 via-transparent to-transparent"></div>
-                      <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-black text-[#0575f5] shadow-lg backdrop-blur">
-                        #{String(index + 1).padStart(2, '0')}
-                      </span>
-                    </div>
+                    <ProjectImageSlider project={project} index={index} />
 
                     <div className="flex min-h-[300px] flex-col p-5 md:p-7">
                       <div className="mb-4 flex flex-wrap items-center gap-2">
@@ -221,36 +292,34 @@ export default function Portfolio() {
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#10c7ee]/25 blur-3xl"></div>
             <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#0575f5]/20 blur-3xl"></div>
 
-            <div className="relative grid min-h-[260px] overflow-hidden lg:grid-cols-[1.1fr_0.9fr]">
-              <div className="relative h-72 lg:h-auto">
-                <img src={selectedProject.image} alt={selectedProject.title} className="absolute inset-0 h-full w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#142331]/80 via-[#142331]/10 to-transparent"></div>
-                <span className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-black text-[#0575f5] shadow-lg backdrop-blur">
-                  {getCategoryLabel(selectedProject.category)}
-                </span>
-              </div>
+            {(() => {
+              const modalImages = getProjectImages(selectedProject);
 
-              <div className="relative flex flex-col justify-center bg-gradient-to-br from-[#142331] via-[#16344a] to-[#0575f5] p-6 text-white md:p-8">
-                <button
-                  type="button"
-                  onClick={closeProjectDetail}
-                  className="absolute right-5 top-5 rounded-full bg-white/10 p-2 text-white/80 shadow-lg backdrop-blur transition hover:bg-white hover:text-[#142331]"
-                  aria-label="Tutup modal"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-                <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-cyan-200">Project Detail</p>
-                <h3 className="pr-10 text-2xl font-black leading-tight md:text-3xl">{selectedProject.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-cyan-50/90 md:text-base">{selectedProject.desc}</p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {selectedProject.techs.slice(0, 5).map((tech) => (
-                    <span key={tech} className="rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white backdrop-blur">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              return <ModalImageGallery images={modalImages} title={selectedProject.title} />;
+            })()}
+
+            <div className="relative bg-gradient-to-br from-[#142331] via-[#16344a] to-[#0575f5] p-6 text-white md:p-8">
+              <button
+                type="button"
+                onClick={closeProjectDetail}
+                className="absolute right-5 top-5 rounded-full bg-white/10 p-2 text-white/80 shadow-lg backdrop-blur transition hover:bg-white hover:text-[#142331]"
+                aria-label="Tutup modal"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <span className="mb-4 inline-flex rounded-full bg-white/15 px-4 py-2 text-xs font-black text-cyan-100 backdrop-blur">
+                {getCategoryLabel(selectedProject.category)}
+              </span>
+              <h3 className="pr-10 text-2xl font-black leading-tight md:text-3xl">{selectedProject.title}</h3>
+              <p className="mt-4 max-w-4xl text-sm leading-6 text-cyan-50/90 md:text-base">{selectedProject.desc}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {selectedProject.techs.slice(0, 5).map((tech) => (
+                  <span key={tech} className="rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white backdrop-blur">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
 
