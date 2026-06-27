@@ -36,6 +36,7 @@ export default function Footer({ profile }: FooterProps) {
             <div className="flex gap-4">
               <a
                 href="https://linkedin.com/in/alfreinsco"
+                aria-label="Kunjungi LinkedIn Alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
@@ -53,6 +54,7 @@ export default function Footer({ profile }: FooterProps) {
               </a>
               <a
                 href="https://github.com/alfreinsco"
+                aria-label="Kunjungi GitHub Alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
@@ -70,6 +72,7 @@ export default function Footer({ profile }: FooterProps) {
               </a>
               <a
                 href="https://twitter.com/alfreinsco"
+                aria-label="Kunjungi Twitter Alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
@@ -87,6 +90,7 @@ export default function Footer({ profile }: FooterProps) {
               </a>
               <a
                 href="https://instagram.com/alfreinsco_"
+                aria-label="Kunjungi Instagram Alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"
@@ -104,6 +108,7 @@ export default function Footer({ profile }: FooterProps) {
               </a>
               <a
                 href="https://wa.me/6281318812027"
+                aria-label="Hubungi Alfreinsco lewat WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0575f5] flex items-center justify-center text-gray-300 hover:text-white transition-all"

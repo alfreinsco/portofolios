@@ -206,7 +206,7 @@ export default function AboutSection({
                 href={import.meta.env.VITE_CV_URL || "#"}
                 onClick={handleDownloadCV}
                 download="/CV_Alfreinsco.pdf"
-                className="inline-flex items-center gap-2 bg-[#0575f5] hover:bg-[#045fd0] text-white py-3 px-8 rounded-full transition-all font-medium shadow-lg hover:shadow-cyan-500/30 hover:scale-105"
+                className="inline-flex items-center gap-2 bg-[#0369a1] hover:bg-[#075985] text-white py-3 px-8 rounded-full transition-all font-semibold shadow-lg hover:shadow-cyan-500/30 hover:scale-105"
               >
                 Download CV
                 <svg

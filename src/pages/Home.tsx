@@ -95,6 +95,7 @@ export default function Home() {
       {/* Header Component - Sekarang dengan activeSection */}
       <Header isScrolled={isScrolled} activeSection={activeSection} />
 
+      <main>
       {/* Hero Section Component */}
       <HomeSection profile={data.profile} />
 
@@ -119,6 +120,7 @@ export default function Home() {
 
       {/* Contact Section Component */}
       <ContactSection profile={data.profile} />
+      </main>
 
       {/* Footer Component */}
       <Footer profile={data.profile} />

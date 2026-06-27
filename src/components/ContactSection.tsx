@@ -160,6 +160,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
             <div className="flex gap-3 md:gap-4">
               <a
                 href={profile.socialMedia.linkedin}
+                aria-label="Kunjungi LinkedIn Alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
@@ -175,6 +176,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
               </a>
               <a
                 href={profile.socialMedia.github}
+                aria-label="Kunjungi GitHub Alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
@@ -190,6 +192,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
               </a>
               <a
                 href={profile.socialMedia.twitter}
+                aria-label="Kunjungi Twitter Alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
@@ -205,6 +208,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
               </a>
               <a
                 href={profile.socialMedia.instagram}
+                aria-label="Kunjungi Instagram Alfreinsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
@@ -220,6 +224,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
               </a>
               <a
                 href={profile.socialMedia.whatsapp}
+                aria-label="Hubungi Alfreinsco lewat WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cyan-100 flex items-center justify-center text-[#0575f5] hover:bg-[#0575f5] hover:text-white transition-all"
