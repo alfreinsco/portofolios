@@ -148,11 +148,11 @@ export default function ServicesSection({ isVisible, services }: ServicesSection
               <div className="grid gap-5 sm:grid-cols-2">
                 <label className="block">
                   <span className="mb-2 block text-sm font-bold text-gray-700">Nama</span>
-                  <input name="name" type="text" required placeholder="Nama lengkap" className="w-full rounded-2xl border border-cyan-100 bg-white px-4 py-3 text-gray-800 outline-none transition focus:border-[#10c7ee] focus:ring-4 focus:ring-cyan-100" />
+                  <input name="name" type="text" autoComplete="name" required placeholder="Nama lengkap" className="w-full rounded-2xl border border-cyan-100 bg-white px-4 py-3 text-gray-800 outline-none transition focus:border-[#10c7ee] focus:ring-4 focus:ring-cyan-100" />
                 </label>
                 <label className="block">
                   <span className="mb-2 block text-sm font-bold text-gray-700">Email</span>
-                  <input name="email" type="email" required placeholder="email@domain.com" className="w-full rounded-2xl border border-cyan-100 bg-white px-4 py-3 text-gray-800 outline-none transition focus:border-[#10c7ee] focus:ring-4 focus:ring-cyan-100" />
+                  <input name="email" type="email" autoComplete="email" required placeholder="email@domain.com" className="w-full rounded-2xl border border-cyan-100 bg-white px-4 py-3 text-gray-800 outline-none transition focus:border-[#10c7ee] focus:ring-4 focus:ring-cyan-100" />
                 </label>
               </div>
 

@@ -253,6 +253,8 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    autoComplete="name"
                     className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-cyan-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-[#10c7ee] focus:border-[#10c7ee] transition-all text-sm md:text-base"
                     placeholder="Nama Anda"
                     required
@@ -268,6 +270,8 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    autoComplete="email"
                     className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-cyan-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-[#10c7ee] focus:border-[#10c7ee] transition-all text-sm md:text-base"
                     placeholder="email@gmail.com"
                     required
@@ -285,6 +289,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-cyan-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-[#10c7ee] focus:border-[#10c7ee] transition-all text-sm md:text-base"
                   placeholder="Subjek pesan"
                   required
@@ -300,6 +305,7 @@ export default function ContactSection({ profile }: ContactSectionProps) {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="text-gray-700 w-full px-3 md:px-4 py-2 md:py-3 border border-cyan-100 bg-white/80 rounded-2xl focus:ring-2 focus:ring-[#10c7ee] focus:border-[#10c7ee] transition-all text-sm md:text-base"
                   placeholder="Tulis pesan Anda di sini..."

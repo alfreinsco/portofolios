@@ -51,6 +51,7 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
             href="/"
             onClick={(e) => scrollToSection(e, "beranda")}
             className="flex items-center hover:scale-105 transition-transform"
+            aria-label="Ke beranda Alfreinsco"
           >
             <img
               src="/img/logo-alfreinsco-kanan.png"
@@ -107,8 +108,12 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             className="md:hidden text-gray-700 focus:outline-none rounded-2xl bg-white/70 p-2 shadow-lg shadow-[#142331]/10 backdrop-blur"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+            aria-controls="mobile-navigation"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
               <svg
@@ -145,8 +150,10 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
         </div>
 
         {/* Mobile Navigation */}
+        {isMenuOpen && (
         <div
-          className={`md:hidden fixed inset-0 bg-white/95 z-40 pt-24 px-6 transition-all duration-300 ease-in-out transform backdrop-blur-xl ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+          id="mobile-navigation"
+          className="md:hidden fixed inset-0 bg-white/95 z-40 pt-24 px-6 transition-all duration-300 ease-in-out transform backdrop-blur-xl"
         >
           <div className="flex flex-col space-y-6">
             <a
@@ -193,6 +200,7 @@ export default function Header({ isScrolled, activeSection }: HeaderProps) {
             </a>
           </div>
         </div>
+        )}
       </div>
     </header>
   );

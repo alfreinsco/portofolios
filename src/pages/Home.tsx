@@ -26,6 +26,13 @@ export default function Home() {
   const data = getData();
 
   useEffect(() => {
+    document.title = 'Marthin Alfreinsco Salakory | Software Engineer & Full Stack Developer';
+
+    const description = 'Portofolio Marthin Alfreinsco Salakory, Software Engineer dan Full Stack Developer asal Ambon yang berfokus pada sistem informasi kampus, repository digital, dashboard admin, Laravel, React, Next.js, dan REST API.';
+    document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute('content', description);
+    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', 'https://alfreinsco.vercel.app/');
+    document.querySelector<HTMLMetaElement>('meta[property="og:url"]')?.setAttribute('content', 'https://alfreinsco.vercel.app/');
+
     if (window.location.hash) {
       const section = document.getElementById(window.location.hash.replace('#', ''));
       section?.scrollIntoView({ behavior: 'smooth' });

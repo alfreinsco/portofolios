@@ -97,6 +97,20 @@ export default function Portfolio() {
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied'>('idle');
   const [isScrolled] = useState(true);
 
+  useEffect(() => {
+    document.title = 'Daftar Proyek | Marthin Alfreinsco Salakory';
+
+    const description = 'Daftar proyek Marthin Alfreinsco Salakory, Software Engineer dan Full Stack Developer asal Ambon untuk sistem kampus, website, aplikasi, dashboard admin, Laravel, React, REST API, dan deployment server.';
+    const metaDescription = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    metaDescription?.setAttribute('content', description);
+
+    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    canonical?.setAttribute('href', 'https://alfreinsco.vercel.app/portofolio');
+
+    const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
+    ogUrl?.setAttribute('content', 'https://alfreinsco.vercel.app/portofolio');
+  }, []);
+
   const openProjectDetail = (project: PortfolioProject) => {
     setSelectedProject(project);
     document.body.style.overflow = 'hidden';
@@ -170,10 +184,12 @@ export default function Portfolio() {
             <div className="glass-card rounded-[2rem] p-4 md:p-5">
               <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div className="relative">
+                  <label htmlFor="portfolio-search" className="sr-only">Cari proyek portofolio</label>
                   <svg xmlns="http://www.w3.org/2000/svg" className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
                   </svg>
                   <input
+                    id="portfolio-search"
                     type="search"
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
@@ -192,6 +208,7 @@ export default function Portfolio() {
                       key={category.key}
                       type="button"
                       onClick={() => setActiveCategory(category.key)}
+                      aria-pressed={activeCategory === category.key}
                       className={`rounded-full px-4 py-2 text-sm font-bold transition ${activeCategory === category.key ? 'bg-gradient-to-r from-[#10c7ee] to-[#0575f5] text-white shadow-lg shadow-cyan-500/20' : 'bg-white text-gray-700 hover:bg-cyan-100'}`}
                     >
                       {category.label} <span className="ml-1 opacity-80">({count})</span>
