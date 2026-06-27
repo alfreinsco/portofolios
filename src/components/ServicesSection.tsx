@@ -123,8 +123,8 @@ export default function ServicesSection({ isVisible, services }: ServicesSection
       </div>
 
       {selectedService && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#142331]/70 px-4 py-6 backdrop-blur-sm" onClick={closeModal}>
-          <div className="relative w-full max-w-2xl overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-[#142331]/30" onClick={(event) => event.stopPropagation()}>
+        <div className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-[#142331]/70 px-4 py-6 backdrop-blur-sm md:items-center" onClick={closeModal}>
+          <div className="relative my-2 max-h-[calc(100vh-3rem)] w-full max-w-2xl overflow-y-auto rounded-[2rem] bg-white shadow-2xl shadow-[#142331]/30" onClick={(event) => event.stopPropagation()}>
             <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#10c7ee]/25 blur-3xl"></div>
             <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-[#0575f5]/20 blur-3xl"></div>
 
