@@ -18,28 +18,80 @@ export default function AboutSection({
   );
 
   const professionalSkills = [
-    { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-    { name: "TypeScript", url: "https://www.typescriptlang.org/" },
-    { name: "React.js", url: "https://react.dev/" },
-    { name: "Next.js", url: "https://nextjs.org/" },
-    { name: "Node.js", url: "https://nodejs.org/" },
-    { name: "Express.js", url: "https://expressjs.com/" },
-    { name: "HTML/CSS", url: "https://developer.mozilla.org/en-US/docs/Learn_web_development" },
-    { name: "TailwindCSS", url: "https://tailwindcss.com/" },
-    { name: "PHP", url: "https://www.php.net/" },
-    { name: "Laravel", url: "https://laravel.com/" },
-    { name: "CodeIgniter", url: "https://codeigniter.com/" },
-    { name: "Flutter", url: "https://flutter.dev/" },
-    { name: "Dart", url: "https://dart.dev/" },
-    { name: "UI/UX Design", url: "https://www.interaction-design.org/literature/topics/ux-design" },
-    { name: "Figma", url: "https://www.figma.com/" },
-    { name: "Git & GitHub", url: "https://github.com/" },
-    { name: "REST API", url: "https://restfulapi.net/" },
-    { name: "Database Design", url: "https://www.postgresql.org/docs/current/ddl.html" },
-    { name: "MySQL/PostgreSQL", url: "https://www.postgresql.org/" },
-    { name: "Firebase", url: "https://firebase.google.com/" },
-    { name: "Docker", url: "https://www.docker.com/" },
-    { name: "AWS/Netlify/Vercel", url: "https://vercel.com/" },
+    {
+      name: "JavaScript",
+      url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
+    },
+    {
+      name: "TypeScript",
+      url: "https://www.typescriptlang.org/",
+      icon: "https://cdn.simpleicons.org/typescript/3178C6",
+    },
+    { name: "React.js", url: "https://react.dev/", icon: "/img/icons/react.svg" },
+    { name: "Next.js", url: "https://nextjs.org/", icon: "/img/icons/nextjs.svg" },
+    { name: "Node.js", url: "https://nodejs.org/", icon: "/img/icons/node.svg" },
+    {
+      name: "Express.js",
+      url: "https://expressjs.com/",
+      icon: "https://cdn.simpleicons.org/express/000000",
+    },
+    {
+      name: "HTML/CSS",
+      url: "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+      icon: "https://cdn.simpleicons.org/html5/E34F26",
+    },
+    {
+      name: "TailwindCSS",
+      url: "https://tailwindcss.com/",
+      icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+    },
+    { name: "PHP", url: "https://www.php.net/", icon: "https://cdn.simpleicons.org/php/777BB4" },
+    { name: "Laravel", url: "https://laravel.com/", icon: "/img/icons/laravel.svg" },
+    {
+      name: "CodeIgniter",
+      url: "https://codeigniter.com/",
+      icon: "https://cdn.simpleicons.org/codeigniter/EF4223",
+    },
+    { name: "Flutter", url: "https://flutter.dev/", icon: "/img/icons/flutter.svg" },
+    { name: "Dart", url: "https://dart.dev/", icon: "https://cdn.simpleicons.org/dart/0175C2" },
+    {
+      name: "UI/UX Design",
+      url: "https://www.interaction-design.org/literature/topics/ux-design",
+      icon: "https://cdn.simpleicons.org/figma/F24E1E",
+    },
+    { name: "Figma", url: "https://www.figma.com/", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
+    {
+      name: "Git & GitHub",
+      url: "https://github.com/",
+      icon: "https://cdn.simpleicons.org/github/181717",
+    },
+    {
+      name: "REST API",
+      url: "https://restfulapi.net/",
+      icon: "https://cdn.simpleicons.org/swagger/85EA2D",
+    },
+    {
+      name: "Database Design",
+      url: "https://www.postgresql.org/docs/current/ddl.html",
+      icon: "https://cdn.simpleicons.org/postgresql/4169E1",
+    },
+    {
+      name: "MySQL/PostgreSQL",
+      url: "https://www.postgresql.org/",
+      icon: "https://cdn.simpleicons.org/postgresql/4169E1",
+    },
+    {
+      name: "Firebase",
+      url: "https://firebase.google.com/",
+      icon: "https://cdn.simpleicons.org/firebase/FFCA28",
+    },
+    { name: "Docker", url: "https://www.docker.com/", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+    {
+      name: "AWS/Netlify/Vercel",
+      url: "https://vercel.com/",
+      icon: "https://cdn.simpleicons.org/vercel/000000",
+    },
   ];
 
   const handleCopyCvPrompt = async () => {
@@ -279,8 +331,14 @@ ${JSON.stringify(education, null, 2)}`;
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Buka website resmi ${skill.name}`}
-                  className="rounded-full border border-cyan-100 bg-cyan-50/80 px-4 py-2 text-sm font-medium text-[#0575f5] transition-all hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-white hover:shadow-md hover:shadow-cyan-900/10"
+                  className="inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-cyan-50/80 px-4 py-2 text-sm font-medium text-[#0575f5] transition-all hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-white hover:shadow-md hover:shadow-cyan-900/10"
                 >
+                  <img
+                    src={skill.icon}
+                    alt=""
+                    className="h-4 w-4 rounded-sm object-contain"
+                    loading="lazy"
+                  />
                   {skill.name}
                 </a>
               ))}
