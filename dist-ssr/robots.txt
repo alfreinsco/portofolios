@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /img/
+Allow: /assets/
+Disallow: /dist/
+
+Sitemap: https://alfreinsco.vercel.app/sitemap.xml
