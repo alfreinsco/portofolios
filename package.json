@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && vite build --ssr src/prerender.tsx --outDir dist-ssr && node scripts/prerender-ssr.mjs",
+    "build:spa": "tsc -b && vite build",
+    "prerender": "vite build --ssr src/prerender.tsx --outDir dist-ssr && node scripts/prerender-ssr.mjs",
     "preview": "vite preview",
     "start": "concurrently \"vite --host 0.0.0.0\" \"npx json-server --watch pengunjung.json --port 3001\"",
     "lint": "tsc --noEmit"
