@@ -6,7 +6,7 @@
     "phone": "+62 813 1881 2027",
     "email": "alfreinsco@gmail.com",
     "bio": "Membangun aplikasi web, mobile dan desktop yang menarik dengan fokus pada pengalaman pengguna yang luar biasa dan performa tinggi. Menjadikan ide Anda menjadi kenyataan.",
-    "avatar": "/img/marthin1.jpg",
+    "avatar": "/img/optimized/marthin.webp",
     "available": true,
     "socialMedia": {
       "linkedin": "https://linkedin.com/in/alfreinsco",
@@ -189,7 +189,12 @@
       "title": "Aplikasi Pendaftaran Mahasiswa Baru Universitas Pattimura Jalur Mandiri",
       "desc": "Sistem pendaftaran mahasiswa baru yang memudahkan proses pendaftaran dan pengelolaan data mahasiswa.",
       "category": "web",
-      "techs": ["React", "Node.js", "MongoDB", "Laravel"],
+      "techs": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Laravel"
+      ],
       "image": "/img/project/optimized/pmb.webp",
       "link": "https://pmb.unpatti.ac.id",
       "features": [
@@ -205,7 +210,13 @@
       "title": "Sistem Pemilihan Majelis Jemaat GPM Wayame",
       "desc": "Sistem yang memiliki 4 sub-sistem yaitu sidata untuk pendataan jemaat, siverval untuk verifikasi dan validasi jemaat pemilihan, sipungut untuk sistem pemungutan suara, dan situng untuk sistem perhitungan suara.",
       "category": "web",
-      "techs": ["PHP", "Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "techs": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "TailwindCSS",
+        "DaisyUI"
+      ],
       "image": "/img/project/optimized/sipdp.webp",
       "link": "https://sipdp.elabs.id",
       "features": [
@@ -222,7 +233,12 @@
       "title": "Perpustakaan Digital SMA Kristen YPKPM Ambon - Solusi Cerdas untuk Akses Buku Modern",
       "desc": "Sistem perpustakaan digital yang memudahkan akses dan pengelolaan koleksi buku secara online.",
       "category": "web",
-      "techs": ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      "techs": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
       "image": "/img/project/optimized/smakrismart.webp",
       "link": "https://github.com/alfreinsco/smakrismart",
       "features": [
@@ -238,7 +254,12 @@
       "title": "Pendaftaran KKN Kebangsaan 2024 - Program Kuliah Kerja Nyata untuk Masyarakat",
       "desc": "Sistem pendaftaran KKN yang memudahkan mahasiswa untuk mendaftar dan mengelola data kegiatan KKN.",
       "category": "web",
-      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "techs": [
+        "Laravel",
+        "MySQL",
+        "TailwindCSS",
+        "DaisyUI"
+      ],
       "image": "/img/project/optimized/kkn-kebangsaan2024.webp",
       "link": "https://kkn2024.unpatti.ac.id",
       "features": [
@@ -254,7 +275,12 @@
       "title": "Sistem Yudisium - Solusi untuk Proses Yudisium Mahasiswa",
       "desc": "Sistem yudisium yang memudahkan mahasiswa untuk mengelola dan memantau proses yudisium mereka.",
       "category": "web",
-      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "techs": [
+        "Laravel",
+        "MySQL",
+        "TailwindCSS",
+        "DaisyUI"
+      ],
       "image": "/img/project/optimized/sisyu.webp",
       "link": "https://yudisium.unpatti.ac.id",
       "features": [
@@ -270,7 +296,12 @@
       "title": "Sistem Penyuratan - Solusi untuk Proses Penyuratan",
       "desc": "Sistem penyuratan yang memudahkan pengguna untuk mengelola dan memantau proses penyuratan mereka.",
       "category": "web",
-      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "techs": [
+        "Laravel",
+        "MySQL",
+        "TailwindCSS",
+        "DaisyUI"
+      ],
       "image": "/img/project/optimized/sispen.webp",
       "link": "https://wa.me/6281318812027",
       "features": [
@@ -286,7 +317,12 @@
       "title": "Sistem CDC Teknik Mesin - Solusi untuk Proses CDC",
       "desc": "Sistem CDC yang memudahkan pengguna untuk mengelola dan memantau proses teknik mesin mereka.",
       "category": "web",
-      "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
+      "techs": [
+        "Laravel",
+        "MySQL",
+        "TailwindCSS",
+        "DaisyUI"
+      ],
       "image": "/img/project/optimized/cdc-mesin.webp",
       "link": "https://wa.me/6281318812027",
       "features": [
@@ -302,7 +338,11 @@
       "title": "Sistem Permintaan Ambulance - Solusi untuk Permintaan Ambulance",
       "desc": "Aplikasi mobile yang memudahkan pengguna untuk mengajukan permintaan ambulance dengan cepat dan efisien.",
       "category": "app",
-      "techs": ["Flutter", "Firebase", "Dart"],
+      "techs": [
+        "Flutter",
+        "Firebase",
+        "Dart"
+      ],
       "image": "/img/project/optimized/ambulance.webp",
       "link": "https://wa.me/6281318812027",
       "features": [
@@ -320,7 +360,7 @@
       "name": "Budi Santoso",
       "position": "CEO, TechStart Indonesia",
       "company": "TechStart Indonesia",
-      "avatar": "/testimonial1.jpg",
+      "avatar": "/img/optimized/logo-alfreinsco.webp",
       "text": "Alfreinsco memberikan solusi teknologi yang tepat untuk startup kami. Kerjanya sangat profesional dan hasilnya melampaui ekspektasi kami."
     },
     {
@@ -328,7 +368,7 @@
       "name": "Sarah Wijaya",
       "position": "Marketing Director",
       "company": "Digital Agency",
-      "avatar": "/testimonial2.jpg",
+      "avatar": "/img/optimized/logo-alfreinsco.webp",
       "text": "Website yang dibuat sangat responsif dan cepat. Proses kerjasamanya juga sangat menyenangkan dengan komunikasi yang baik."
     },
     {
@@ -336,7 +376,7 @@
       "name": "Hendro Wibowo",
       "position": "Founder",
       "company": "EdTech Platform",
-      "avatar": "/testimonial3.jpg",
+      "avatar": "/img/optimized/logo-alfreinsco.webp",
       "text": "Aplikasi mobile yang dibuat sangat intuitif dan mudah digunakan. Pengguna kami sangat puas dengan pengalaman menggunakan aplikasinya."
     }
   ],

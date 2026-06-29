@@ -16,6 +16,6 @@ Edit file sesuai kebutuhan:
 Catatan:
 
 - Gambar tetap diletakkan di `public/img`.
-- Path gambar ditulis dari root public, contoh: `/img/project/pmb.png`.
+- Path gambar ditulis dari root public, contoh: `/img/project/optimized/pmb.webp`.
 - Setelah mengubah data, jalankan `npm run build` untuk memastikan tidak ada error.
 - Deploy ulang website setelah perubahan data selesai.

@@ -39,5 +39,6 @@ Jika ingin memakai API eksternal, set environment variable berikut:
 
 ```bash
 VITE_VISITORS_API_URL=https://domain-api-anda.com/visitors
-VITE_CV_URL=/CV_Alfreinsco.pdf
+# Opsional: URL eksternal CV jika ingin menambahkan tombol download CV lagi.
+# VITE_CV_URL=https://example.com/CV_Alfreinsco.pdf
 ```
