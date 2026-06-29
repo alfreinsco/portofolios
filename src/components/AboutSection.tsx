@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 
 interface AboutSectionProps {
   profile: any;
@@ -12,6 +13,10 @@ export default function AboutSection({
   experience,
   education,
 }: AboutSectionProps) {
+  const [cvPromptStatus, setCvPromptStatus] = useState<"idle" | "copied">(
+    "idle",
+  );
+
   const professionalSkills = [
     {
       title: "Frontend Development",
@@ -35,14 +40,21 @@ export default function AboutSection({
     },
   ];
 
-  // Fungsi untuk menangani download CV
-  const handleDownloadCV = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // Jika CV belum tersedia, cegah default action dan tampilkan pesan
-    if (!import.meta.env.VITE_CV_URL) {
-      e.preventDefault();
-      alert("CV akan segera tersedia!");
-    }
-    // Jika CV tersedia, biarkan default action (download) berjalan
+  const handleCopyCvPrompt = async () => {
+    const prompt = `Buatkan CV profesional dalam bahasa Indonesia berdasarkan profil berikut. Susun dengan format ringkas, ATS-friendly, dan cocok untuk melamar posisi Full Stack Developer atau UI/UX Designer. Sertakan ringkasan profil, keahlian utama, pengalaman, pendidikan, proyek relevan, tools/teknologi, dan versi singkat untuk LinkedIn.
+
+Profil:
+${JSON.stringify(profile, null, 2)}
+
+Pengalaman:
+${JSON.stringify(experience, null, 2)}
+
+Pendidikan:
+${JSON.stringify(education, null, 2)}`;
+
+    await navigator.clipboard.writeText(prompt);
+    setCvPromptStatus("copied");
+    window.setTimeout(() => setCvPromptStatus("idle"), 2000);
   };
 
   return (
@@ -224,27 +236,30 @@ export default function AboutSection({
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={import.meta.env.VITE_CV_URL || "#"}
-                onClick={handleDownloadCV}
-                download="/CV_Alfreinsco.pdf"
-                className="inline-flex items-center gap-2 bg-[#0369a1] hover:bg-[#075985] text-white py-3 px-8 rounded-full transition-all font-semibold shadow-lg hover:shadow-cyan-500/30 hover:scale-105"
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={handleCopyCvPrompt}
+                className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:border-cyan-200 hover:bg-cyan-50 hover:text-[#0575f5]"
               >
-                Download CV
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-4 w-4"
+                  fill="none"
                   viewBox="0 0 20 20"
-                  fill="currentColor"
+                  stroke="currentColor"
                 >
                   <path
-                    fillRule="evenodd"
-                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                    clipRule="evenodd"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.8}
+                    d="M4 13.5V16h12v-2.5M6.5 7.5 10 4m0 0 3.5 3.5M10 4v9"
                   />
                 </svg>
-              </a>
+                {cvPromptStatus === "copied"
+                  ? "Prompt CV disalin"
+                  : "Buat prompt CV"}
+              </button>
             </div>
           </div>
         </div>
