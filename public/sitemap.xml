@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
   <url>
     <loc>https://alfreinsco.vercel.app/</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://alfreinsco.vercel.app/img/logo-alfreinsco.png</image:loc>
+      <image:title>Logo Alfreinsco</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alfreinsco.vercel.app/img/marthin1.jpg</image:loc>
+      <image:title>Marthin Alfreinsco Salakory</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://alfreinsco.vercel.app/portofolio</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://alfreinsco.vercel.app/img/project/repository-unpatti.png</image:loc>
+      <image:title>Repository UNPATTI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alfreinsco.vercel.app/img/project/sikerma.png</image:loc>
+      <image:title>SIKERMA UNPATTI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alfreinsco.vercel.app/img/project/smartpkkmaluku.png</image:loc>
+      <image:title>SMART PKK MALUKU</image:title>
+    </image:image>
   </url>
 </urlset>

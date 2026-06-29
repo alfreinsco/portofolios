@@ -109,6 +109,11 @@ export default function Portfolio() {
 
     const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
     ogUrl?.setAttribute('content', 'https://alfreinsco.vercel.app/portofolio');
+
+    document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.setAttribute('content', 'Daftar Proyek | Marthin Alfreinsco Salakory');
+    document.querySelector<HTMLMetaElement>('meta[property="og:description"]')?.setAttribute('content', description);
+    document.querySelector<HTMLMetaElement>('meta[name="twitter:title"]')?.setAttribute('content', 'Daftar Proyek | Marthin Alfreinsco Salakory');
+    document.querySelector<HTMLMetaElement>('meta[name="twitter:description"]')?.setAttribute('content', description);
   }, []);
 
   const openProjectDetail = (project: PortfolioProject) => {
