@@ -5,7 +5,7 @@ export const profile = {
   "phone": "+62 813 1881 2027",
   "email": "alfreinsco@gmail.com",
   "bio": "Membangun aplikasi web, mobile dan desktop yang menarik dengan fokus pada pengalaman pengguna yang luar biasa dan performa tinggi. Menjadikan ide Anda menjadi kenyataan.",
-  "avatar": "/img/marthin1.jpg",
+  "avatar": "/img/optimized/marthin.webp",
   "available": true,
   "socialMedia": {
     "linkedin": "https://linkedin.com/in/alfreinsco",

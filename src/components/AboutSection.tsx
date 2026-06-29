@@ -128,15 +128,15 @@ ${JSON.stringify(education, null, 2)}`;
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-2/5">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden flex-shrink-0 border-8 border-white shadow-2xl shadow-[#142331]/20 z-10 relative">
+              <div className="w-64 h-80 md:w-80 md:h-[28rem] rounded-[2rem] overflow-hidden flex-shrink-0 border-8 border-white bg-gradient-to-b from-white to-cyan-50 shadow-2xl shadow-[#142331]/20 z-10 relative">
                 <img
-                  src="/img/marthin1.jpeg"
+                  src="/img/optimized/marthin-about.webp"
                   alt="Foto Profil"
                   width={320}
-                  height={320}
+                  height={448}
                   loading="lazy"
                   decoding="async"
-                  className="object-cover -translate-y-40"
+                  className="h-full w-full scale-110 object-cover object-[center_18%]"
                 />
               </div>
               <div className="absolute w-full h-full top-5 left-5 border-8 border-[#0575f5] rounded-2xl -z-10"></div>

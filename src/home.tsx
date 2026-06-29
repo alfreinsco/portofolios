@@ -32,16 +32,6 @@ export default function HomeSection({ profile }: HomeProps) {
       icon: "/img/icons/nextjs.svg",
       url: "https://nextjs.org/",
     },
-    {
-      name: "TypeScript",
-      icon: "/img/icons/typescript.svg",
-      url: "https://www.typescriptlang.org/",
-    },
-    {
-      name: "Node.js",
-      icon: "/img/icons/node.svg",
-      url: "https://nodejs.org/",
-    },
   ];
 
   // Fungsi untuk scroll ke section tanpa mengubah URL
