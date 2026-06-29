@@ -12,6 +12,29 @@ export default function AboutSection({
   experience,
   education,
 }: AboutSectionProps) {
+  const professionalSkills = [
+    {
+      title: "Frontend Development",
+      summary: "Membangun antarmuka web responsif, interaktif, dan mudah digunakan.",
+      focus: ["React", "Next.js", "TailwindCSS"],
+    },
+    {
+      title: "Backend Development",
+      summary: "Merancang API, autentikasi, integrasi data, dan logika aplikasi.",
+      focus: ["Laravel", "CodeIgniter", "Database"],
+    },
+    {
+      title: "UI/UX Design",
+      summary: "Menyusun alur pengguna, wireframe, dan desain visual yang terarah.",
+      focus: ["Figma", "Prototyping", "Design System"],
+    },
+    {
+      title: "Mobile Development",
+      summary: "Mengembangkan pengalaman mobile yang rapi, praktis, dan konsisten.",
+      focus: ["Responsive UI", "Flutter", "API Integration"],
+    },
+  ];
+
   // Fungsi untuk menangani download CV
   const handleDownloadCV = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // Jika CV belum tersedia, cegah default action dan tampilkan pesan
@@ -230,61 +253,35 @@ export default function AboutSection({
           <h3 className="text-2xl font-bold mb-6 text-center text-gray-800">
             Keahlian Profesional
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium text-gray-700">
-                  Frontend Development
-                </span>
-                <span className="text-[#0575f5]">100%</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {professionalSkills.map((skill) => (
+              <div
+                key={skill.title}
+                className="rounded-2xl border border-cyan-100 bg-white/80 p-6 shadow-lg shadow-cyan-900/5 transition-all hover:-translate-y-1 hover:shadow-cyan-900/10"
+              >
+                <div className="mb-4 flex items-start gap-3">
+                  <div className="mt-1 h-3 w-3 flex-shrink-0 rounded-full bg-gradient-to-r from-[#10c7ee] to-[#0575f5]"></div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">
+                      {skill.title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                      {skill.summary}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {skill.focus.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-[#0575f5]"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-[#0575f5] h-2 rounded-full"
-                  style={{ width: "100%" }}
-                ></div>
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium text-gray-700">
-                  Backend Development
-                </span>
-                <span className="text-[#0575f5]">100%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-[#0575f5] h-2 rounded-full"
-                  style={{ width: "100%" }}
-                ></div>
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium text-gray-700">UI/UX Design</span>
-                <span className="text-[#0575f5]">95%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-[#0575f5] h-2 rounded-full"
-                  style={{ width: "95%" }}
-                ></div>
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium text-gray-700">
-                  Mobile Development
-                </span>
-                <span className="text-[#0575f5]">90%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-[#0575f5] h-2 rounded-full"
-                  style={{ width: "90%" }}
-                ></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
