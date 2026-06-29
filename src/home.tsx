@@ -11,6 +11,39 @@ interface HomeProps {
 }
 
 export default function HomeSection({ profile }: HomeProps) {
+  const techStacks = [
+    {
+      name: "React",
+      icon: "/img/icons/react.svg",
+      url: "https://react.dev/",
+    },
+    {
+      name: "Next.js",
+      icon: "/img/icons/nextjs.svg",
+      url: "https://nextjs.org/",
+    },
+    {
+      name: "Node.js",
+      icon: "/img/icons/node.svg",
+      url: "https://nodejs.org/",
+    },
+    {
+      name: "TypeScript",
+      icon: "/img/icons/typescript.svg",
+      url: "https://www.typescriptlang.org/",
+    },
+    {
+      name: "Laravel",
+      icon: "/img/icons/laravel.svg",
+      url: "https://laravel.com/",
+    },
+    {
+      name: "Flutter",
+      icon: "/img/icons/flutter.svg",
+      url: "https://flutter.dev/",
+    },
+  ];
+
   // Fungsi untuk scroll ke section tanpa mengubah URL
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -89,27 +122,23 @@ export default function HomeSection({ profile }: HomeProps) {
               <div className="text-gray-600 font-medium text-sm md:text-base">
                 Tech Stack:
               </div>
-              <div className="flex gap-3 md:gap-4">
-                <img
-                  src="/img/icons/react.svg"
-                  alt="React"
-                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
-                />
-                <img
-                  src="/img/icons/nextjs.svg"
-                  alt="Next.js"
-                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
-                />
-                <img
-                  src="/img/icons/node.svg"
-                  alt="Node.js"
-                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
-                />
-                <img
-                  src="/img/icons/typescript.svg"
-                  alt="TypeScript"
-                  className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale hover:grayscale-0 hover:-translate-y-1 transition-all"
-                />
+              <div className="flex flex-wrap gap-3 md:gap-4">
+                {techStacks.map((tech) => (
+                  <a
+                    key={tech.name}
+                    href={tech.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Buka halaman resmi ${tech.name}`}
+                    title={tech.name}
+                  >
+                    <img
+                      src={tech.icon}
+                      alt={tech.name}
+                      className="h-9 w-9 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale transition-all hover:-translate-y-1 hover:grayscale-0 md:h-11 md:w-11"
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
