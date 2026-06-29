@@ -18,26 +18,28 @@ export default function AboutSection({
   );
 
   const professionalSkills = [
-    {
-      title: "Frontend Development",
-      summary: "Membangun antarmuka web responsif, interaktif, dan mudah digunakan.",
-      focus: ["React", "Next.js", "TailwindCSS"],
-    },
-    {
-      title: "Backend Development",
-      summary: "Merancang API, autentikasi, integrasi data, dan logika aplikasi.",
-      focus: ["Laravel", "CodeIgniter", "Database"],
-    },
-    {
-      title: "UI/UX Design",
-      summary: "Menyusun alur pengguna, wireframe, dan desain visual yang terarah.",
-      focus: ["Figma", "Prototyping", "Design System"],
-    },
-    {
-      title: "Mobile Development",
-      summary: "Mengembangkan pengalaman mobile yang rapi, praktis, dan konsisten.",
-      focus: ["Responsive UI", "Flutter", "API Integration"],
-    },
+    { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: "TypeScript", url: "https://www.typescriptlang.org/" },
+    { name: "React.js", url: "https://react.dev/" },
+    { name: "Next.js", url: "https://nextjs.org/" },
+    { name: "Node.js", url: "https://nodejs.org/" },
+    { name: "Express.js", url: "https://expressjs.com/" },
+    { name: "HTML/CSS", url: "https://developer.mozilla.org/en-US/docs/Learn_web_development" },
+    { name: "TailwindCSS", url: "https://tailwindcss.com/" },
+    { name: "PHP", url: "https://www.php.net/" },
+    { name: "Laravel", url: "https://laravel.com/" },
+    { name: "CodeIgniter", url: "https://codeigniter.com/" },
+    { name: "Flutter", url: "https://flutter.dev/" },
+    { name: "Dart", url: "https://dart.dev/" },
+    { name: "UI/UX Design", url: "https://www.interaction-design.org/literature/topics/ux-design" },
+    { name: "Figma", url: "https://www.figma.com/" },
+    { name: "Git & GitHub", url: "https://github.com/" },
+    { name: "REST API", url: "https://restfulapi.net/" },
+    { name: "Database Design", url: "https://www.postgresql.org/docs/current/ddl.html" },
+    { name: "MySQL/PostgreSQL", url: "https://www.postgresql.org/" },
+    { name: "Firebase", url: "https://firebase.google.com/" },
+    { name: "Docker", url: "https://www.docker.com/" },
+    { name: "AWS/Netlify/Vercel", url: "https://vercel.com/" },
   ];
 
   const handleCopyCvPrompt = async () => {
@@ -268,35 +270,26 @@ ${JSON.stringify(education, null, 2)}`;
           <h3 className="text-2xl font-bold mb-6 text-center text-gray-800">
             Keahlian Profesional
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {professionalSkills.map((skill) => (
-              <div
-                key={skill.title}
-                className="rounded-2xl border border-cyan-100 bg-white/80 p-6 shadow-lg shadow-cyan-900/5 transition-all hover:-translate-y-1 hover:shadow-cyan-900/10"
-              >
-                <div className="mb-4 flex items-start gap-3">
-                  <div className="mt-1 h-3 w-3 flex-shrink-0 rounded-full bg-gradient-to-r from-[#10c7ee] to-[#0575f5]"></div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">
-                      {skill.title}
-                    </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                      {skill.summary}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {skill.focus.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-[#0575f5]"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div className="rounded-3xl border border-cyan-100 bg-white/80 p-6 shadow-lg shadow-cyan-900/5">
+            <div className="flex flex-wrap justify-center gap-3">
+              {professionalSkills.map((skill) => (
+                <a
+                  key={skill.name}
+                  href={skill.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Buka website resmi ${skill.name}`}
+                  className="rounded-full border border-cyan-100 bg-cyan-50/80 px-4 py-2 text-sm font-medium text-[#0575f5] transition-all hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-white hover:shadow-md hover:shadow-cyan-900/10"
+                >
+                  {skill.name}
+                </a>
+              ))}
+            </div>
+            <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-relaxed text-gray-500">
+              Keahlian yang digunakan secara fleksibel sesuai kebutuhan proyek,
+              mulai dari perancangan antarmuka, pengembangan aplikasi, integrasi
+              API, hingga pengelolaan database.
+            </p>
           </div>
         </div>
       </div>
