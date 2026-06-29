@@ -135,14 +135,14 @@ export default function HomeSection({ profile }: HomeProps) {
             </div>
           </div>
           <div className="w-full md:w-1/2 relative mt-8 md:mt-0">
-            <div className="relative z-10 animate-float max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-[2rem] bg-white/50 p-3 shadow-2xl shadow-[#142331]/20 backdrop-blur">
+            <div className="relative z-10 animate-float h-[22rem] max-w-xs sm:h-[26rem] sm:max-w-sm md:h-[30rem] md:max-w-md mx-auto rounded-[2rem] bg-white/50 p-3 shadow-2xl shadow-[#142331]/20 backdrop-blur">
               <img
                 src="/img/optimized/marthin.webp"
                 alt="Developer Hero"
                 width={600}
-                height={600}
+                height={760}
                 fetchPriority="high"
-                className="rounded-[1.5rem] object-cover shadow-2xl"
+                className="h-full w-full rounded-[1.5rem] object-cover object-[65%_center] shadow-2xl"
                               />
             </div>
             <div className="absolute -top-6 right-6 -z-10 w-48 h-48 md:w-72 md:h-72 bg-cyan-300 rounded-full filter blur-3xl opacity-50 animate-blob"></div>
