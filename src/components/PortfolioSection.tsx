@@ -54,6 +54,8 @@ function ModalImageGallery({
         <img
           src={images[activeIndex]}
           alt={`${title} ${activeIndex + 1}`}
+          loading="lazy"
+          decoding="async"
           className="h-full w-full bg-slate-950 object-contain"
         />
       </div>
@@ -199,6 +201,8 @@ export default function PortfolioSection({
                 <img
                   src={getProjectImages(item)[0]}
                   alt={item.title}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#142331]/75 via-transparent to-transparent"></div>

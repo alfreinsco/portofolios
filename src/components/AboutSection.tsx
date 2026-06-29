@@ -21,12 +21,12 @@ export default function AboutSection({
     {
       name: "JavaScript",
       url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
+      icon: "/img/icons/javascript.svg",
     },
     {
       name: "TypeScript",
       url: "https://www.typescriptlang.org/",
-      icon: "https://cdn.simpleicons.org/typescript/3178C6",
+      icon: "/img/icons/typescript.svg",
     },
     { name: "React.js", url: "https://react.dev/", icon: "/img/icons/react.svg" },
     { name: "Next.js", url: "https://nextjs.org/", icon: "/img/icons/nextjs.svg" },
@@ -34,63 +34,63 @@ export default function AboutSection({
     {
       name: "Express.js",
       url: "https://expressjs.com/",
-      icon: "https://cdn.simpleicons.org/express/000000",
+      icon: "/img/icons/express.svg",
     },
     {
       name: "HTML/CSS",
       url: "https://developer.mozilla.org/en-US/docs/Learn_web_development",
-      icon: "https://cdn.simpleicons.org/html5/E34F26",
+      icon: "/img/icons/html5.svg",
     },
     {
       name: "TailwindCSS",
       url: "https://tailwindcss.com/",
-      icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+      icon: "/img/icons/tailwindcss.svg",
     },
-    { name: "PHP", url: "https://www.php.net/", icon: "https://cdn.simpleicons.org/php/777BB4" },
+    { name: "PHP", url: "https://www.php.net/", icon: "/img/icons/php.svg" },
     { name: "Laravel", url: "https://laravel.com/", icon: "/img/icons/laravel.svg" },
     {
       name: "CodeIgniter",
       url: "https://codeigniter.com/",
-      icon: "https://cdn.simpleicons.org/codeigniter/EF4223",
+      icon: "/img/icons/codeigniter.svg",
     },
     { name: "Flutter", url: "https://flutter.dev/", icon: "/img/icons/flutter.svg" },
-    { name: "Dart", url: "https://dart.dev/", icon: "https://cdn.simpleicons.org/dart/0175C2" },
+    { name: "Dart", url: "https://dart.dev/", icon: "/img/icons/dart.svg" },
     {
       name: "UI/UX Design",
       url: "https://www.interaction-design.org/literature/topics/ux-design",
-      icon: "https://cdn.simpleicons.org/figma/F24E1E",
+      icon: "/img/icons/figma.svg",
     },
-    { name: "Figma", url: "https://www.figma.com/", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
+    { name: "Figma", url: "https://www.figma.com/", icon: "/img/icons/figma.svg" },
     {
       name: "Git & GitHub",
       url: "https://github.com/",
-      icon: "https://cdn.simpleicons.org/github/181717",
+      icon: "/img/icons/github.svg",
     },
     {
       name: "REST API",
       url: "https://restfulapi.net/",
-      icon: "https://cdn.simpleicons.org/swagger/85EA2D",
+      icon: "/img/icons/swagger.svg",
     },
     {
       name: "Database Design",
       url: "https://www.postgresql.org/docs/current/ddl.html",
-      icon: "https://cdn.simpleicons.org/postgresql/4169E1",
+      icon: "/img/icons/postgresql.svg",
     },
     {
       name: "MySQL/PostgreSQL",
       url: "https://www.postgresql.org/",
-      icon: "https://cdn.simpleicons.org/postgresql/4169E1",
+      icon: "/img/icons/postgresql.svg",
     },
     {
       name: "Firebase",
       url: "https://firebase.google.com/",
-      icon: "https://cdn.simpleicons.org/firebase/FFCA28",
+      icon: "/img/icons/firebase.svg",
     },
-    { name: "Docker", url: "https://www.docker.com/", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+    { name: "Docker", url: "https://www.docker.com/", icon: "/img/icons/docker.svg" },
     {
       name: "AWS/Netlify/Vercel",
       url: "https://vercel.com/",
-      icon: "https://cdn.simpleicons.org/vercel/000000",
+      icon: "/img/icons/vercel.svg",
     },
   ];
 
@@ -134,6 +134,8 @@ ${JSON.stringify(education, null, 2)}`;
                   alt="Foto Profil"
                   width={320}
                   height={320}
+                  loading="lazy"
+                  decoding="async"
                   className="object-cover -translate-y-40"
                 />
               </div>

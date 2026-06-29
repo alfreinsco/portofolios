@@ -9,7 +9,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://alfreinsco.vercel.app/img/logo-alfreinsco.png</image:loc>
+      <image:loc>https://alfreinsco.vercel.app/img/optimized/logo-alfreinsco.webp</image:loc>
       <image:title>Logo Alfreinsco</image:title>
     </image:image>
     <image:image>
@@ -23,15 +23,15 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://alfreinsco.vercel.app/img/project/repository-unpatti.png</image:loc>
+      <image:loc>https://alfreinsco.vercel.app/img/project/optimized/repository-unpatti.webp</image:loc>
       <image:title>Repository UNPATTI</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://alfreinsco.vercel.app/img/project/sikerma.png</image:loc>
+      <image:loc>https://alfreinsco.vercel.app/img/project/optimized/sikerma.webp</image:loc>
       <image:title>SIKERMA UNPATTI</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://alfreinsco.vercel.app/img/project/smartpkkmaluku.png</image:loc>
+      <image:loc>https://alfreinsco.vercel.app/img/project/optimized/smartpkkmaluku.webp</image:loc>
       <image:title>SMART PKK MALUKU</image:title>
     </image:image>
   </url>

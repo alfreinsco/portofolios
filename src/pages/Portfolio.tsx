@@ -29,7 +29,13 @@ function ProjectImageSlider({ project, index }: { project: PortfolioProject; ind
 
   return (
     <div className="relative min-h-64 overflow-hidden lg:min-h-full">
-      <img src={images[0]} alt={project.title} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+      <img
+        src={images[0]}
+        alt={project.title}
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+      />
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#142331]/70 via-transparent to-transparent"></div>
       <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-black text-[#0575f5] shadow-lg backdrop-blur">
         #{String(index + 1).padStart(2, '0')}
@@ -68,7 +74,13 @@ function ModalImageGallery({ images, title }: { images: string[]; title: string 
   return (
     <div className="relative w-full overflow-hidden border-b border-cyan-100 bg-white">
       <div className="h-[240px] sm:h-[320px] md:h-[460px]">
-        <img src={images[activeIndex]} alt={`${title} ${activeIndex + 1}`} className="h-full w-full bg-slate-950 object-contain" />
+        <img
+          src={images[activeIndex]}
+          alt={`${title} ${activeIndex + 1}`}
+          loading="lazy"
+          decoding="async"
+          className="h-full w-full bg-slate-950 object-contain"
+        />
       </div>
 
       {images.length > 1 && (

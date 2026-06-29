@@ -190,7 +190,7 @@
       "desc": "Sistem pendaftaran mahasiswa baru yang memudahkan proses pendaftaran dan pengelolaan data mahasiswa.",
       "category": "web",
       "techs": ["React", "Node.js", "MongoDB", "Laravel"],
-      "image": "/img/project/pmb.png",
+      "image": "/img/project/optimized/pmb.webp",
       "link": "https://pmb.unpatti.ac.id",
       "features": [
         "Form pendaftaran yang mudah diisi",
@@ -206,7 +206,7 @@
       "desc": "Sistem yang memiliki 4 sub-sistem yaitu sidata untuk pendataan jemaat, siverval untuk verifikasi dan validasi jemaat pemilihan, sipungut untuk sistem pemungutan suara, dan situng untuk sistem perhitungan suara.",
       "category": "web",
       "techs": ["PHP", "Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-      "image": "/img/project/sipdp.png",
+      "image": "/img/project/optimized/sipdp.webp",
       "link": "https://sipdp.elabs.id",
       "features": [
         "Sistem pendataan jemaat yang efisien",
@@ -223,7 +223,7 @@
       "desc": "Sistem perpustakaan digital yang memudahkan akses dan pengelolaan koleksi buku secara online.",
       "category": "web",
       "techs": ["PHP", "Laravel", "MySQL", "Bootstrap"],
-      "image": "/img/project/smakrismart.png",
+      "image": "/img/project/optimized/smakrismart.webp",
       "link": "https://github.com/alfreinsco/smakrismart",
       "features": [
         "Pencarian buku yang cepat dan mudah",
@@ -239,7 +239,7 @@
       "desc": "Sistem pendaftaran KKN yang memudahkan mahasiswa untuk mendaftar dan mengelola data kegiatan KKN.",
       "category": "web",
       "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-      "image": "/img/project/kkn-kebangsaan2024.png",
+      "image": "/img/project/optimized/kkn-kebangsaan2024.webp",
       "link": "https://kkn2024.unpatti.ac.id",
       "features": [
         "Form pendaftaran yang user-friendly",
@@ -255,7 +255,7 @@
       "desc": "Sistem yudisium yang memudahkan mahasiswa untuk mengelola dan memantau proses yudisium mereka.",
       "category": "web",
       "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-      "image": "/img/project/sisyu.png",
+      "image": "/img/project/optimized/sisyu.webp",
       "link": "https://yudisium.unpatti.ac.id",
       "features": [
         "Form pendaftaran yudisium yang mudah digunakan",
@@ -271,7 +271,7 @@
       "desc": "Sistem penyuratan yang memudahkan pengguna untuk mengelola dan memantau proses penyuratan mereka.",
       "category": "web",
       "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-      "image": "/img/project/sispen.png",
+      "image": "/img/project/optimized/sispen.webp",
       "link": "https://wa.me/6281318812027",
       "features": [
         "Form pendaftaran penyuratan yang mudah digunakan",
@@ -287,7 +287,7 @@
       "desc": "Sistem CDC yang memudahkan pengguna untuk mengelola dan memantau proses teknik mesin mereka.",
       "category": "web",
       "techs": ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-      "image": "/img/project/cdc-mesin.png",
+      "image": "/img/project/optimized/cdc-mesin.webp",
       "link": "https://wa.me/6281318812027",
       "features": [
         "Form pendaftaran CDC yang mudah digunakan",
@@ -303,7 +303,7 @@
       "desc": "Aplikasi mobile yang memudahkan pengguna untuk mengajukan permintaan ambulance dengan cepat dan efisien.",
       "category": "app",
       "techs": ["Flutter", "Firebase", "Dart"],
-      "image": "/img/project/ambulance.png",
+      "image": "/img/project/optimized/ambulance.webp",
       "link": "https://wa.me/6281318812027",
       "features": [
         "Form permintaan ambulance yang mudah digunakan",

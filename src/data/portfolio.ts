@@ -4,7 +4,7 @@ export const portfolio = [
     desc: "Platform digital perpustakaan Universitas Pattimura untuk mengakses ribuan e-resources akademik seperti jurnal, skripsi, tesis, dan penelitian terkini secara mudah dan instan.",
     category: "web",
     techs: ["PHP", "Bootstrap", "MySQL"], // Contoh tech stack umum repository kampus, silakan sesuaikan jika tahu detailnya
-    image: "/img/project/repository-unpatti.png",
+    image: "/img/project/optimized/repository-unpatti.webp",
     link: "https://repository.unpatti.ac.id/",
     features: [
       "Pencarian canggih dengan fitur filter berdasarkan penulis, tahun publikasi, topik, dan jenis dokumen akademik.",
@@ -19,7 +19,7 @@ export const portfolio = [
     desc: "Sistem Informasi Point of Sales (POS) dan Manajemen Inventori retail minyak kayu putih yang dirancang untuk mengoptimalkan alur kerja kasir serta memberikan laporan performa bisnis yang akurat bagi pemilik toko.",
     category: "web",
     techs: ["PHP Native", "Tailwind CSS"],
-    image: "/img/project/mikastor.png",
+    image: "/img/project/optimized/mikastor.webp",
     link: "https://github.com/alfreinsco/mikastor",
     features: [
       "Dashboard bisnis real-time untuk memantau akumulasi total pendapatan, omset harian, dan jumlah varian aktif.",
@@ -34,7 +34,7 @@ export const portfolio = [
     desc: "Sistem Informasi Manajemen Kerjasama Universitas Pattimura untuk melacak, mengelola, dan mengoptimalkan dokumen kerja sama antarinstansi secara transparan dan real-time.",
     category: "web",
     techs: ["Laravel", "Tailwind CSS", "Livewire"], // Sesuaikan kembali dengan tech stack asli yang Anda gunakan
-    image: "/img/project/sikerma.png",
+    image: "/img/project/optimized/sikerma.webp",
     link: "https://sikerma.unpatti.ac.id/",
     features: [
       "Dashboard interaktif pelacakan statistik total kerja sama, mitra aktif, dan persentase tingkat keberhasilan",
@@ -49,7 +49,7 @@ export const portfolio = [
     desc: "Aplikasi dan ruang belajar sederhana untuk keluarga serta kader PKK Maluku guna membaca materi, mengikuti kursus, menonton video, dan mengikuti webinar secara mandiri.",
     category: "web",
     techs: ["Next.js", "Tailwind CSS", "TypeScript"], // Sesuaikan dengan teknologi asli yang Anda gunakan
-    image: "/img/project/smartpkkmaluku.png",
+    image: "/img/project/optimized/smartpkkmaluku.webp",
     link: "https://smart.pkkmaluku.com/",
     features: [
       "Sistem pembelajaran mandiri (E-Learning) interaktif langkah demi langkah untuk kader dan keluarga",
@@ -64,7 +64,7 @@ export const portfolio = [
     desc: "Portal resmi Tim Penggerak PKK Provinsi Maluku untuk pemberdayaan keluarga, peningkatan kualitas hidup, dan penguatan ketahanan ekonomi menuju Maluku sejahtera.",
     category: "web",
     techs: ["Next.js", "Tailwind CSS", "TypeScript"],
-    image: "/img/project/pkkmaluku.png",
+    image: "/img/project/optimized/pkkmaluku.webp",
     link: "https://pkkmaluku.com/",
     features: [
       "Sistem pemetaan interaktif sebaran kader dan kelompok Dasawisma di 11 kabupaten/kota",
@@ -79,7 +79,7 @@ export const portfolio = [
     desc: "Destinasi pantai eksklusif dan privat di Seram Bagian Barat yang dirancang khusus untuk momen hangat berkumpul bersama keluarga tercinta.",
     category: "web",
     techs: ["Next.js", "Tailwind CSS", "TypeScript"],
-    image: "/img/project/kairatubeach.png",
+    image: "/img/project/optimized/kairatubeach.webp",
     link: "https://kairatubeach.codedaritimur.com/",
     features: [
       "Akses penuh ke area pantai privat yang aman dan ramah keluarga",
@@ -94,7 +94,7 @@ export const portfolio = [
     desc: "Sistem informasi kepegawaian Universitas Pattimura yang dirancang untuk memonitoring kehadiran, aktivitas, dan data master pegawai secara terintegrasi.",
     category: "app",
     techs: ["flutter", "React", "PHP", "Laravel", "MySQL"], // Sesuaikan dengan tech stack asli yang Anda gunakan
-    image: "/img/project/sigap.jpeg",
+    image: "/img/project/optimized/sigap.webp",
     link: "https://play.google.com/store/apps/details?id=com.unpatti.sigap",
     features: [
       "Dashboard monitoring kehadiran pegawai (WFO/WFH/WFA) secara real-time",
@@ -110,7 +110,7 @@ export const portfolio = [
     desc: "Sistem pendaftaran mahasiswa baru yang memudahkan proses pendaftaran dan pengelolaan data mahasiswa.",
     category: "web",
     techs: ["React", "Node.js", "MongoDB", "Laravel"],
-    image: "/img/project/pmb.png",
+    image: "/img/project/optimized/pmb.webp",
     link: "https://mandiri.pmb.unpatti.ac.id",
     features: [
       "Form pendaftaran yang mudah diisi",
@@ -125,7 +125,7 @@ export const portfolio = [
     desc: "Sistem yang memiliki 4 sub-sistem yaitu sidata untuk pendataan jemaat, siverval untuk verifikasi dan validasi jemaat pemilihan, sipungut untuk sistem pemungutan suara, dan situng untuk sistem perhitungan suara.",
     category: "web",
     techs: ["PHP", "Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-    image: "/img/project/sipdp.png",
+    image: "/img/project/optimized/sipdp.webp",
     link: null,
     features: [
       "Sistem pendataan jemaat yang efisien",
@@ -142,7 +142,7 @@ export const portfolio = [
     desc: "Sistem perpustakaan digital yang memudahkan akses dan pengelolaan koleksi buku secara online.",
     category: "web",
     techs: ["PHP", "Laravel", "MySQL", "Bootstrap"],
-    image: "/img/project/smakrismart.png",
+    image: "/img/project/optimized/smakrismart.webp",
     link: "https://github.com/alfreinsco/smakrismart",
     features: [
       "Pencarian buku yang cepat dan mudah",
@@ -158,7 +158,7 @@ export const portfolio = [
     desc: "Sistem pendaftaran KKN yang memudahkan mahasiswa untuk mendaftar dan mengelola data kegiatan KKN.",
     category: "web",
     techs: ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-    image: "/img/project/kkn-kebangsaan2024.png",
+    image: "/img/project/optimized/kkn-kebangsaan2024.webp",
     link: null,
     features: [
       "Form pendaftaran yang user-friendly",
@@ -173,7 +173,7 @@ export const portfolio = [
     desc: "Sistem yudisium yang memudahkan mahasiswa untuk mengelola dan memantau proses yudisium mereka.",
     category: "web",
     techs: ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-    image: "/img/project/sisyu.png",
+    image: "/img/project/optimized/sisyu.webp",
     link: null,
     features: [
       "Form pendaftaran yudisium yang mudah digunakan",
@@ -188,7 +188,7 @@ export const portfolio = [
     desc: "Sistem penyuratan yang memudahkan pengguna untuk mengelola dan memantau proses penyuratan mereka.",
     category: "web",
     techs: ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-    image: "/img/project/sispen.png",
+    image: "/img/project/optimized/sispen.webp",
     link: null,
     features: [
       "Form pendaftaran penyuratan yang mudah digunakan",
@@ -203,7 +203,7 @@ export const portfolio = [
     desc: "Sistem CDC yang memudahkan pengguna untuk mengelola dan memantau proses teknik mesin mereka.",
     category: "web",
     techs: ["Laravel", "MySQL", "TailwindCSS", "DaisyUI"],
-    image: "/img/project/cdc-mesin.png",
+    image: "/img/project/optimized/cdc-mesin.webp",
     link: null,
     features: [
       "Form pendaftaran CDC yang mudah digunakan",
@@ -218,7 +218,7 @@ export const portfolio = [
     desc: "Aplikasi mobile yang memudahkan pengguna untuk mengajukan permintaan ambulance dengan cepat dan efisien.",
     category: "app",
     techs: ["Flutter", "Firebase", "Dart"],
-    image: "/img/project/ambulance.png",
+    image: "/img/project/optimized/ambulance.webp",
     link: null,
     features: [
       "Form permintaan ambulance yang mudah digunakan",

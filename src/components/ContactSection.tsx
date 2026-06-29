@@ -41,25 +41,25 @@ export default function ContactSection({ profile }: ContactSectionProps) {
     {
       name: "GitHub",
       url: profile.socialMedia.github,
-      icon: "https://cdn.simpleicons.org/github/181717",
+      icon: "/img/icons/github.svg",
       label: "Kunjungi GitHub Alfreinsco",
     },
     {
       name: "X",
       url: profile.socialMedia.twitter,
-      icon: "https://cdn.simpleicons.org/x/000000",
+      icon: "/img/icons/x.svg",
       label: "Kunjungi X Alfreinsco",
     },
     {
       name: "Instagram",
       url: profile.socialMedia.instagram,
-      icon: "https://cdn.simpleicons.org/instagram/E4405F",
+      icon: "/img/icons/instagram.svg",
       label: "Kunjungi Instagram Alfreinsco",
     },
     {
       name: "WhatsApp",
       url: profile.socialMedia.whatsapp,
-      icon: "https://cdn.simpleicons.org/whatsapp/25D366",
+      icon: "/img/icons/whatsapp.svg",
       label: "Hubungi Alfreinsco lewat WhatsApp",
     },
   ];

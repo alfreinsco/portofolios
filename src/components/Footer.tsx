@@ -29,25 +29,25 @@ export default function Footer({ profile }: FooterProps) {
     {
       name: "GitHub",
       url: profile.socialMedia?.github || "https://github.com/alfreinsco",
-      icon: "https://cdn.simpleicons.org/github/181717",
+      icon: "/img/icons/github.svg",
       label: "Kunjungi GitHub Alfreinsco",
     },
     {
       name: "X",
       url: profile.socialMedia?.twitter || "https://twitter.com/alfreinsco",
-      icon: "https://cdn.simpleicons.org/x/000000",
+      icon: "/img/icons/x.svg",
       label: "Kunjungi X Alfreinsco",
     },
     {
       name: "Instagram",
       url: profile.socialMedia?.instagram || "https://instagram.com/alfreinsco_",
-      icon: "https://cdn.simpleicons.org/instagram/E4405F",
+      icon: "/img/icons/instagram.svg",
       label: "Kunjungi Instagram Alfreinsco",
     },
     {
       name: "WhatsApp",
       url: profile.socialMedia?.whatsapp || "https://wa.me/6281318812027",
-      icon: "https://cdn.simpleicons.org/whatsapp/25D366",
+      icon: "/img/icons/whatsapp.svg",
       label: "Hubungi Alfreinsco lewat WhatsApp",
     },
   ];
@@ -58,8 +58,9 @@ export default function Footer({ profile }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
             <img
-              src="/img/logo-alfreinsco-bawah.png"
+              src="/img/optimized/logo-alfreinsco-bawah.webp"
               alt="Alfreinsco"
+              loading="lazy"
               className="mb-4 h-20 w-auto rounded-2xl bg-white/95 p-2 object-contain"
             />
             <p className="text-gray-400 mb-6">
