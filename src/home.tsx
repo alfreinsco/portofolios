@@ -18,21 +18,6 @@ export default function HomeSection({ profile }: HomeProps) {
       url: "https://react.dev/",
     },
     {
-      name: "Next.js",
-      icon: "/img/icons/nextjs.svg",
-      url: "https://nextjs.org/",
-    },
-    {
-      name: "Node.js",
-      icon: "/img/icons/node.svg",
-      url: "https://nodejs.org/",
-    },
-    {
-      name: "TypeScript",
-      icon: "/img/icons/typescript.svg",
-      url: "https://www.typescriptlang.org/",
-    },
-    {
       name: "Laravel",
       icon: "/img/icons/laravel.svg",
       url: "https://laravel.com/",
@@ -41,6 +26,21 @@ export default function HomeSection({ profile }: HomeProps) {
       name: "Flutter",
       icon: "/img/icons/flutter.svg",
       url: "https://flutter.dev/",
+    },
+    {
+      name: "Next.js",
+      icon: "/img/icons/nextjs.svg",
+      url: "https://nextjs.org/",
+    },
+    {
+      name: "TypeScript",
+      icon: "/img/icons/typescript.svg",
+      url: "https://www.typescriptlang.org/",
+    },
+    {
+      name: "Node.js",
+      icon: "/img/icons/node.svg",
+      url: "https://nodejs.org/",
     },
   ];
 
@@ -118,11 +118,11 @@ export default function HomeSection({ profile }: HomeProps) {
                 Hubungi Saya
               </a>
             </div>
-            <div className="mt-6 md:mt-8 flex flex-wrap gap-4 md:gap-6 items-center">
-              <div className="text-gray-600 font-medium text-sm md:text-base">
+            <div className="mt-6 grid grid-cols-[auto_1fr] items-start gap-3 md:mt-8 md:gap-4">
+              <div className="pt-1.5 text-sm font-medium text-gray-600 md:text-base">
                 Tech Stack:
               </div>
-              <div className="flex flex-wrap gap-3 md:gap-4">
+              <div className="flex flex-wrap gap-2">
                 {techStacks.map((tech) => (
                   <a
                     key={tech.name}
@@ -131,12 +131,14 @@ export default function HomeSection({ profile }: HomeProps) {
                     rel="noopener noreferrer"
                     aria-label={`Buka halaman resmi ${tech.name}`}
                     title={tech.name}
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-md shadow-[#142331]/10 transition-all hover:-translate-y-0.5 hover:text-[#0575f5] hover:shadow-cyan-900/10 md:px-3 md:text-sm"
                   >
                     <img
                       src={tech.icon}
                       alt={tech.name}
-                      className="h-9 w-9 rounded-2xl bg-white p-2 shadow-lg shadow-[#142331]/10 grayscale transition-all hover:-translate-y-1 hover:grayscale-0 md:h-11 md:w-11"
+                      className="h-4 w-4 object-contain md:h-5 md:w-5"
                     />
+                    <span>{tech.name}</span>
                   </a>
                 ))}
               </div>
